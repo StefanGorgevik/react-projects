@@ -1,0 +1,21 @@
+.header-div {
+    height: 50px;
+    width: 100%;
+    margin: auto;
+}
+
+.header-div nav {
+    height: 100%;
+}
+
+.header-div ul {
+    height: 100%;
+    display: flex;
+    background-color: gray;
+    flex-grow: 1;
+    justify-content: space-evenly;
+}
+
+.header-div ul li{
+    list-style: none;
+}

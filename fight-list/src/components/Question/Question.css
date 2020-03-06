@@ -1,0 +1,12 @@
+.question {
+    border: 1px solid black;
+    border-radius: 15px;
+    height: 100%;
+    padding: 80px;
+    width: 30%;
+    margin: 20px auto;
+}
+
+.question p {
+    font-size: 24px;
+}
