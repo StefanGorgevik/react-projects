@@ -1,0 +1,50 @@
+.card-draw  {
+    background-image: url('../../assets/images/card-draw-background.jpg');
+    height: 95vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.card-draw-h1 {
+    padding: 30px;
+    margin: -5px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.back-card {
+    height: 500px;
+    width: 335px;
+}
+
+.draw-btn {
+    color: white;
+    background-color: grey;
+    height: 50px;
+    width: 335px;;
+    font-size: 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+.draw-btn:hover {
+    font-size: 25px;
+    font-weight: 700;
+    height: 60px;
+    color: black;
+    border: 2px double black;
+    border-radius: 15px;
+}
+
+.deck-cards {
+    margin-bottom: 20px;
+    margin-left: 380px;
+    height: 70px;
+    width: 900px;
+}
+
+.deck-cards-follow{
+    position: absolute;
+    left: 100px;
+}

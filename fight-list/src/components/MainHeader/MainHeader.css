@@ -1,0 +1,26 @@
+.main-header-div {
+    height: 50px;
+    width: 100%;
+    margin: auto;
+}
+
+.main-header-div nav {
+    height: 100%;
+    border-bottom: 2px solid white;
+}
+
+.main-header-div ul {
+    height: 100%;
+    display: flex;
+    background-color: gray;
+}
+
+.main-header-div ul li{
+    list-style: none;
+}
+.main-header-div ul a{
+    text-decoration: none;
+    color:white;
+    margin: auto;
+    font-size: 20px;
+}

@@ -1,10 +1,10 @@
 import React from 'react'
 
-import Question from '../../components/Question/Question'
-import Input from '../../components/Input/Input'
-import Answer from '../../components/Answers/Answer/Answer'
+import Question from '../../components/FightList/Question/Question'
+import Input from '../../components/FightList/Input/Input'
+import Answer from '../../components/FightList/Answer/Answer'
 
-import Header from '../../components/Navigation/Header'
+import Header from '../../components/FightList/Navigation/Header'
 import './FightList.css'
 
 class FightList extends React.Component {
