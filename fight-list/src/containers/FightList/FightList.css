@@ -1,4 +1,12 @@
 .fight-list {
     margin: 0 auto;
     text-align: center;
+    background-image: url('../../assets/images/fight-list-wall.jpg');
+    height: 95vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.fight-list h1 {
+    padding: 30px;
 }

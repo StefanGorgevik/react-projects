@@ -4,7 +4,6 @@ import Question from '../../components/FightList/Question/Question'
 import Input from '../../components/FightList/Input/Input'
 import Answer from '../../components/FightList/Answer/Answer'
 
-import Header from '../../components/FightList/Navigation/Header'
 import './FightList.css'
 
 class FightList extends React.Component {
@@ -25,7 +24,7 @@ class FightList extends React.Component {
         event.preventDefault()
         const answers = this.state.answers
         answers.push(this.state.inputValue.toLowerCase());
-        this.setState({ answers: answers})
+        this.setState({ answers: answers })
     }
 
     render() {
@@ -38,10 +37,11 @@ class FightList extends React.Component {
         }
         return (
             <div className="fight-list">
-                <Header />
                 <div>
                     <h1>Fight list</h1>
-                    <Question />
+                    <div className="question-div">
+                        <Question />
+                    </div>
                     <Input saveValue={this.handleInputValue} click={this.saveAnswer} value={this.state.inputValue} />
                     {answers}
                 </div>
