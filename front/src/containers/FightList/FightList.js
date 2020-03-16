@@ -4,6 +4,10 @@ import Question from '../../components/FightList/Question/Question'
 import Input from '../../components/FightList/Input/Input'
 import Timer from '../../components/FightList/Timer/Timer'
 // import Answer from '../../components/FightList/Answer/Answer'
+import GameOver from '../../components/FightList/GameOver/GameOver'
+import store from '../../redux/store'
+import { connect } from 'react-redux'
+import { gameOver } from '../../redux/actions/actions'
 
 import './FightList.css'
 
@@ -36,12 +40,15 @@ class FightList extends React.Component {
             incorrectAnswers: [],
             count: 0,
             score: 0,
-            timer: 10
+            timer: 10,
+            gameOver: false,
+            started: false
         }
     }
 
 
     componentDidUpdate() {
+        console.log('comp did update')
         if (this.state.timer === 10 && this.state.count !== this.state.questions.length) {
             this.startInterval()
         }
@@ -55,21 +62,23 @@ class FightList extends React.Component {
             } else if (this.state.count === this.state.questions.length - 1) {
                 console.log(this.state.count, this.state.questions.length - 1)
                 console.log("entered 2 if")
-                alert("Your score is " + this.state.score)
+                store.dispatch(gameOver(true))
             }
         }
+    }
+
+    startGame = () => {
+        this.setState({ started: true })
+    }
+
+    hideGameOverAlert = () => {
+        store.dispatch(gameOver(false))
+        this.clearInterval()
     }
 
     clearInterval = () => {
         clearInterval(this.myInterval)
         console.log("called")
-    }
-
-    nextQuestion = () => {
-            if (this.state.count !== this.state.questions.length) {
-                this.clearInterval()
-                this.setState({ count: this.state.count + 1, correctAnswers: [], incorrectAnswers: [], timer: 10 })
-        }
     }
 
     startInterval = () => {
@@ -79,6 +88,14 @@ class FightList extends React.Component {
             }))
         }, 1000)
     }
+
+    nextQuestion = () => {
+        if (this.state.count !== this.state.questions.length) {
+            this.clearInterval()
+            this.setState({ count: this.state.count + 1, correctAnswers: [], incorrectAnswers: [], timer: 10 })
+        }
+    }
+
 
 
     toTitleCase = (phrase) => {
@@ -149,20 +166,28 @@ class FightList extends React.Component {
         }
         return (
             <div className="fight-list">
+                {this.props.gameOver ? <GameOver hide={this.hideGameOverAlert} score={this.state.score} /> : null}
                 <div>
                     <h1 className="title-h1">Fight list</h1>
+
+                    <button className={this.state.started ? "disabled-start start-btn" : "start-btn"} onClick={this.startGame}>Start</button>
                     <div className="score-div" >
                         <div>
                             <p>Current Score: </p>
-                            <h1 className="score-h1">{this.state.score}</h1>
+                            <p className="score-p">
+                                <span>
+                                    {this.state.score}
+                                </span>
+                            </p>
                         </div>
                         <Timer next={this.nextQuestion} timer={this.state.timer} startInterval={this.startInterval}
-                            myInterval={this.myInterval}
+                            myInterval={this.myInterval} started={this.state.started}
                         />
+
                     </div>
                     <div className="question-div">
                         <Question count={this.state.count} questions={this.state.questions} />
-                        <button className="next-button" onClick={this.nextQuestion}><i className="fas fa-forward"></i></button>
+                        <button className={this.state.started ? "next-button" : 'disabled-link next-button'} onClick={this.nextQuestion}><i className="fas fa-forward"></i></button>
                     </div>
                     <Input saveValue={this.handleInputValue} click={this.saveAnswer} value={this.state.inputValue} />
                     <div className="all-answers-div">
@@ -179,4 +204,10 @@ class FightList extends React.Component {
     }
 }
 
-export default FightList;
+function mapStateToProps(state) {
+    return {
+        gameOver: state.gameOver
+    }
+}
+
+export default connect(mapStateToProps)(FightList);

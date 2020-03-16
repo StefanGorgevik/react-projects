@@ -4,3 +4,9 @@ export const getCard = (card) => {
         payload: card
     }
 }
+export const gameOver = (bool) => {
+    return {
+        type: "GAME_OVER",
+        payload: bool
+    }
+}

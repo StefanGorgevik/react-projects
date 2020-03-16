@@ -1,20 +1,24 @@
 import React from 'react'
-
+import './Timer.css'
 class Timer extends React.Component {
     render() {
         return (
             <div>
                 <p>Time Left: </p>
-                <h1 className="score-h1">{this.props.timer}</h1>
+                    <p className="score-p">
+                    {this.props.started ?
+                        <span>
+                            {this.props.timer}
+                        </span> :  null}
+                    </p>
             </div>
         )
     }
 
     componentDidMount() {
-        this.myInterval = this.props.startInterval()
-           
+        this.props.startInterval()
     }
-    
+
     componentWillUnmount() {
         clearInterval(this.myInterval)
     }

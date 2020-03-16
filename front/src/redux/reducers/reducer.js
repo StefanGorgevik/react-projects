@@ -1,5 +1,6 @@
 const initState = {
-    card: ''
+    card: '',
+    gameOver: false
 }
 
 export function reducer (state = initState, action ) {
@@ -7,6 +8,11 @@ export function reducer (state = initState, action ) {
         case "GET_QUESTIONS": {
             return {
                 ...state, card: action.payload
+            }
+        }
+        case "GAME_OVER": {
+            return {
+                ...state, gameOver: action.payload
             }
         }
        
