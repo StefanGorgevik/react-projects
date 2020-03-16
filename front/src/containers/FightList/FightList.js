@@ -12,7 +12,6 @@ class FightList extends React.Component {
         super(props)
         this.state = {
             inputValue: '',
-            count: 0,
             answers: [
                 {
                     id: 0,
@@ -21,37 +20,55 @@ class FightList extends React.Component {
                 {
                     id: 1,
                     answers: ['Apple', 'Banana', 'Pineapple', 'Cranberry', 'Raspberry', 'Kiwi', 'Peach', 'Pear', 'Lemon', 'Orange']
+                },
+                {
+                    id: 2,
+                    answers: ['Ferrari', 'Golf', 'BMW', 'Audi', 'Ford', 'Renault', 'Masserati']
                 }
             ],
             questions: [
                 { id: 0, question: "Write all of the continents" },
-                { id: 1, question: "Name fruits" }
+                { id: 1, question: "Name fruits" },
+                { id: 2, question: "Car brands" }
+
             ],
             correctAnswers: [],
             incorrectAnswers: [],
+            count: 0,
             score: 0,
             timer: 10
         }
     }
 
+
     componentDidUpdate() {
-        if (this.state.timer === 0) {
-            clearInterval(this.myInterval)
-            this.nextQuestion()
+        if (this.state.timer === 10 && this.state.count !== this.state.questions.length) {
             this.startInterval()
-            if (this.state.count === this.state.answers.length-1)  {
-                this.clearInterval()
-            }
         }
-        if(this.state.timer === 10) {
-            this.startInterval()
+        if (this.state.timer === 0) {
+            this.clearInterval()
+            if (this.state.count !== this.state.questions.length - 1) {
+                console.log(this.state.count, this.state.questions.length - 1)
+                this.startInterval()
+                this.nextQuestion()
+
+            } else if (this.state.count === this.state.questions.length - 1) {
+                console.log(this.state.count, this.state.questions.length - 1)
+                console.log("entered 2 if")
+                alert("Your score is " + this.state.score)
+            }
         }
     }
 
+    clearInterval = () => {
+        clearInterval(this.myInterval)
+        console.log("called")
+    }
+
     nextQuestion = () => {
-        if (this.state.count !== this.state.questions.length - 1) {
-            this.clearInterval()
-            this.setState({ count: this.state.count + 1, correctAnswers: [], incorrectAnswers: [], timer: 10 })
+            if (this.state.count !== this.state.questions.length) {
+                this.clearInterval()
+                this.setState({ count: this.state.count + 1, correctAnswers: [], incorrectAnswers: [], timer: 10 })
         }
     }
 
@@ -63,23 +80,14 @@ class FightList extends React.Component {
         }, 1000)
     }
 
-    clearInterval = () => {
-        clearInterval(this.myInterval)
-    }
 
     toTitleCase = (phrase) => {
-        const str = phrase
-            .toLowerCase()
-            .split(' ')
-            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-            .join(' ')
+        const str = phrase.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
         return str
     };
 
     handleInputValue = (event) => {
         var val = this.toTitleCase(event.target.value)
-        // val = val.substr(0, 1).toUpperCase() + val.substr(1)
-        console.log(val)
         this.setState({ inputValue: val })
     }
 

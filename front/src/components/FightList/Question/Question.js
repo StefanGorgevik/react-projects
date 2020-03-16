@@ -5,7 +5,7 @@ function Question(props) {
         return (
             <div className="question">
                 <p>
-                    {props.questions[props.count].question}
+                    {props.count !== props.questions.length ? props.questions[props.count].question : null}
                 </p>
             </div>
         )

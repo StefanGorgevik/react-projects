@@ -39,13 +39,6 @@
     padding: 10px;
 }
 
-.all-answers-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    width: 100%;
-}
 
 .question-div {
     display: flex;
@@ -61,13 +54,10 @@
     height: 50px;
     font-size: 50px;
     position: relative;
-    right: 650px;
+    right: 450px;
     color: black;
 }
 
-.fas .fa-forward {
-    color: black;
-}
 
 .score-h1 {
     width: 70px;
@@ -88,4 +78,12 @@
 .score-div div {
     margin-left: 50px;
     margin-right: 60px;
+}
+
+.all-answers-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
 }
