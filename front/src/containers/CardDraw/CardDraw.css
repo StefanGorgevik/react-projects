@@ -1,13 +1,13 @@
 .card-draw  {
     background-image: url('../../assets/images/card-draw-background.jpg');
-    height: 95vh;
+    height: 96vh;
     background-position: center;
     background-size: cover;
+    overflow: hidden;
 }
 
 .card-draw-h1 {
     padding: 30px;
-    margin: -5px;
     color: white;
     margin-bottom: 10px;
 }
