@@ -7,7 +7,12 @@ const Answer = (props) => {
     })
     return (
         <div className="answer">
-                <p className={answer.length === 0 ? 'incorrect' : 'correct'}>{answer.length === 0 ? props.answer : answer}</p>
+            <div className="correct">
+                {answer}
+            </div>
+            <div className="incorrect">
+
+            </div>
         </div>
     )
 }

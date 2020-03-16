@@ -1,21 +1,14 @@
 import React from 'react'
 import './Question.css'
 
-class Question extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {}
-    }
-
-    render() {
+function Question(props) {
         return (
             <div className="question">
                 <p>
-                    Write all of the continents
+                    {props.questions[props.count].question}
                 </p>
             </div>
         )
-    }
 }
 
 export default Question;

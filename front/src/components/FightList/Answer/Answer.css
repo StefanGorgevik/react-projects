@@ -8,18 +8,3 @@
     margin-top: 5px;
 }
 
-.correct {
-    color: yellow;
-    font-size: 15px;
-    font-weight: bold;
-    border: 1px solid black;
-    width: 20%;
-}
-
-.incorrect {
-    color: red;
-    border: 1px solid black;
-    font-size: 15px;
-    font-weight: bold;
-    width: 20%;
-}
