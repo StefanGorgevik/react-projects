@@ -30,7 +30,8 @@ class FightList extends React.Component {
             gamePaused: true,
             repeat: '',
             gameFinished: false,
-            gameStatic: true
+            gameStatic: true,
+            hintUsed: false
         }
     }
 
@@ -130,14 +131,16 @@ class FightList extends React.Component {
                 count: prevState.count + 1, timer: 30,
                 correctAnswers: [], incorrectAnswers: [],
                 inputValue: '',
-                currentAnswerLength: this.state.answers[prevState.count + 1].answers.length
+                currentAnswerLength: this.state.answers[prevState.count + 1].answers.length,
+                hintUsed: false
             }))
         }
         if (this.state.timer === 0 && this.state.count !== this.state.questions.length - 1) {
             this.setState((prevState) => ({
                 count: prevState.count + 1, timer: 30,
                 correctAnswers: [], incorrectAnswers: [],
-                currentAnswerLength: this.state.answers[prevState.count + 1].answers.length
+                currentAnswerLength: this.state.answers[prevState.count + 1].answers.length,
+                hintUsed: false
             }))
         }
     }
@@ -198,6 +201,22 @@ class FightList extends React.Component {
         }
     }
 
+    useHint = () => {
+        const corAnswers = this.state.correctAnswers
+        const answers = this.state.answers
+        const count =this.state.count
+        const joker = answers[count].answers[Math.floor(Math.random() * answers[count].answers.length)]
+        corAnswers.push(joker)
+        answers[count].answers.splice(answers[count].answers.indexOf(joker), 1)
+        this.setState({...this.state,
+            hintUsed: true,
+            ...this.state.correctAnswers, 
+            correctAnswers: corAnswers,
+            ...this.state.answers,
+            answers: answers
+        })
+    }
+
     render() {
         return (
             <div className="fight-list">
@@ -242,6 +261,8 @@ class FightList extends React.Component {
                         timerStopped={this.timerStopped}
                         questions={this.state.questions} count={this.state.count}
                         static={this.state.gameStatic}
+                        useHint={this.useHint}
+                        hintUsed={this.state.hintUsed}
                     />
                     <Answers
                         wordToBlink={this.state.repeat}

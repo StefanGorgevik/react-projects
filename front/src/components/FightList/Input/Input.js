@@ -22,6 +22,11 @@ const Input = (props) => {
                 onClick={props.nextQuestion}>
                 <i className="fas fa-forward"></i>
             </button>
+            <button
+                className={ !props.hintUsed && props.timerStarted ? "next-button" : 'disabled-link next-button'}
+                onClick={props.useHint}>
+               Hint
+            </button>
             {!props.static ?
                 <button className="next-button"
                     onClick={props.gamePaused ? props.continue : props.pause}>{props.gamePaused ? "Start" : "Pause"}
