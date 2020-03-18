@@ -4,9 +4,10 @@ import './Question.css'
 function Question(props) {
         return (
             <div className="question">
+            {props.timerStarted ? 
                 <p>
                     {props.count !== props.questions.length ? props.questions[props.count].question : null}
-                </p>
+                </p> : null}
             </div>
         )
 }

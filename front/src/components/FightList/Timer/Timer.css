@@ -1,0 +1,16 @@
+.timer-div {
+    margin-left: 50px;
+}
+
+.timer-label {
+    font-size: 20px;
+}
+
+.blinking{
+    animation:blinkingText 1.2s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: #000;    }
+    50%{ color: rgb(62, 218, 23); font-size: 36px;}
+    100%{    color: rgb(228, 15, 15); font-size: 37px;    }
+}

@@ -4,6 +4,9 @@
     background-position: center;
     background-size: cover;
     overflow: hidden;
+    cursor: pointer;
+    margin-top:45px;
+    height: 100%;
 }
 
 .card-draw-h1 {
@@ -26,6 +29,7 @@
     margin-top: 10px;
     cursor: pointer;
     border: none;
+    outline: none;
 }
 
 .draw-btn:hover {

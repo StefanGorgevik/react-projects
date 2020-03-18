@@ -1,27 +1,18 @@
 import React from 'react'
 import './Timer.css'
-class Timer extends React.Component {
-    render() {
+function Timer (props) {
         return (
-            <div>
-                <p>Time Left: </p>
-                    <p className="score-p">
-                    {this.props.started ?
-                        <span>
-                            {this.props.timer}
-                        </span> :  null}
-                    </p>
+            <div className="timer-div">
+                <p className="timer-label">Time Left</p>
+                <p className="score-p">
+                    {props.started ?
+                        <span className={props.timer <= 5 ? "blinking" : ""}>
+                            {props.timer}
+                        </span> : null}
+                </p>
             </div>
         )
-    }
-
-    componentDidMount() {
-        this.props.startInterval()
-    }
-
-    componentWillUnmount() {
-        clearInterval(this.myInterval)
-    }
+    
 }
 
 export default Timer;

@@ -14,15 +14,14 @@
 
 .game-over-div {
     width: 440px;
-    height: 211px;
+    height: 255px;
     background-color:rgba(0, 0, 0, 0.664);
     padding: 50px;
     border-radius: 5px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    margin:auto;
-    margin-bottom: 334px;
+    margin: auto;
 }
 
 .game-over-div h1{
@@ -33,7 +32,8 @@
 }
 
 .game-over-btns {
-    margin: 10px;
+    margin: 20px;
+    margin-top: 30px;
     width: 120px;
     height: 30px;
     font-size: 14px;
@@ -42,10 +42,11 @@
     background-color: transparent;
     color: white;
     border: 3px solid rgba(235, 247, 248, 0.65);
-    border-radius: 3px;
+    border-radius: 8px;
     cursor: pointer;
 }
 
 .score-span {
     font-weight: bold;
+    font-size:22px;
 }

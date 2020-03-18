@@ -27,7 +27,7 @@ class CardDraw extends React.Component {
                 <h1 className="card-draw-h1">CardDraw</h1>
                 <img className="deck-cards" src={DeckOfCards} alt="deck-of-cards" />
                 <img className="deck-cards deck-cards-follow" src={DeckOfCards} alt="deck-of-cards" />
-                <div className="card">
+                <div className="card" onClick={this.drawACard}>
                     {!this.state.drawn ?
                         <img className="back-card" src={BackCard} alt="card" /> :
                         <img className="back-card" src={this.state.card} alt="card" /> }

@@ -1,10 +1,10 @@
 import React from 'react'
-
+import './Home.css'
 class Home extends React.Component {
     render() {
         return (
             <div className="home">
-                <h1>Welcome to my game page</h1>
+                <h1>Welcome to game page</h1>
             </div>
         )
     }
