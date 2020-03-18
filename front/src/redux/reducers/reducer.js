@@ -18,7 +18,7 @@ const initState = {
         },
         {
             id: 4,
-            answers: ['Bedroom', 'Living room', 'Closet', 'Bathroom', 'Kitchen', 'Hall']
+            answers: ['Bedroom', 'Living Room', 'Closet', 'Bathroom', 'Kitchen', 'Hall']
         },
         {
             id: 5,

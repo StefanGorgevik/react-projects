@@ -57,12 +57,7 @@ class FightList extends React.Component {
 
     hideGameOverAlert = () => {
         this.clearInterval()
-        this.setState({
-            gameOver: false,
-            timerStopped: true, timerStarted: false,
-            correctAnswers: [], incorrectAnswers: [],
-            gameFinished: false
-        })
+        this.setState({ gameOver: false })
         window.location.reload();
     }
 
@@ -74,28 +69,32 @@ class FightList extends React.Component {
                     if (this.state.timer > 0) {
                         this.setState((prevState) => ({ timer: prevState.timer - 1 }))
                     }
-                    if (this.state.timer === 0 && this.state.count !== this.state.questions.length - 1) {
-                        this.nextQuestion()
+                    if (this.state.timer === 0) {
+                        if (this.state.count !== this.state.questions.length - 1) {
+                            this.nextQuestion()
+                        }
+                        if (this.state.count === this.state.questions.length - 1) {
+                            this.setState({ timerStarted: false, timerStopped: true, gameOver: true, gamePaused: true, timer: 0 })
+                            this.clearInterval()
+                        }
                     }
-                    if (this.state.timer === 0 && this.state.count === this.state.questions.length - 1) {
-                        this.setState({ timerStarted: false, timerStopped: true, gameOver: true, gamePaused: true, timer: 0 })
-                        this.clearInterval()
-                    }
-                    if (this.state.correctAnswers.length === this.state.currentAnswerLength && this.state.count !== this.state.questions.length - 1) {                       
-                        this.nextQuestion()
-                        this.setState({
-                            timer: 30, correctAnswers: [], incorrectAnswers: []
-                        })
-                    }
-                    if (this.state.correctAnswers.length === this.state.currentAnswerLength && this.state.count === this.state.questions.length - 1) {
-                        this.setState({
-                            gameFinished: true,
-                            gameOver: true,
-                            gameStatic: true,
-                            timer: 0, correctAnswers: [],
-                            incorrectAnswers: []
-                        })
-                        this.clearInterval()
+                    if (this.state.correctAnswers.length === this.state.currentAnswerLength) {
+                        if (this.state.count !== this.state.questions.length - 1) {
+                            this.nextQuestion()
+                            this.setState({
+                                timer: 30, correctAnswers: [], incorrectAnswers: []
+                            })
+                        }
+                        if (this.state.count === this.state.questions.length - 1) {
+                            this.setState({
+                                gameFinished: true,
+                                gameOver: true,
+                                gameStatic: true,
+                                timer: 0, correctAnswers: [],
+                                incorrectAnswers: []
+                            })
+                            this.clearInterval()
+                        }
                     }
                 }
             }, 1000);
@@ -127,31 +126,26 @@ class FightList extends React.Component {
 
     nextQuestion = () => {
         if (this.state.count !== this.state.questions.length - 1) {
-            this.setState((prevState) => ({
-                count: prevState.count + 1, timer: 30,
-                correctAnswers: [], incorrectAnswers: [],
-                inputValue: '',
-                currentAnswerLength: this.state.answers[prevState.count + 1].answers.length,
-                hintUsed: false
-            }))
-        }
-        if (this.state.timer === 0 && this.state.count !== this.state.questions.length - 1) {
-            this.setState((prevState) => ({
-                count: prevState.count + 1, timer: 30,
-                correctAnswers: [], incorrectAnswers: [],
-                currentAnswerLength: this.state.answers[prevState.count + 1].answers.length,
-                hintUsed: false
-            }))
+                this.setState((prevState) => ({
+                    count: prevState.count + 1, timer: 30,
+                    correctAnswers: [], incorrectAnswers: [],
+                    inputValue: '',
+                    currentAnswerLength: this.state.answers[prevState.count + 1].answers.length,
+                    hintUsed: false
+                }))
+            if (this.state.timer === 0) {
+                this.setState((prevState) => ({
+                    count: prevState.count + 1, timer: 30,
+                    correctAnswers: [], incorrectAnswers: [],
+                    currentAnswerLength: this.state.answers[prevState.count + 1].answers.length,
+                    hintUsed: false
+                }))
+            }
         }
     }
 
-    toTitleCase = (phrase) => {
-        const str = phrase.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
-        return str
-    };
-
     handleInputValue = (event) => {
-        var val = this.toTitleCase(event.target.value)
+        var val = event.target.value.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
         this.setState({ inputValue: val })
     }
 
@@ -204,16 +198,15 @@ class FightList extends React.Component {
     useHint = () => {
         const corAnswers = this.state.correctAnswers
         const answers = this.state.answers
-        const count =this.state.count
+        const count = this.state.count
         const joker = answers[count].answers[Math.floor(Math.random() * answers[count].answers.length)]
         corAnswers.push(joker)
         answers[count].answers.splice(answers[count].answers.indexOf(joker), 1)
-        this.setState({...this.state,
+        this.setState({
+            ...this.state,
             hintUsed: true,
-            ...this.state.correctAnswers, 
-            correctAnswers: corAnswers,
-            ...this.state.answers,
-            answers: answers
+            ...this.state.correctAnswers, correctAnswers: corAnswers,
+            ...this.state.answers, answers: answers
         })
     }
 
