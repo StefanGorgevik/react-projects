@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://localhost:3000/fight-list -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="icon" href="http://localhost:3000/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Web site created using create-react-app">
+    
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+    
+    <link href="./ia_files/css" rel="stylesheet">
+    <link href="./ia_files/css(1)" rel="stylesheet">
+    <link href="./ia_files/css(2)" rel="stylesheet">
+    <script src="./ia_files/c9584d5355.js.download" crossorigin="anonymous"></script><link rel="stylesheet" href="./ia_files/free.min.css" media="all">
+    <title>Stefan.GG</title>
+  <style type="text/css">* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  
+}
+html, body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+</style><style type="text/css">.App {
+  text-align: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+</style><style type="text/css">.question {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid rgba(26, 21, 21, 0.527);
+    border-radius: 15px;
+    height: 230px;
+    padding: 80px;
+    width: 50%;
+    margin: auto;
+    
+}
+
+.question p {
+    font-size: 44px;
+    font-weight: bold 700;
+    font-family: 'Teko', sans-serif;
+}
+
+.remaining-ans {
+    display: flex;
+    padding: 2px;
+    width: 100px;
+    position: static;
+    font-size: 30px;
+    font-weight: bold;
+}</style><style type="text/css">.input {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.inputLabel {
+    font-size: 20px;
+    border-bottom: 1px solid black;
+    font-weight: bold;
+}
+.answer {
+    width: 300px;
+    border: 3px solid black;
+    border-radius: 5px;  height: 40px;
+    margin: 0 20px;
+    background-color: transparent;
+}
+
+.disabled-input {
+    border: 3px solid grey;
+}
+
+.input button {
+    height: 40px;
+    padding: 0 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.next-button {
+    display: flex;
+    background-color: inherit;
+    border: 3px solid rgb(27, 26, 26);
+    border-radius: 4px;
+    width: 100px;
+    height: 50px;
+    font-size: 50px;
+    color: black;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 3px;
+}
+
+
+.disabled-link {
+    color: grey;
+    border: 3px solid grey;
+    pointer-events: none;
+}
+
+.pause-btn {
+    margin-left: 3px;
+}
+
+#answer {
+    font-size: 18px;
+    font-weight: 600;
+}</style><style type="text/css">.timer-div {
+    margin-left: 50px;
+}
+
+.timer-label {
+    font-size: 20px;
+}
+
+.blinking{
+    animation:blinkingText 1.2s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: #000;    }
+    50%{ color: rgb(62, 218, 23); font-size: 36px;}
+    100%{    color: rgb(228, 15, 15); font-size: 37px;    }
+}</style><style type="text/css">.game-over-main-div {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    margin: auto;
+    background-color: rgb(156, 148, 148);
+    color: white;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.59);
+}
+
+.game-over-div {
+    width: 440px;
+    height: 265px;
+    background-color:rgba(0, 0, 0, 0.664);
+    padding: 50px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.game-over-div h1{
+    margin-bottom: 20px;
+}
+.game-over-div p{
+    margin-bottom: 10px;
+}
+
+.game-over-btn {
+    margin: auto;
+    margin-top: 35px;
+    width: 250px;
+    height: 35px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: transparent;
+    color: white;
+    border: 3px solid rgba(235, 247, 248, 0.65);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.score-span {
+    font-weight: bold;
+    font-size:22px;
+}</style><style type="text/css"> .score-div {
+    margin-right: 50px;
+} 
+
+.score-label {
+    font-size: 20px;
+}</style><style type="text/css">.all-answers-div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1 1;
+    padding: 10px;
+    min-width: 100%;
+    height: 100%;
+}
+
+
+.cor-answers-div,
+.incor-answers-div {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    flex-grow: 100;
+    overflow: hidden;
+    min-width: 50%;
+}
+.cor-answers-div {
+    justify-content: flex-end;
+}
+
+
+.answers  {
+    /* min-width: 200px; */
+    height: 30px;
+    padding: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 10px;
+}
+.correct {
+    color: rgb(214, 250, 255); 
+    background-color: rgb(54, 47, 47);
+    margin-right: 30px;
+    width: 25%;
+}
+.incorrect {
+    color: rgb(150, 250, 20);
+    background-color: rgb(136, 13, 13);
+    margin-left: 30px;
+    width: 25%;
+}
+
+.blink-word {
+    color: rgb(143, 106, 19);
+    font-size: 18px;
+    border: 1px solid springgreen;
+}</style><style type="text/css">.fight-list {
+    margin: auto;
+    text-align: center;
+    background-image: url(/static/media/fight-list-wall.8ad2e26b.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    font-family: 'Sen', sans-serif;
+    margin-top:35px;
+    height: 100%;
+}
+
+.title-h1 {
+    padding: 25px;
+}
+
+.correct, 
+.incorrect {
+    margin-top: 10px;
+}
+
+
+
+.question-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.score-p {
+    width: 70px;
+    height: 70px;
+    margin: auto;
+    padding: 5px;
+    margin-top: 10px;
+    font-size: 40px;
+    border: 5px solid rgba(8, 5, 37, 0.596);
+    border-radius: 13px;
+}
+
+.score-time-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+
+
+.start-btn {
+    width: 250px;
+    background-color: rgb(139, 125, 125);
+    color: white;
+    height: 40px;
+    border: none;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    cursor: pointer;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.disabled-start {
+    color: rgba(75, 72, 72, 0.657);
+    pointer-events: none;
+}
+</style><style type="text/css">.card-draw  {
+    background-image: url(/static/media/card-draw-background.3d2d48d8.jpg);
+    height: 96vh;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    cursor: pointer;
+    margin-top:45px;
+    height: 100%;
+}
+
+.card-draw-h1 {
+    padding: 30px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.back-card {
+    height: 500px;
+    width: 335px;
+}
+
+.draw-btn {
+    color: white;
+    background-color: grey;
+    height: 50px;
+    width: 335px;;
+    font-size: 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.draw-btn:hover {
+    font-size: 25px;
+    font-weight: 700;
+    height: 60px;
+    color: black;
+    border: 2px double black;
+    border-radius: 15px;
+}
+
+.deck-cards {
+    margin-bottom: 20px;
+    margin-left: 380px;
+    height: 70px;
+    width: 900px;
+}
+
+.deck-cards-follow{
+    position: absolute;
+    left: 100px;
+}</style><style type="text/css">.home {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    margin-top: 40px;
+    height: 100%;
+    background-image: url(/static/media/home-background.d520f086.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home h1 { 
+    margin: 0 auto;
+    color: white;
+}</style><style type="text/css">.main-header-div {
+    position: fixed;
+    height: 5%;
+    width: 100%;
+    margin: auto;
+    
+}
+
+.main-header-div nav {
+    height: 100%;
+}
+
+.main-header-div ul {
+    height: 100%;
+    display: flex;
+   background-image: url(/static/media/header.0f23f9d5.jpg);
+   background-position: center;
+}
+
+.main-header-div ul li{
+    list-style: none;
+}
+.main-header-div ul a{
+    text-decoration: none;
+    color:white;
+    margin: auto;
+    font-size: 20px;
+}</style></head>
+  <body data-gr-c-s-loaded="true">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><div class="App"><div class="main-header-div"><nav><ul><a href="http://localhost:3000/"><li>Home</li></a><a href="http://localhost:3000/fight-list"><li>Fight List</li></a><a href="http://localhost:3000/card-draw"><li>Card Draw</li></a></ul></nav></div><div class="fight-list"><div><h1 class="title-h1">Fight list</h1><button class="disabled-start start-btn">Let's do this</button><div class="score-time-div"><div class="score-div"><p class="score-label">Current Score</p><p class="score-p"><span>6</span></p></div><div class="timer-div"><p class="timer-label">Time Left</p><p class="score-p"><span class="">30</span></p></div></div><div class="question-div"><div class="question"><div class="remaining-ans"><span>0</span> / <span>10</span></div><p>Types of fruits</p></div></div><div class="input"><form _lpchecked="1"><label class="inputLabel" for="answer">Answer: </label><input class="answer" autocomplete="off" type="text" id="answer" value=""></form><button class="next-button">Enter</button><button class="next-button"><i class="fas fa-forward" aria-hidden="true"></i></button><button class="next-button">Pause</button></div><div><div class="all-answers-div"><div class="cor-answers-div"></div><div class="incor-answers-div"><p class="answers incorrect"></p></div></div></div></div></div></div></div>
+
+  <script src="./ia_files/bundle.js.download"></script><script src="./ia_files/1.chunk.js.download"></script><script src="./ia_files/main.chunk.js.download"></script><script src="./ia_files/main.0263ed4a4220732dfdec.hot-update.js.download"></script>
+
+</body></html>

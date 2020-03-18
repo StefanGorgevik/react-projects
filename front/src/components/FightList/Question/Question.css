@@ -6,7 +6,7 @@
     border-radius: 15px;
     height: 230px;
     padding: 80px;
-    width: 500px;
+    width: 50%;
     margin: auto;
     
 }
@@ -15,4 +15,13 @@
     font-size: 44px;
     font-weight: bold 700;
     font-family: 'Teko', sans-serif;
+}
+
+.remaining-ans {
+    display: flex;
+    padding: 2px;
+    width: 100px;
+    position: static;
+    font-size: 30px;
+    font-weight: bold;
 }

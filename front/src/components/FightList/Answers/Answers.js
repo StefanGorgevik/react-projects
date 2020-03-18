@@ -23,13 +23,17 @@ function Answers(props) {
         })
     }
     return (
-        <div className="all-answers-div">
-            <div className="cor-answers-div">
-                {corAnswers}
-            </div>
-            <div className="incor-answers-div">
-                {incorAnswers}
-            </div>
+        <div>
+            {!props.gamePaused ?
+                <div className="all-answers-div">
+
+                    <div className="cor-answers-div">
+                        {corAnswers}
+                    </div>
+                    <div className="incor-answers-div">
+                        {incorAnswers}
+                    </div>
+                </div> : null}
         </div>
     )
 }

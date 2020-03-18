@@ -1,0 +1,3069 @@
+(this["webpackJsonpfight-list"] = this["webpackJsonpfight-list"] || []).push([["main"],{
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/FightList/Answers/Answers.css":
+/*!*********************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!./node_modules/postcss-loader/src??postcss!./src/components/FightList/Answers/Answers.css ***!
+  \*********************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, ".all-answers-div {\r\n    display: flex;\r\n    flex-direction: row;\r\n    flex-wrap: wrap;\r\n    flex: 1 1;\r\n    padding: 10px;\r\n    min-width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n\r\n.cor-answers-div,\r\n.incor-answers-div {\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    height: 100%;\r\n    flex-grow: 100;\r\n    overflow: hidden;\r\n    min-width: 50%;\r\n}\r\n.cor-answers-div {\r\n    justify-content: flex-end;\r\n}\r\n\r\n\r\n.answers  {\r\n    /* min-width: 200px; */\r\n    height: 30px;\r\n    padding: 5px;\r\n    font-size: 15px;\r\n    font-weight: 600;\r\n    border-radius: 10px;\r\n}\r\n.correct {\r\n    color: rgb(214, 250, 255); \r\n    background-color: rgb(54, 47, 47);\r\n    margin-right: 30px;\r\n    width: 25%;\r\n}\r\n.incorrect {\r\n    color: rgb(150, 250, 20);\r\n    background-color: rgb(136, 13, 13);\r\n    margin-left: 30px;\r\n    width: 25%;\r\n}\r\n\r\n.blink-word {\r\n    color: rgb(143, 106, 19);\r\n    font-size: 18px;\r\n    border: 1px solid springgreen;\r\n}", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/FightList/GameOver/GameOver.css":
+/*!***********************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!./node_modules/postcss-loader/src??postcss!./src/components/FightList/GameOver/GameOver.css ***!
+  \***********************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, ".game-over-main-div {\r\n    position: fixed;\r\n    display: flex;\r\n    flex-direction: column;\r\n    border: 1px solid black;\r\n    margin: auto;\r\n    background-color: rgb(156, 148, 148);\r\n    color: white;\r\n    width: 100%;\r\n    height: 100%;\r\n    align-items: center;\r\n    background: rgba(0, 0, 0, 0.59);\r\n}\r\n\r\n.game-over-div {\r\n    width: 440px;\r\n    height: 265px;\r\n    background-color:rgba(0, 0, 0, 0.664);\r\n    padding: 50px;\r\n    border-radius: 5px;\r\n    box-sizing: border-box;\r\n    display: flex;\r\n    flex-direction: column;\r\n    margin: auto;\r\n}\r\n\r\n.game-over-div h1{\r\n    margin-bottom: 20px;\r\n}\r\n.game-over-div p{\r\n    margin-bottom: 10px;\r\n}\r\n\r\n.game-over-btn {\r\n    margin: auto;\r\n    margin-top: 35px;\r\n    width: 250px;\r\n    height: 35px;\r\n    font-size: 14px;\r\n    text-transform: uppercase;\r\n    font-weight: bold;\r\n    background-color: transparent;\r\n    color: white;\r\n    border: 3px solid rgba(235, 247, 248, 0.65);\r\n    border-radius: 8px;\r\n    cursor: pointer;\r\n}\r\n\r\n.score-span {\r\n    font-weight: bold;\r\n    font-size:22px;\r\n}", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/FightList/Input/Input.css":
+/*!*****************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!./node_modules/postcss-loader/src??postcss!./src/components/FightList/Input/Input.css ***!
+  \*****************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, ".input {\r\n    display: flex;\r\n    flex-grow: 1;\r\n    justify-content: center;\r\n    margin: auto;\r\n    margin-top: 20px;\r\n}\r\n\r\n.inputLabel {\r\n    font-size: 20px;\r\n    border-bottom: 1px solid black;\r\n    font-weight: bold;\r\n}\r\n.answer {\r\n    width: 300px;\r\n    border: 3px solid black;\r\n    border-radius: 5px;  height: 40px;\r\n    margin: 0 20px;\r\n    background-color: transparent;\r\n}\r\n\r\n.disabled-input {\r\n    border: 3px solid grey;\r\n}\r\n\r\n.input button {\r\n    height: 40px;\r\n    padding: 0 20px;\r\n    font-size: 20px;\r\n    cursor: pointer;\r\n}\r\n\r\n.next-button {\r\n    display: flex;\r\n    background-color: inherit;\r\n    border: 3px solid rgb(27, 26, 26);\r\n    border-radius: 4px;\r\n    width: 100px;\r\n    height: 50px;\r\n    font-size: 50px;\r\n    color: black;\r\n    justify-content: center;\r\n    cursor: pointer;\r\n    margin-left: 3px;\r\n}\r\n\r\n\r\n.disabled-link {\r\n    color: grey;\r\n    border: 3px solid grey;\r\n    pointer-events: none;\r\n}\r\n\r\n.pause-btn {\r\n    margin-left: 3px;\r\n}\r\n\r\n#answer {\r\n    font-size: 18px;\r\n    font-weight: 600;\r\n}", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/FightList/Question/Question.css":
+/*!***********************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!./node_modules/postcss-loader/src??postcss!./src/components/FightList/Question/Question.css ***!
+  \***********************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, ".question {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    border: 10px solid rgba(26, 21, 21, 0.527);\r\n    border-radius: 15px;\r\n    height: 230px;\r\n    padding: 80px;\r\n    width: 50%;\r\n    margin: auto;\r\n    \r\n}\r\n\r\n.question p {\r\n    font-size: 44px;\r\n    font-weight: bold 700;\r\n    font-family: 'Teko', sans-serif;\r\n}\r\n\r\n.remaining-ans {\r\n    display: flex;\r\n    padding: 2px;\r\n    width: 100px;\r\n    position: static;\r\n    font-size: 30px;\r\n    font-weight: bold;\r\n}", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/FightList/Score/Score.css":
+/*!*****************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!./node_modules/postcss-loader/src??postcss!./src/components/FightList/Score/Score.css ***!
+  \*****************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, " .score-div {\r\n    margin-right: 50px;\r\n} \r\n\r\n.score-label {\r\n    font-size: 20px;\r\n}", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/FightList/Timer/Timer.css":
+/*!*****************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!./node_modules/postcss-loader/src??postcss!./src/components/FightList/Timer/Timer.css ***!
+  \*****************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, ".timer-div {\r\n    margin-left: 50px;\r\n}\r\n\r\n.timer-label {\r\n    font-size: 20px;\r\n}\r\n\r\n.blinking{\r\n    animation:blinkingText 1.2s infinite;\r\n}\r\n@keyframes blinkingText{\r\n    0%{     color: #000;    }\r\n    50%{ color: rgb(62, 218, 23); font-size: 36px;}\r\n    100%{    color: rgb(228, 15, 15); font-size: 37px;    }\r\n}", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/MainHeader/MainHeader.css":
+/*!*****************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!./node_modules/postcss-loader/src??postcss!./src/components/MainHeader/MainHeader.css ***!
+  \*****************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+var ___CSS_LOADER_GET_URL_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
+var ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(/*! ../../assets/images/header.jpg */ "./src/assets/images/header.jpg");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
+// Module
+exports.push([module.i, ".main-header-div {\r\n    position: fixed;\r\n    height: 5%;\r\n    width: 100%;\r\n    margin: auto;\r\n    \r\n}\r\n\r\n.main-header-div nav {\r\n    height: 100%;\r\n}\r\n\r\n.main-header-div ul {\r\n    height: 100%;\r\n    display: flex;\r\n   background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n   background-position: center;\r\n}\r\n\r\n.main-header-div ul li{\r\n    list-style: none;\r\n}\r\n.main-header-div ul a{\r\n    text-decoration: none;\r\n    color:white;\r\n    margin: auto;\r\n    font-size: 20px;\r\n}", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/containers/App.css":
+/*!***********************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!./node_modules/postcss-loader/src??postcss!./src/containers/App.css ***!
+  \***********************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, ".App {\n  text-align: center;\n  height: 100vh;\n  overflow: hidden;\n}\n\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/containers/CardDraw/CardDraw.css":
+/*!*************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!./node_modules/postcss-loader/src??postcss!./src/containers/CardDraw/CardDraw.css ***!
+  \*************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+var ___CSS_LOADER_GET_URL_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
+var ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(/*! ../../assets/images/card-draw-background.jpg */ "./src/assets/images/card-draw-background.jpg");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
+// Module
+exports.push([module.i, ".card-draw  {\r\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n    height: 96vh;\r\n    background-position: center;\r\n    background-size: cover;\r\n    overflow: hidden;\r\n    cursor: pointer;\r\n    margin-top:45px;\r\n    height: 100%;\r\n}\r\n\r\n.card-draw-h1 {\r\n    padding: 30px;\r\n    color: white;\r\n    margin-bottom: 10px;\r\n}\r\n\r\n.back-card {\r\n    height: 500px;\r\n    width: 335px;\r\n}\r\n\r\n.draw-btn {\r\n    color: white;\r\n    background-color: grey;\r\n    height: 50px;\r\n    width: 335px;;\r\n    font-size: 15px;\r\n    margin-top: 10px;\r\n    cursor: pointer;\r\n    border: none;\r\n    outline: none;\r\n}\r\n\r\n.draw-btn:hover {\r\n    font-size: 25px;\r\n    font-weight: 700;\r\n    height: 60px;\r\n    color: black;\r\n    border: 2px double black;\r\n    border-radius: 15px;\r\n}\r\n\r\n.deck-cards {\r\n    margin-bottom: 20px;\r\n    margin-left: 380px;\r\n    height: 70px;\r\n    width: 900px;\r\n}\r\n\r\n.deck-cards-follow{\r\n    position: absolute;\r\n    left: 100px;\r\n}", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/containers/FightList/FightList.css":
+/*!***************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!./node_modules/postcss-loader/src??postcss!./src/containers/FightList/FightList.css ***!
+  \***************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+var ___CSS_LOADER_GET_URL_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
+var ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(/*! ../../assets/images/fight-list-wall.jpg */ "./src/assets/images/fight-list-wall.jpg");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
+// Module
+exports.push([module.i, ".fight-list {\r\n    margin: auto;\r\n    text-align: center;\r\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n    background-position: center;\r\n    background-size: cover;\r\n    overflow: hidden;\r\n    font-family: 'Sen', sans-serif;\r\n    margin-top:35px;\r\n    height: 100%;\r\n}\r\n\r\n.title-h1 {\r\n    padding: 25px;\r\n}\r\n\r\n.correct, \r\n.incorrect {\r\n    margin-top: 10px;\r\n}\r\n\r\n\r\n\r\n.question-div {\r\n    display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n}\r\n\r\n.score-p {\r\n    width: 70px;\r\n    height: 70px;\r\n    margin: auto;\r\n    padding: 5px;\r\n    margin-top: 10px;\r\n    font-size: 40px;\r\n    border: 5px solid rgba(8, 5, 37, 0.596);\r\n    border-radius: 13px;\r\n}\r\n\r\n.score-time-div {\r\n    display: flex;\r\n    flex-direction: row;\r\n    justify-content: center;\r\n    margin: auto;\r\n    margin-bottom: 30px;\r\n}\r\n\r\n\r\n\r\n.start-btn {\r\n    width: 250px;\r\n    background-color: rgb(139, 125, 125);\r\n    color: white;\r\n    height: 40px;\r\n    border: none;\r\n    border-radius: 15px;\r\n    margin-bottom: 40px;\r\n    cursor: pointer;\r\n    font-size: 20px;\r\n    text-transform: uppercase;\r\n    font-weight: 600;\r\n}\r\n\r\n.disabled-start {\r\n    color: rgba(75, 72, 72, 0.657);\r\n    pointer-events: none;\r\n}\r\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/containers/Home/Home.css":
+/*!*****************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!./node_modules/postcss-loader/src??postcss!./src/containers/Home/Home.css ***!
+  \*****************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+var ___CSS_LOADER_GET_URL_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
+var ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(/*! ../../assets/images/home-background.jpg */ "./src/assets/images/home-background.jpg");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
+// Module
+exports.push([module.i, ".home {\r\n    display: flex;\r\n    align-items: center;\r\n    margin: auto;\r\n    margin-top: 40px;\r\n    height: 100%;\r\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n    background-position: center;\r\n    background-repeat: no-repeat;\r\n    background-size: cover;\r\n}\r\n\r\n.home h1 { \r\n    margin: 0 auto;\r\n    color: white;\r\n}", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/index.css":
+/*!**************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!./node_modules/postcss-loader/src??postcss!./src/index.css ***!
+  \**************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  overflow: hidden;\n  \n}\nhtml, body {\n  margin: 0;\n  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',\n    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',\n    sans-serif;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  height: 100%;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',\n    monospace;\n}\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./src/assets/images/card-draw-background.jpg":
+/*!****************************************************!*\
+  !*** ./src/assets/images/card-draw-background.jpg ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/card-draw-background.3d2d48d8.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards sync recursive ^\\.\\/.*.*\\.jpg$":
+/*!******************************************************!*\
+  !*** ./src/assets/images/cards sync ^\.\/.*.*\.jpg$ ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./10C.jpg": "./src/assets/images/cards/10C.jpg",
+	"./10D.jpg": "./src/assets/images/cards/10D.jpg",
+	"./10H.jpg": "./src/assets/images/cards/10H.jpg",
+	"./10S.jpg": "./src/assets/images/cards/10S.jpg",
+	"./11C.jpg": "./src/assets/images/cards/11C.jpg",
+	"./11D.jpg": "./src/assets/images/cards/11D.jpg",
+	"./11H.jpg": "./src/assets/images/cards/11H.jpg",
+	"./11S.jpg": "./src/assets/images/cards/11S.jpg",
+	"./12C.jpg": "./src/assets/images/cards/12C.jpg",
+	"./12D.jpg": "./src/assets/images/cards/12D.jpg",
+	"./12H.jpg": "./src/assets/images/cards/12H.jpg",
+	"./12S.jpg": "./src/assets/images/cards/12S.jpg",
+	"./13C.jpg": "./src/assets/images/cards/13C.jpg",
+	"./13D.jpg": "./src/assets/images/cards/13D.jpg",
+	"./13H.jpg": "./src/assets/images/cards/13H.jpg",
+	"./13S.jpg": "./src/assets/images/cards/13S.jpg",
+	"./1C.jpg": "./src/assets/images/cards/1C.jpg",
+	"./1D.jpg": "./src/assets/images/cards/1D.jpg",
+	"./1H.jpg": "./src/assets/images/cards/1H.jpg",
+	"./1S.jpg": "./src/assets/images/cards/1S.jpg",
+	"./2C.jpg": "./src/assets/images/cards/2C.jpg",
+	"./2D.jpg": "./src/assets/images/cards/2D.jpg",
+	"./2H.jpg": "./src/assets/images/cards/2H.jpg",
+	"./2S.jpg": "./src/assets/images/cards/2S.jpg",
+	"./3C.jpg": "./src/assets/images/cards/3C.jpg",
+	"./3D.jpg": "./src/assets/images/cards/3D.jpg",
+	"./3H.jpg": "./src/assets/images/cards/3H.jpg",
+	"./3S.jpg": "./src/assets/images/cards/3S.jpg",
+	"./4C.jpg": "./src/assets/images/cards/4C.jpg",
+	"./4D.jpg": "./src/assets/images/cards/4D.jpg",
+	"./4H.jpg": "./src/assets/images/cards/4H.jpg",
+	"./4S.jpg": "./src/assets/images/cards/4S.jpg",
+	"./5C.jpg": "./src/assets/images/cards/5C.jpg",
+	"./5D.jpg": "./src/assets/images/cards/5D.jpg",
+	"./5H.jpg": "./src/assets/images/cards/5H.jpg",
+	"./5S.jpg": "./src/assets/images/cards/5S.jpg",
+	"./6C.jpg": "./src/assets/images/cards/6C.jpg",
+	"./6D.jpg": "./src/assets/images/cards/6D.jpg",
+	"./6H.jpg": "./src/assets/images/cards/6H.jpg",
+	"./6S.jpg": "./src/assets/images/cards/6S.jpg",
+	"./7C.jpg": "./src/assets/images/cards/7C.jpg",
+	"./7D.jpg": "./src/assets/images/cards/7D.jpg",
+	"./7H.jpg": "./src/assets/images/cards/7H.jpg",
+	"./7S.jpg": "./src/assets/images/cards/7S.jpg",
+	"./8C.jpg": "./src/assets/images/cards/8C.jpg",
+	"./8D.jpg": "./src/assets/images/cards/8D.jpg",
+	"./8H.jpg": "./src/assets/images/cards/8H.jpg",
+	"./8S.jpg": "./src/assets/images/cards/8S.jpg",
+	"./9C.jpg": "./src/assets/images/cards/9C.jpg",
+	"./9D.jpg": "./src/assets/images/cards/9D.jpg",
+	"./9H.jpg": "./src/assets/images/cards/9H.jpg",
+	"./9S.jpg": "./src/assets/images/cards/9S.jpg",
+	"./Gray_back.jpg": "./src/assets/images/cards/Gray_back.jpg",
+	"./Green_back.jpg": "./src/assets/images/cards/Green_back.jpg",
+	"./Red_back.jpg": "./src/assets/images/cards/Red_back.jpg",
+	"./Yellow_back.jpg": "./src/assets/images/cards/Yellow_back.jpg",
+	"./blue_back.jpg": "./src/assets/images/cards/blue_back.jpg",
+	"./purple_back.jpg": "./src/assets/images/cards/purple_back.jpg"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./src/assets/images/cards sync recursive ^\\.\\/.*.*\\.jpg$";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/10C.jpg":
+/*!*****************************************!*\
+  !*** ./src/assets/images/cards/10C.jpg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/10C.354b7b1e.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/10D.jpg":
+/*!*****************************************!*\
+  !*** ./src/assets/images/cards/10D.jpg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/10D.13a231b8.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/10H.jpg":
+/*!*****************************************!*\
+  !*** ./src/assets/images/cards/10H.jpg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/10H.d0a839fe.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/10S.jpg":
+/*!*****************************************!*\
+  !*** ./src/assets/images/cards/10S.jpg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/10S.c1302c56.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/11C.jpg":
+/*!*****************************************!*\
+  !*** ./src/assets/images/cards/11C.jpg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/11C.6d00e155.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/11D.jpg":
+/*!*****************************************!*\
+  !*** ./src/assets/images/cards/11D.jpg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/11D.fea5118a.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/11H.jpg":
+/*!*****************************************!*\
+  !*** ./src/assets/images/cards/11H.jpg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/11H.454bbb76.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/11S.jpg":
+/*!*****************************************!*\
+  !*** ./src/assets/images/cards/11S.jpg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/11S.686aea08.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/12C.jpg":
+/*!*****************************************!*\
+  !*** ./src/assets/images/cards/12C.jpg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/12C.e40a157b.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/12D.jpg":
+/*!*****************************************!*\
+  !*** ./src/assets/images/cards/12D.jpg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/12D.81deb606.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/12H.jpg":
+/*!*****************************************!*\
+  !*** ./src/assets/images/cards/12H.jpg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/12H.87f96511.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/12S.jpg":
+/*!*****************************************!*\
+  !*** ./src/assets/images/cards/12S.jpg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/12S.5b6749fd.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/13C.jpg":
+/*!*****************************************!*\
+  !*** ./src/assets/images/cards/13C.jpg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/13C.825911bf.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/13D.jpg":
+/*!*****************************************!*\
+  !*** ./src/assets/images/cards/13D.jpg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/13D.12084ce5.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/13H.jpg":
+/*!*****************************************!*\
+  !*** ./src/assets/images/cards/13H.jpg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/13H.39e16dba.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/13S.jpg":
+/*!*****************************************!*\
+  !*** ./src/assets/images/cards/13S.jpg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/13S.d710f10c.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/1C.jpg":
+/*!****************************************!*\
+  !*** ./src/assets/images/cards/1C.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/1C.fd0f054b.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/1D.jpg":
+/*!****************************************!*\
+  !*** ./src/assets/images/cards/1D.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/1D.7913ce4a.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/1H.jpg":
+/*!****************************************!*\
+  !*** ./src/assets/images/cards/1H.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/1H.c5b6a134.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/1S.jpg":
+/*!****************************************!*\
+  !*** ./src/assets/images/cards/1S.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/1S.272af404.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/2C.jpg":
+/*!****************************************!*\
+  !*** ./src/assets/images/cards/2C.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/2C.066ae686.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/2D.jpg":
+/*!****************************************!*\
+  !*** ./src/assets/images/cards/2D.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/2D.c6677ab4.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/2H.jpg":
+/*!****************************************!*\
+  !*** ./src/assets/images/cards/2H.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/2H.4b2cf809.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/2S.jpg":
+/*!****************************************!*\
+  !*** ./src/assets/images/cards/2S.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/2S.8e24cbaa.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/3C.jpg":
+/*!****************************************!*\
+  !*** ./src/assets/images/cards/3C.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/3C.38e0df66.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/3D.jpg":
+/*!****************************************!*\
+  !*** ./src/assets/images/cards/3D.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/3D.13159968.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/3H.jpg":
+/*!****************************************!*\
+  !*** ./src/assets/images/cards/3H.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/3H.b1db92f5.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/3S.jpg":
+/*!****************************************!*\
+  !*** ./src/assets/images/cards/3S.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/3S.ec5993d0.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/4C.jpg":
+/*!****************************************!*\
+  !*** ./src/assets/images/cards/4C.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/4C.78b8df72.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/4D.jpg":
+/*!****************************************!*\
+  !*** ./src/assets/images/cards/4D.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/4D.36b51a18.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/4H.jpg":
+/*!****************************************!*\
+  !*** ./src/assets/images/cards/4H.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/4H.8fccba55.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/4S.jpg":
+/*!****************************************!*\
+  !*** ./src/assets/images/cards/4S.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/4S.a4b73fff.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/5C.jpg":
+/*!****************************************!*\
+  !*** ./src/assets/images/cards/5C.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/5C.06b943fb.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/5D.jpg":
+/*!****************************************!*\
+  !*** ./src/assets/images/cards/5D.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/5D.10d89619.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/5H.jpg":
+/*!****************************************!*\
+  !*** ./src/assets/images/cards/5H.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/5H.f5d702f9.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/5S.jpg":
+/*!****************************************!*\
+  !*** ./src/assets/images/cards/5S.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/5S.8fd39dd7.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/6C.jpg":
+/*!****************************************!*\
+  !*** ./src/assets/images/cards/6C.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/6C.9d135342.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/6D.jpg":
+/*!****************************************!*\
+  !*** ./src/assets/images/cards/6D.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/6D.9ed6948d.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/6H.jpg":
+/*!****************************************!*\
+  !*** ./src/assets/images/cards/6H.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/6H.c7842889.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/6S.jpg":
+/*!****************************************!*\
+  !*** ./src/assets/images/cards/6S.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/6S.f1499471.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/7C.jpg":
+/*!****************************************!*\
+  !*** ./src/assets/images/cards/7C.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/7C.57202bbb.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/7D.jpg":
+/*!****************************************!*\
+  !*** ./src/assets/images/cards/7D.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/7D.3d5f6582.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/7H.jpg":
+/*!****************************************!*\
+  !*** ./src/assets/images/cards/7H.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/7H.25680783.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/7S.jpg":
+/*!****************************************!*\
+  !*** ./src/assets/images/cards/7S.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/7S.8e9fad3a.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/8C.jpg":
+/*!****************************************!*\
+  !*** ./src/assets/images/cards/8C.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/8C.b139c167.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/8D.jpg":
+/*!****************************************!*\
+  !*** ./src/assets/images/cards/8D.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/8D.d5830921.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/8H.jpg":
+/*!****************************************!*\
+  !*** ./src/assets/images/cards/8H.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/8H.424248ab.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/8S.jpg":
+/*!****************************************!*\
+  !*** ./src/assets/images/cards/8S.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/8S.b824de6c.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/9C.jpg":
+/*!****************************************!*\
+  !*** ./src/assets/images/cards/9C.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/9C.79c5345d.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/9D.jpg":
+/*!****************************************!*\
+  !*** ./src/assets/images/cards/9D.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/9D.4de857aa.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/9H.jpg":
+/*!****************************************!*\
+  !*** ./src/assets/images/cards/9H.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/9H.6df56ea4.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/9S.jpg":
+/*!****************************************!*\
+  !*** ./src/assets/images/cards/9S.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/9S.70f9f396.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/Gray_back.jpg":
+/*!***********************************************!*\
+  !*** ./src/assets/images/cards/Gray_back.jpg ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/Gray_back.243e0fb7.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/Green_back.jpg":
+/*!************************************************!*\
+  !*** ./src/assets/images/cards/Green_back.jpg ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/Green_back.4dfabab2.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/Red_back.jpg":
+/*!**********************************************!*\
+  !*** ./src/assets/images/cards/Red_back.jpg ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/Red_back.cc10d8e1.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/Yellow_back.jpg":
+/*!*************************************************!*\
+  !*** ./src/assets/images/cards/Yellow_back.jpg ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/Yellow_back.8788b8fa.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/blue_back.jpg":
+/*!***********************************************!*\
+  !*** ./src/assets/images/cards/blue_back.jpg ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/blue_back.d9e0d11e.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/cards/purple_back.jpg":
+/*!*************************************************!*\
+  !*** ./src/assets/images/cards/purple_back.jpg ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/purple_back.438c2e78.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/deckofcards.png":
+/*!*******************************************!*\
+  !*** ./src/assets/images/deckofcards.png ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/deckofcards.e0489e1f.png";
+
+/***/ }),
+
+/***/ "./src/assets/images/fight-list-wall.jpg":
+/*!***********************************************!*\
+  !*** ./src/assets/images/fight-list-wall.jpg ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/fight-list-wall.8ad2e26b.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/header.jpg":
+/*!**************************************!*\
+  !*** ./src/assets/images/header.jpg ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/header.0f23f9d5.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/home-background.jpg":
+/*!***********************************************!*\
+  !*** ./src/assets/images/home-background.jpg ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/home-background.d520f086.jpg";
+
+/***/ }),
+
+/***/ "./src/components/FightList/Answers/Answers.css":
+/*!******************************************************!*\
+  !*** ./src/components/FightList/Answers/Answers.css ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../../node_modules/postcss-loader/src??postcss!./Answers.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/FightList/Answers/Answers.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(true) {
+	module.hot.accept(/*! !../../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../../node_modules/postcss-loader/src??postcss!./Answers.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/FightList/Answers/Answers.css", function() {
+		var newContent = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../../node_modules/postcss-loader/src??postcss!./Answers.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/FightList/Answers/Answers.css");
+
+		if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./src/components/FightList/Answers/Answers.js":
+/*!*****************************************************!*\
+  !*** ./src/components/FightList/Answers/Answers.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Answers_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Answers.css */ "./src/components/FightList/Answers/Answers.css");
+/* harmony import */ var _Answers_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Answers_css__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "D:\\Programming\\Repositories\\react-projects\\front\\src\\components\\FightList\\Answers\\Answers.js";
+
+
+
+function Answers(props) {
+  if (props.correctAnswers.length !== 0) {
+    var corAnswers = props.correctAnswers.map((answer, i) => {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: props.wordToBlink === answer ? "answers correct blink-word" : "answers correct",
+        key: answer + i,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 9
+        },
+        __self: this
+      }, answer);
+    });
+  }
+
+  if (props.incorrectAnswers.length !== 0) {
+    var incorAnswers = props.incorrectAnswers.map((answer, i) => {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "answers incorrect",
+        key: answer + i,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 19
+        },
+        __self: this
+      }, answer);
+    });
+  }
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
+    },
+    __self: this
+  }, !props.gamePaused ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "all-answers-div",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "cor-answers-div",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: this
+  }, corAnswers), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "incor-answers-div",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
+    },
+    __self: this
+  }, incorAnswers)) : null);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Answers);
+
+/***/ }),
+
+/***/ "./src/components/FightList/GameOver/GameOver.css":
+/*!********************************************************!*\
+  !*** ./src/components/FightList/GameOver/GameOver.css ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../../node_modules/postcss-loader/src??postcss!./GameOver.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/FightList/GameOver/GameOver.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(true) {
+	module.hot.accept(/*! !../../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../../node_modules/postcss-loader/src??postcss!./GameOver.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/FightList/GameOver/GameOver.css", function() {
+		var newContent = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../../node_modules/postcss-loader/src??postcss!./GameOver.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/FightList/GameOver/GameOver.css");
+
+		if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./src/components/FightList/GameOver/GameOver.js":
+/*!*******************************************************!*\
+  !*** ./src/components/FightList/GameOver/GameOver.js ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _GameOver_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./GameOver.css */ "./src/components/FightList/GameOver/GameOver.css");
+/* harmony import */ var _GameOver_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_GameOver_css__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "D:\\Programming\\Repositories\\react-projects\\front\\src\\components\\FightList\\GameOver\\GameOver.js";
+
+
+
+function GameOver(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "game-over-main-div",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "game-over-div",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }, props.gameFinished ? "You got all answers!" : "Game over"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }, "You have scored ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "score-span",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }, props.score), " points"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "game-over-btn",
+    onClick: props.hide,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: this
+  }, "Close"))));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (GameOver);
+
+/***/ }),
+
+/***/ "./src/components/FightList/Input/Input.css":
+/*!**************************************************!*\
+  !*** ./src/components/FightList/Input/Input.css ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../../node_modules/postcss-loader/src??postcss!./Input.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/FightList/Input/Input.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(true) {
+	module.hot.accept(/*! !../../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../../node_modules/postcss-loader/src??postcss!./Input.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/FightList/Input/Input.css", function() {
+		var newContent = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../../node_modules/postcss-loader/src??postcss!./Input.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/FightList/Input/Input.css");
+
+		if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./src/components/FightList/Input/Input.js":
+/*!*************************************************!*\
+  !*** ./src/components/FightList/Input/Input.js ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Input_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Input.css */ "./src/components/FightList/Input/Input.css");
+/* harmony import */ var _Input_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Input_css__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "D:\\Programming\\Repositories\\react-projects\\front\\src\\components\\FightList\\Input\\Input.js";
+
+
+
+const Input = props => {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "input",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: undefined
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+    onSubmit: props.click,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: undefined
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    className: "inputLabel",
+    htmlFor: "answer",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: undefined
+  }, "Answer: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    className: props.timerStarted ? "answer" : "disabled-input answer",
+    disabled: props.timerStarted ? "" : "disabled",
+    autoComplete: "off",
+    onChange: props.saveValue,
+    type: "text",
+    id: "answer",
+    value: props.value,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: undefined
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    onClick: props.click,
+    className: props.timerStarted ? "next-button" : 'disabled-link next-button',
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: undefined
+  }, "Enter"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: props.timerStarted || !props.count === props.questions.length - 1 ? "next-button" : 'disabled-link next-button',
+    onClick: props.nextQuestion,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: undefined
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fas fa-forward",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: undefined
+  })), !props.static ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "next-button",
+    onClick: props.gamePaused ? props.continue : props.pause,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: undefined
+  }, props.gamePaused ? "Start" : "Pause") : null);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Input);
+
+/***/ }),
+
+/***/ "./src/components/FightList/Question/Question.css":
+/*!********************************************************!*\
+  !*** ./src/components/FightList/Question/Question.css ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../../node_modules/postcss-loader/src??postcss!./Question.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/FightList/Question/Question.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(true) {
+	module.hot.accept(/*! !../../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../../node_modules/postcss-loader/src??postcss!./Question.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/FightList/Question/Question.css", function() {
+		var newContent = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../../node_modules/postcss-loader/src??postcss!./Question.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/FightList/Question/Question.css");
+
+		if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./src/components/FightList/Question/Question.js":
+/*!*******************************************************!*\
+  !*** ./src/components/FightList/Question/Question.js ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Question_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Question.css */ "./src/components/FightList/Question/Question.css");
+/* harmony import */ var _Question_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Question_css__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "D:\\Programming\\Repositories\\react-projects\\front\\src\\components\\FightList\\Question\\Question.js";
+
+
+
+function Question(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "question",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, props.timerStarted ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "remaining-ans",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }, props.corAns.length), " / ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }, props.answersLength)) : null, props.timerStarted ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: this
+  }, props.count !== props.questions.length ? props.questions[props.count].question : null) : null);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Question);
+
+/***/ }),
+
+/***/ "./src/components/FightList/Score/Score.css":
+/*!**************************************************!*\
+  !*** ./src/components/FightList/Score/Score.css ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../../node_modules/postcss-loader/src??postcss!./Score.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/FightList/Score/Score.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(true) {
+	module.hot.accept(/*! !../../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../../node_modules/postcss-loader/src??postcss!./Score.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/FightList/Score/Score.css", function() {
+		var newContent = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../../node_modules/postcss-loader/src??postcss!./Score.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/FightList/Score/Score.css");
+
+		if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./src/components/FightList/Score/Score.js":
+/*!*************************************************!*\
+  !*** ./src/components/FightList/Score/Score.js ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Score_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Score.css */ "./src/components/FightList/Score/Score.css");
+/* harmony import */ var _Score_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Score_css__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "D:\\Programming\\Repositories\\react-projects\\front\\src\\components\\FightList\\Score\\Score.js";
+
+
+
+function Score(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "score-div",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "score-label",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, "Current Score"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "score-p",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }, props.timerStarted ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  }, props.score) : null));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Score);
+
+/***/ }),
+
+/***/ "./src/components/FightList/Timer/Timer.css":
+/*!**************************************************!*\
+  !*** ./src/components/FightList/Timer/Timer.css ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../../node_modules/postcss-loader/src??postcss!./Timer.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/FightList/Timer/Timer.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(true) {
+	module.hot.accept(/*! !../../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../../node_modules/postcss-loader/src??postcss!./Timer.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/FightList/Timer/Timer.css", function() {
+		var newContent = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../../node_modules/postcss-loader/src??postcss!./Timer.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/FightList/Timer/Timer.css");
+
+		if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./src/components/FightList/Timer/Timer.js":
+/*!*************************************************!*\
+  !*** ./src/components/FightList/Timer/Timer.js ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Timer_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Timer.css */ "./src/components/FightList/Timer/Timer.css");
+/* harmony import */ var _Timer_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Timer_css__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "D:\\Programming\\Repositories\\react-projects\\front\\src\\components\\FightList\\Timer\\Timer.js";
+
+
+
+function Timer(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "timer-div",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "timer-label",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, "Time Left"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "score-p",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, props.started ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: props.timer <= 5 ? "blinking" : "",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }, props.timer) : null));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Timer);
+
+/***/ }),
+
+/***/ "./src/components/MainHeader/MainHeader.css":
+/*!**************************************************!*\
+  !*** ./src/components/MainHeader/MainHeader.css ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./MainHeader.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/MainHeader/MainHeader.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(true) {
+	module.hot.accept(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./MainHeader.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/MainHeader/MainHeader.css", function() {
+		var newContent = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./MainHeader.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/components/MainHeader/MainHeader.css");
+
+		if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./src/components/MainHeader/MainHeader.js":
+/*!*************************************************!*\
+  !*** ./src/components/MainHeader/MainHeader.js ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _MainHeader_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./MainHeader.css */ "./src/components/MainHeader/MainHeader.css");
+/* harmony import */ var _MainHeader_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_MainHeader_css__WEBPACK_IMPORTED_MODULE_2__);
+var _jsxFileName = "D:\\Programming\\Repositories\\react-projects\\front\\src\\components\\MainHeader\\MainHeader.js";
+
+
+
+
+class MainHeader extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
+  render() {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "main-header-div",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 9
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 10
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 11
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      to: "/",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 12
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 12
+      },
+      __self: this
+    }, "Home")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      to: "/fight-list",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 13
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 13
+      },
+      __self: this
+    }, "Fight List")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      to: "/card-draw",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14
+      },
+      __self: this
+    }, "Card Draw")))));
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (MainHeader);
+
+/***/ }),
+
+/***/ "./src/containers/App.css":
+/*!********************************!*\
+  !*** ./src/containers/App.css ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../node_modules/postcss-loader/src??postcss!./App.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/containers/App.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(true) {
+	module.hot.accept(/*! !../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../node_modules/postcss-loader/src??postcss!./App.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/containers/App.css", function() {
+		var newContent = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../node_modules/postcss-loader/src??postcss!./App.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/containers/App.css");
+
+		if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./src/containers/App.js":
+/*!*******************************!*\
+  !*** ./src/containers/App.js ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _App_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./App.css */ "./src/containers/App.css");
+/* harmony import */ var _App_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_App_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _FightList_FightList__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./FightList/FightList */ "./src/containers/FightList/FightList.js");
+/* harmony import */ var _CardDraw_CardDraw__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./CardDraw/CardDraw */ "./src/containers/CardDraw/CardDraw.js");
+/* harmony import */ var _Home_Home__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Home/Home */ "./src/containers/Home/Home.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _components_MainHeader_MainHeader__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/MainHeader/MainHeader */ "./src/components/MainHeader/MainHeader.js");
+var _jsxFileName = "D:\\Programming\\Repositories\\react-projects\\front\\src\\containers\\App.js";
+
+
+
+
+
+
+
+
+function App() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "App",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["BrowserRouter"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_MainHeader_MainHeader__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Switch"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Route"], {
+    exact: true,
+    path: "/",
+    component: _Home_Home__WEBPACK_IMPORTED_MODULE_4__["default"],
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Route"], {
+    exact: true,
+    path: "/fight-list",
+    component: _FightList_FightList__WEBPACK_IMPORTED_MODULE_2__["default"],
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Route"], {
+    exact: true,
+    path: "/card-draw",
+    component: _CardDraw_CardDraw__WEBPACK_IMPORTED_MODULE_3__["default"],
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: this
+  }))));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (App);
+
+/***/ }),
+
+/***/ "./src/containers/CardDraw/CardDraw.css":
+/*!**********************************************!*\
+  !*** ./src/containers/CardDraw/CardDraw.css ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./CardDraw.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/containers/CardDraw/CardDraw.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(true) {
+	module.hot.accept(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./CardDraw.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/containers/CardDraw/CardDraw.css", function() {
+		var newContent = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./CardDraw.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/containers/CardDraw/CardDraw.css");
+
+		if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./src/containers/CardDraw/CardDraw.js":
+/*!*********************************************!*\
+  !*** ./src/containers/CardDraw/CardDraw.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _CardDraw_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CardDraw.css */ "./src/containers/CardDraw/CardDraw.css");
+/* harmony import */ var _CardDraw_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_CardDraw_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _assets_images_cards_Gray_back_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../assets/images/cards/Gray_back.jpg */ "./src/assets/images/cards/Gray_back.jpg");
+/* harmony import */ var _assets_images_cards_Gray_back_jpg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_assets_images_cards_Gray_back_jpg__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _assets_images_deckofcards_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../assets/images/deckofcards.png */ "./src/assets/images/deckofcards.png");
+/* harmony import */ var _assets_images_deckofcards_png__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_assets_images_deckofcards_png__WEBPACK_IMPORTED_MODULE_3__);
+var _jsxFileName = "D:\\Programming\\Repositories\\react-projects\\front\\src\\containers\\CardDraw\\CardDraw.js";
+
+
+
+
+
+class CardDraw extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
+  constructor(props) {
+    super(props);
+
+    this.drawACard = () => {
+      var ranType = this.state.cardsTypes[Math.floor(Math.random() * 4)];
+      var ranNum = Math.floor(1 + Math.random() * 12);
+
+      var h = __webpack_require__("./src/assets/images/cards sync recursive ^\\.\\/.*.*\\.jpg$")(`./${ranNum}${ranType}.jpg`);
+
+      this.setState({
+        card: h,
+        drawn: true
+      });
+    };
+
+    this.state = {
+      cardsTypes: ["C", "D", "H", "S"],
+      card: '../../assets/images/cards/10H.jpg',
+      drawn: false
+    };
+  }
+
+  render() {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "card-draw",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 26
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+      className: "card-draw-h1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 27
+      },
+      __self: this
+    }, "CardDraw"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      className: "deck-cards",
+      src: _assets_images_deckofcards_png__WEBPACK_IMPORTED_MODULE_3___default.a,
+      alt: "deck-of-cards",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 28
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      className: "deck-cards deck-cards-follow",
+      src: _assets_images_deckofcards_png__WEBPACK_IMPORTED_MODULE_3___default.a,
+      alt: "deck-of-cards",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 29
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "card",
+      onClick: this.drawACard,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 30
+      },
+      __self: this
+    }, !this.state.drawn ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      className: "back-card",
+      src: _assets_images_cards_Gray_back_jpg__WEBPACK_IMPORTED_MODULE_2___default.a,
+      alt: "card",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 32
+      },
+      __self: this
+    }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      className: "back-card",
+      src: this.state.card,
+      alt: "card",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 33
+      },
+      __self: this
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      onClick: this.drawACard,
+      className: "draw-btn",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 35
+      },
+      __self: this
+    }, "Draw"));
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (CardDraw);
+
+/***/ }),
+
+/***/ "./src/containers/FightList/FightList.css":
+/*!************************************************!*\
+  !*** ./src/containers/FightList/FightList.css ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./FightList.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/containers/FightList/FightList.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(true) {
+	module.hot.accept(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./FightList.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/containers/FightList/FightList.css", function() {
+		var newContent = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./FightList.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/containers/FightList/FightList.css");
+
+		if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./src/containers/FightList/FightList.js":
+/*!***********************************************!*\
+  !*** ./src/containers/FightList/FightList.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_FightList_Question_Question__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/FightList/Question/Question */ "./src/components/FightList/Question/Question.js");
+/* harmony import */ var _components_FightList_Input_Input__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/FightList/Input/Input */ "./src/components/FightList/Input/Input.js");
+/* harmony import */ var _components_FightList_Timer_Timer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/FightList/Timer/Timer */ "./src/components/FightList/Timer/Timer.js");
+/* harmony import */ var _components_FightList_GameOver_GameOver__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/FightList/GameOver/GameOver */ "./src/components/FightList/GameOver/GameOver.js");
+/* harmony import */ var _components_FightList_Score_Score__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/FightList/Score/Score */ "./src/components/FightList/Score/Score.js");
+/* harmony import */ var _components_FightList_Answers_Answers__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/FightList/Answers/Answers */ "./src/components/FightList/Answers/Answers.js");
+/* harmony import */ var _FightList_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./FightList.css */ "./src/containers/FightList/FightList.css");
+/* harmony import */ var _FightList_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_FightList_css__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+var _jsxFileName = "D:\\Programming\\Repositories\\react-projects\\front\\src\\containers\\FightList\\FightList.js";
+
+
+
+
+
+
+
+
+
+
+class FightList extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
+  constructor(props) {
+    super(props);
+
+    this.startGame = () => {
+      this.setState({
+        answers: this.props.answers,
+        questions: this.props.questions,
+        timerStarted: true,
+        timerStopped: false,
+        timer: 30,
+        count: 0,
+        score: 0,
+        gameOver: false,
+        correctAnswers: [],
+        incorrectAnswers: [],
+        inputValue: '',
+        gamePaused: false,
+        gameFinished: false,
+        currentAnswerLength: this.state.answers[this.state.count].answers.length,
+        gameStatic: false
+      });
+      this.startInterval();
+    };
+
+    this.hideGameOverAlert = () => {
+      this.clearInterval();
+      this.setState({
+        gameOver: false,
+        timerStopped: true,
+        timerStarted: false,
+        correctAnswers: [],
+        incorrectAnswers: [],
+        gameFinished: false
+      });
+    };
+
+    this.startInterval = () => {
+      if (this.state.timerStopped && this.state.gamePaused) {
+        this.timer = setInterval(() => {
+          this.setState({
+            timerStarted: true,
+            timerStopped: false,
+            gamePaused: false
+          });
+
+          if (this.state.timerStarted) {
+            if (this.state.timer > 0) {
+              this.setState(prevState => ({
+                timer: prevState.timer - 1
+              }));
+            }
+
+            if (this.state.timer === 0 && this.state.count !== this.state.questions.length - 1) {
+              this.nextQuestion();
+            }
+
+            if (this.state.timer === 0 && this.state.count === this.state.questions.length - 1) {
+              this.setState({
+                timerStarted: false,
+                timerStopped: true,
+                gameOver: true,
+                gamePaused: true,
+                timer: 0
+              });
+              this.clearInterval();
+            }
+
+            if (this.state.correctAnswers.length === this.state.currentAnswerLength && this.state.count !== this.state.questions.length - 1) {
+              console.log("1voto");
+              this.nextQuestion();
+              this.setState({
+                timer: 30,
+                correctAnswers: [],
+                incorrectAnswers: []
+              });
+            }
+
+            if (this.state.correctAnswers.length === this.state.currentAnswerLength && this.state.count === this.state.questions.length - 1) {
+              this.setState({
+                gameFinished: true,
+                gameOver: true,
+                timer: 0,
+                correctAnswers: [],
+                incorrectAnswers: []
+              });
+              this.clearInterval();
+            }
+          }
+        }, 1000);
+      }
+    };
+
+    this.clearInterval = () => {
+      console.log("glear");
+      clearInterval(this.timer);
+
+      if (!this.state.gamePaused) {
+        this.setState({
+          gamePaused: true,
+          timerStopped: true,
+          timerStarted: false
+        });
+      }
+
+      if (this.state.gameFinished) {
+        console.log('game fin clear');
+        this.setState({
+          currentAnswerLength: 1
+        });
+      }
+    };
+
+    this.continueTimer = () => {
+      if (this.state.gamePaused) {
+        this.startInterval();
+        this.setState({
+          gamePaused: false,
+          timerStopped: false,
+          timerStarted: true
+        });
+      }
+    };
+
+    this.nextQuestion = () => {
+      if (this.state.count !== this.state.questions.length - 1) {
+        this.setState(prevState => ({
+          count: prevState.count + 1,
+          timer: 30,
+          correctAnswers: [],
+          incorrectAnswers: [],
+          inputValue: '',
+          currentAnswerLength: this.state.answers[prevState.count + 1].answers.length
+        }));
+      }
+
+      if (this.state.timer === 0 && this.state.count !== this.state.questions.length - 1) {
+        console.log("11");
+        this.setState(prevState => ({
+          count: prevState.count + 1,
+          timer: 30,
+          correctAnswers: [],
+          incorrectAnswers: [],
+          currentAnswerLength: this.state.answers[prevState.count + 1].answers.length
+        }));
+      }
+    };
+
+    this.toTitleCase = phrase => {
+      const str = phrase.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+      return str;
+    };
+
+    this.handleInputValue = event => {
+      var val = this.toTitleCase(event.target.value);
+      this.setState({
+        inputValue: val
+      });
+    };
+
+    this.saveAnswer = event => {
+      event.preventDefault();
+      var corAnswers = this.state.correctAnswers;
+      var incorAnswers = this.state.incorrectAnswers;
+      var answers = this.state.answers;
+      var score = this.state.score;
+      var checkCorAns = corAnswers.filter(ans => {
+        return ans === this.state.inputValue;
+      });
+
+      if (checkCorAns.length === 0) {
+        var answer = answers[this.state.count].answers.filter(ans => {
+          return ans === this.state.inputValue;
+        });
+
+        if (answer.length !== 0) {
+          score++;
+          corAnswers.push(answer[0]);
+          answers[this.state.count].answers.splice(answers[this.state.count].answers.indexOf(answer[0]), 1);
+          this.setState({ ...this.state,
+            answers: answers,
+            ...this.state.correctAnswers,
+            correctAnswers: corAnswers,
+            inputValue: '',
+            score: score,
+            repeat: ''
+          });
+        }
+
+        if (answer.length === 0) {
+          incorAnswers.push(this.state.inputValue);
+          this.setState({ ...this.state.incorrectAnswers,
+            incorrectAnswers: incorAnswers,
+            inputValue: ''
+          });
+        }
+      } else if (checkCorAns.length === 1) {
+        this.setState({
+          repeat: this.state.inputValue,
+          inputValue: ''
+        });
+        setTimeout(() => {
+          this.setState({
+            repeat: ''
+          });
+        }, 400);
+      }
+    };
+
+    this.state = {
+      inputValue: '',
+      answers: [],
+      questions: [],
+      correctAnswers: [],
+      incorrectAnswers: [],
+      currentAnswerLength: 0,
+      count: 0,
+      score: 0,
+      timer: 0,
+      gameOver: false,
+      timerStarted: false,
+      timerStopped: true,
+      gamePaused: true,
+      repeat: '',
+      gameFinished: false,
+      gameStatic: true
+    };
+  }
+
+  componentDidMount() {
+    this.setState({
+      answers: this.props.answers,
+      questions: this.props.questions
+    });
+  }
+
+  render() {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "fight-list",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 210
+      },
+      __self: this
+    }, this.state.gameOver || this.state.gameFinished ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_FightList_GameOver_GameOver__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      hide: this.hideGameOverAlert,
+      score: this.state.score,
+      gameFinished: this.state.gameFinished,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 212
+      },
+      __self: this
+    }) : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 216
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+      className: "title-h1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 217
+      },
+      __self: this
+    }, "Fight list"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      className: this.state.timerStarted ? "disabled-start start-btn" : "start-btn",
+      onClick: this.startGame,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 218
+      },
+      __self: this
+    }, "Let's do this"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "score-time-div",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 221
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_FightList_Score_Score__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      timerStarted: this.state.timerStarted,
+      score: this.state.score,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 222
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_FightList_Timer_Timer__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      next: this.nextQuestion,
+      timer: this.state.timer,
+      started: this.state.timerStarted,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 224
+      },
+      __self: this
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "question-div",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 230
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_FightList_Question_Question__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      count: this.state.count,
+      questions: this.state.questions,
+      timerStarted: this.state.timerStarted,
+      corAns: this.state.correctAnswers,
+      answersLength: this.state.currentAnswerLength,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 231
+      },
+      __self: this
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_FightList_Input_Input__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      saveValue: this.handleInputValue,
+      click: this.saveAnswer,
+      value: this.state.inputValue,
+      timerStarted: this.state.timerStarted,
+      nextQuestion: this.nextQuestion,
+      pause: this.clearInterval,
+      gamePaused: this.state.gamePaused,
+      continue: this.continueTimer,
+      timerStopped: this.timerStopped,
+      questions: this.state.questions,
+      count: this.state.count,
+      static: this.state.gameStatic,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 238
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_FightList_Answers_Answers__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      wordToBlink: this.state.repeat,
+      correctAnswers: this.state.correctAnswers,
+      incorrectAnswers: this.state.incorrectAnswers,
+      gamePaused: this.state.gamePaused,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 251
+      },
+      __self: this
+    })));
+  }
+
+}
+
+function mapStateToProps(state) {
+  return {
+    questions: state.questions,
+    answers: state.answers
+  };
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_8__["connect"])(mapStateToProps)(FightList));
+
+/***/ }),
+
+/***/ "./src/containers/Home/Home.css":
+/*!**************************************!*\
+  !*** ./src/containers/Home/Home.css ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./Home.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/containers/Home/Home.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(true) {
+	module.hot.accept(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./Home.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/containers/Home/Home.css", function() {
+		var newContent = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./Home.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/containers/Home/Home.css");
+
+		if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./src/containers/Home/Home.js":
+/*!*************************************!*\
+  !*** ./src/containers/Home/Home.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Home_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Home.css */ "./src/containers/Home/Home.css");
+/* harmony import */ var _Home_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Home_css__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "D:\\Programming\\Repositories\\react-projects\\front\\src\\containers\\Home\\Home.js";
+
+
+
+class Home extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
+  render() {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "home",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 6
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 7
+      },
+      __self: this
+    }, "Welcome to game page"));
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Home);
+
+/***/ }),
+
+/***/ "./src/index.css":
+/*!***********************!*\
+  !*** ./src/index.css ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../node_modules/postcss-loader/src??postcss!./index.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/index.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(true) {
+	module.hot.accept(/*! !../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../node_modules/postcss-loader/src??postcss!./index.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/index.css", function() {
+		var newContent = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../node_modules/postcss-loader/src??postcss!./index.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/index.css");
+
+		if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.css */ "./src/index.css");
+/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_index_css__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _containers_App__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./containers/App */ "./src/containers/App.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _serviceWorker__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./serviceWorker */ "./src/serviceWorker.js");
+/* harmony import */ var _redux_store__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./redux/store */ "./src/redux/store.js");
+var _jsxFileName = "D:\\Programming\\Repositories\\react-projects\\front\\src\\index.js";
+
+
+
+
+
+
+
+react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_redux__WEBPACK_IMPORTED_MODULE_4__["Provider"], {
+  store: _redux_store__WEBPACK_IMPORTED_MODULE_6__["default"],
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 9
+  },
+  __self: undefined
+}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_App__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 9
+  },
+  __self: undefined
+})), document.getElementById('root')); // If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+
+_serviceWorker__WEBPACK_IMPORTED_MODULE_5__["unregister"]();
+
+/***/ }),
+
+/***/ "./src/redux/reducers/reducer.js":
+/*!***************************************!*\
+  !*** ./src/redux/reducers/reducer.js ***!
+  \***************************************/
+/*! exports provided: reducer */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "reducer", function() { return reducer; });
+const initState = {
+  answers: [{
+    id: 0,
+    answers: ['Asia', 'Africa', 'North America', 'South America', 'Antarctica', 'Europe', 'Australia']
+  }, {
+    id: 1,
+    answers: ['Apple', 'Banana', 'Pineapple', 'Cranberry', 'Raspberry', 'Kiwi', 'Peach', 'Pear', 'Lemon', 'Orange']
+  }, {
+    id: 2,
+    answers: ['Ferrari', 'Golf', 'Bmw', 'Audi', 'Ford', 'Renault', 'Masserati']
+  }, {
+    id: 3,
+    answers: ['Samsung', 'Iphone', 'Huawei']
+  }, {
+    id: 4,
+    answers: ['Bedroom', 'Living room', 'Closet', 'Bathroom', 'Kitchen', 'Hall']
+  }, {
+    id: 5,
+    answers: ['Smell', 'Yell', 'Tell', 'Well']
+  }, {
+    id: 6,
+    answers: ['Action', 'Horror', 'Drama', 'Scence-fiction']
+  }, {
+    id: 7,
+    answers: ['Cello', 'Guitar', "Drums", "Viola"]
+  }, {
+    id: 8,
+    answers: ['Cousin']
+  }],
+  questions: [{
+    id: 0,
+    question: "Write all of the continents"
+  }, {
+    id: 1,
+    question: "Types of fruits"
+  }, {
+    id: 2,
+    question: "Car brands"
+  }, {
+    id: 3,
+    question: "Mobile phones brands"
+  }, {
+    id: 4,
+    question: "Rooms in a house"
+  }, {
+    id: 5,
+    question: "Words that rhyme with sell"
+  }, {
+    id: 6,
+    question: "Types of movie genres"
+  }, {
+    id: 7,
+    question: "10 most played instruments"
+  }, {
+    id: 8,
+    question: "Types of family relationships"
+  }]
+};
+function reducer(state = initState, action) {
+  switch (action.type) {
+    default:
+      return state;
+  }
+}
+
+/***/ }),
+
+/***/ "./src/redux/store.js":
+/*!****************************!*\
+  !*** ./src/redux/store.js ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
+/* harmony import */ var _reducers_reducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./reducers/reducer */ "./src/redux/reducers/reducer.js");
+
+
+const store = Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(_reducers_reducer__WEBPACK_IMPORTED_MODULE_1__["reducer"]);
+/* harmony default export */ __webpack_exports__["default"] = (store);
+
+/***/ }),
+
+/***/ "./src/serviceWorker.js":
+/*!******************************!*\
+  !*** ./src/serviceWorker.js ***!
+  \******************************/
+/*! exports provided: register, unregister */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "register", function() { return register; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unregister", function() { return unregister; });
+// This optional code is used to register a service worker.
+// register() is not called by default.
+// This lets the app load faster on subsequent visits in production, and gives
+// it offline capabilities. However, it also means that developers (and users)
+// will only see deployed updates on subsequent visits to a page, after all the
+// existing tabs open on the page have been closed, since previously cached
+// resources are updated in the background.
+// To learn more about the benefits of this model and instructions on how to
+// opt-in, read https://bit.ly/CRA-PWA
+const isLocalhost = Boolean(window.location.hostname === 'localhost' || // [::1] is the IPv6 localhost address.
+window.location.hostname === '[::1]' || // 127.0.0.0/8 are considered localhost for IPv4.
+window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/));
+function register(config) {
+  if (false) {}
+}
+
+function registerValidSW(swUrl, config) {
+  navigator.serviceWorker.register(swUrl).then(registration => {
+    registration.onupdatefound = () => {
+      const installingWorker = registration.installing;
+
+      if (installingWorker == null) {
+        return;
+      }
+
+      installingWorker.onstatechange = () => {
+        if (installingWorker.state === 'installed') {
+          if (navigator.serviceWorker.controller) {
+            // At this point, the updated precached content has been fetched,
+            // but the previous service worker will still serve the older
+            // content until all client tabs are closed.
+            console.log('New content is available and will be used when all ' + 'tabs for this page are closed. See https://bit.ly/CRA-PWA.'); // Execute callback
+
+            if (config && config.onUpdate) {
+              config.onUpdate(registration);
+            }
+          } else {
+            // At this point, everything has been precached.
+            // It's the perfect time to display a
+            // "Content is cached for offline use." message.
+            console.log('Content is cached for offline use.'); // Execute callback
+
+            if (config && config.onSuccess) {
+              config.onSuccess(registration);
+            }
+          }
+        }
+      };
+    };
+  }).catch(error => {
+    console.error('Error during service worker registration:', error);
+  });
+}
+
+function checkValidServiceWorker(swUrl, config) {
+  // Check if the service worker can be found. If it can't reload the page.
+  fetch(swUrl, {
+    headers: {
+      'Service-Worker': 'script'
+    }
+  }).then(response => {
+    // Ensure service worker exists, and that we really are getting a JS file.
+    const contentType = response.headers.get('content-type');
+
+    if (response.status === 404 || contentType != null && contentType.indexOf('javascript') === -1) {
+      // No service worker found. Probably a different app. Reload the page.
+      navigator.serviceWorker.ready.then(registration => {
+        registration.unregister().then(() => {
+          window.location.reload();
+        });
+      });
+    } else {
+      // Service worker found. Proceed as normal.
+      registerValidSW(swUrl, config);
+    }
+  }).catch(() => {
+    console.log('No internet connection found. App is running in offline mode.');
+  });
+}
+
+function unregister() {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.ready.then(registration => {
+      registration.unregister();
+    }).catch(error => {
+      console.error(error.message);
+    });
+  }
+}
+
+/***/ }),
+
+/***/ 1:
+/*!**************************************************************************************************************!*\
+  !*** multi (webpack)/hot/dev-server.js ./node_modules/react-dev-utils/webpackHotDevClient.js ./src/index.js ***!
+  \**************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! D:\Programming\Repositories\react-projects\front\node_modules\webpack\hot\dev-server.js */"./node_modules/webpack/hot/dev-server.js");
+__webpack_require__(/*! D:\Programming\Repositories\react-projects\front\node_modules\react-dev-utils\webpackHotDevClient.js */"./node_modules/react-dev-utils/webpackHotDevClient.js");
+module.exports = __webpack_require__(/*! D:\Programming\Repositories\react-projects\front\src\index.js */"./src/index.js");
+
+
+/***/ })
+
+},[[1,"runtime-main",1]]]);
+//# sourceMappingURL=main.chunk.js.map

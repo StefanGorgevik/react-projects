@@ -14,7 +14,7 @@
 
 .game-over-div {
     width: 440px;
-    height: 255px;
+    height: 265px;
     background-color:rgba(0, 0, 0, 0.664);
     padding: 50px;
     border-radius: 5px;
@@ -31,11 +31,11 @@
     margin-bottom: 10px;
 }
 
-.game-over-btns {
-    margin: 20px;
-    margin-top: 30px;
-    width: 120px;
-    height: 30px;
+.game-over-btn {
+    margin: auto;
+    margin-top: 35px;
+    width: 250px;
+    height: 35px;
     font-size: 14px;
     text-transform: uppercase;
     font-weight: bold;

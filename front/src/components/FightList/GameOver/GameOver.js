@@ -8,8 +8,7 @@ function GameOver (props) {
                  <h1>{props.gameFinished ? "You got all answers!" : "Game over"}</h1>
                  <p>You have scored <span className="score-span">{props.score}</span> points</p>
                  <div>
-                     <button className="game-over-btns" onClick={props.hide} >Close</button>
-                     <button className="game-over-btns" onClick={props.play} >Play again</button>
+                     <button className="game-over-btn" onClick={props.hide} >Close</button>
                  </div>
             </div>
             </div>
