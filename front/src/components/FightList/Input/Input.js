@@ -64,7 +64,7 @@ const Input = (props) => {
             {
                 !props.static ?
                     <button className="next-button"
-                        onClick={props.gamePaused ? props.continue : props.pause}>{props.gamePaused ? "Start" : "Pause"}
+                        onClick={props.gamePaused ? props.continue : props.pause}>{props.gamePaused ? "Resume" : "Pause"}
                     </button> : null
             }
         </div >

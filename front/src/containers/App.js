@@ -15,6 +15,7 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/fight-list" component={FightList} />
           <Route exact path="/card-draw" component={CardDraw} />
+          <Route exact path="/header" component={MainHeader} />
         </Switch>
       </BrowserRouter>
     </div>

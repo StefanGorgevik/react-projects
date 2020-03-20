@@ -6,7 +6,9 @@
     background-size: cover;
     overflow: hidden;
     font-family: 'Sen', sans-serif;
-    height: 100%;
+    height: 95%;
+    position: absolute;
+    width: 100%;
 }
 
 .title-h1 {

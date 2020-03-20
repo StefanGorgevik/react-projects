@@ -1,12 +1,12 @@
 .card-draw  {
     background-image: url('../../assets/images/card-draw-background.jpg');
-    height: 96vh;
     background-position: center;
     background-size: cover;
     overflow: hidden;
     cursor: pointer;
-    margin-top:45px;
-    height: 100%;
+    height:95%;
+    position: absolute;
+    width: 100%;
 }
 
 .card-draw-h1 {
