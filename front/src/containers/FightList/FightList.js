@@ -7,11 +7,15 @@ import GameOver from '../../components/FightList/GameOver/GameOver'
 import Score from '../../components/FightList/Score/Score'
 import Answers from '../../components/FightList/Answers/Answers'
 import QuestionsInfo from '../../components/FightList/QuestionsInfo/QuestionsInfo'
+import HowToPlay from '../../components/FightList/HowToPlay/HowToPlay'
 import './FightList.css'
-
 import { connect } from 'react-redux'
 
+
+
+
 class FightList extends React.Component {
+
     constructor(props) {
         super(props)
         this.state = {
@@ -31,7 +35,9 @@ class FightList extends React.Component {
             repeat: '',
             gameFinished: false,
             gameStatic: true,
-            hintUsed: false
+            hintUsed: false,
+            infoPopped: true,
+            infoCount: 0
         }
     }
 
@@ -78,23 +84,21 @@ class FightList extends React.Component {
                             this.clearInterval()
                         }
                     }
-                    if (this.state.correctAnswers.length === this.state.currentAnswerLength) {
-                        if (this.state.count !== this.state.questions.length - 1) {
-                            this.nextQuestion()
-                            this.setState({
-                                timer: 30, correctAnswers: [], incorrectAnswers: []
-                            })
-                        }
-                        if (this.state.count === this.state.questions.length - 1) {
-                            this.setState({
-                                gameFinished: true,
-                                gameOver: true,
-                                gameStatic: true,
-                                timer: 0, correctAnswers: [],
-                                incorrectAnswers: []
-                            })
-                            this.clearInterval()
-                        }
+                    if (this.state.correctAnswers.length === this.state.currentAnswerLength && this.state.count !== this.state.questions.length - 1) {
+                        this.nextQuestion()
+                        this.setState({
+                            timer: 30, correctAnswers: [], incorrectAnswers: []
+                        })
+                    }
+                    if (this.state.correctAnswers.length === this.state.currentAnswerLength && this.state.count === this.state.questions.length - 1) {
+                        this.setState({
+                            gameFinished: true,
+                            gameOver: true,
+                            gameStatic: true,
+                            timer: 0, correctAnswers: [],
+                            incorrectAnswers: []
+                        })
+                        this.clearInterval()
                     }
                 }
             }, 1000);
@@ -126,13 +130,13 @@ class FightList extends React.Component {
 
     nextQuestion = () => {
         if (this.state.count !== this.state.questions.length - 1) {
-                this.setState((prevState) => ({
-                    count: prevState.count + 1, timer: 30,
-                    correctAnswers: [], incorrectAnswers: [],
-                    inputValue: '',
-                    currentAnswerLength: this.state.answers[prevState.count + 1].answers.length,
-                    hintUsed: false
-                }))
+            this.setState((prevState) => ({
+                count: prevState.count + 1, timer: 30,
+                correctAnswers: [], incorrectAnswers: [],
+                inputValue: '',
+                currentAnswerLength: this.state.answers[prevState.count + 1].answers.length,
+                hintUsed: false
+            }))
             if (this.state.timer === 0) {
                 this.setState((prevState) => ({
                     count: prevState.count + 1, timer: 30,
@@ -210,6 +214,25 @@ class FightList extends React.Component {
         })
     }
 
+    closeInfoPopup = () => {
+        this.setState({
+            infoPopped: false
+        })
+    }
+
+    nextInfo = () => {
+        this.setState((prevState) => ({
+            infoCount: prevState.infoCount + 1
+        }))
+        if (this.state.infoCount === 2) {
+            setTimeout(() => {
+                this.setState({
+                    infoCount: 5
+                })
+            }, 500)
+        }
+    }
+
     render() {
         return (
             <div className="fight-list">
@@ -218,11 +241,13 @@ class FightList extends React.Component {
                         score={this.state.score}
                         gameFinished={this.state.gameFinished}
                     /> : null}
+                {this.state.infoPopped ? <HowToPlay closeInfo={this.closeInfoPopup} /> : null}
                 <div>
                     <h1 className="title-h1">Fight list</h1>
-                    <button className={this.state.timerStarted ? "disabled-start start-btn" : "start-btn"}
-                        onClick={this.startGame}>
-                        Let's do this</button>
+                    <button id={this.state.infoCount === 3 ? "d" : ""}
+                        className={this.state.infoPopped || this.state.infoCount !== 5 ? "disabled-start start-btn" : "start-btn"}
+                        onClick={this.state.timerStarted ? this.hideGameOverAlert : this.startGame}>{this.state.timerStarted ? "Give up" : "Start playing"}
+                    </button>
                     <div className="score-time-div" >
                         <Score timerStarted={this.state.timerStarted}
                             score={this.state.score} />
@@ -241,6 +266,7 @@ class FightList extends React.Component {
                             corAns={this.state.correctAnswers}
                             answersLength={this.state.currentAnswerLength}
                         />
+
                     </div>
                     <Input
                         saveValue={this.handleInputValue}
@@ -256,7 +282,20 @@ class FightList extends React.Component {
                         static={this.state.gameStatic}
                         useHint={this.useHint}
                         hintUsed={this.state.hintUsed}
+                        infoPopped={this.state.infoPopped}
+                        infoCount={this.state.infoCount}
+                        nextInfo={this.nextInfo}
                     />
+                    {this.state.infoCount <= 2 ?
+                        <div id="ok-div">
+                            {this.state.timerStarted || this.state.infoPopped ? null :
+                                <button onClick={this.nextInfo} className="ok-button">
+                                    {
+                                        this.state.infoCount === 2 ? "Got it!" : <i className="fas fa-thumbs-up"></i>
+                                    }
+
+                                </button>}
+                        </div> : null}
                     <Answers
                         wordToBlink={this.state.repeat}
                         correctAnswers={this.state.correctAnswers}

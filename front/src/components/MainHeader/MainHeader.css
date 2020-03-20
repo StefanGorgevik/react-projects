@@ -1,9 +1,9 @@
 .main-header-div {
-    position: fixed;
+    position: relative;
     height: 5%;
     width: 100%;
-    margin: auto;
-    
+    margin: 0 auto;
+    color: white;
 }
 
 .main-header-div nav {
@@ -19,10 +19,32 @@
 
 .main-header-div ul li{
     list-style: none;
+    color:white;
+    font-size: 20px;
+    margin: auto;
 }
 .main-header-div ul a{
     text-decoration: none;
     color:white;
     margin: auto;
     font-size: 20px;
+}
+
+.hovered-div {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    border: 2px solid rgb(202, 184, 184);
+    color: white;
+    margin: auto;
+}
+.hovered-div ul {
+    display: flex;
+    flex-direction: column;
+    padding:15px;
+    color: white;
+}
+.hovered-div ul li {
+    color: white;
+    border-bottom: 1px solid white;
 }

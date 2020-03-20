@@ -24,7 +24,7 @@
 .question-div {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    justify-content: space-evenly;
 }
 
 .score-p {
@@ -61,8 +61,35 @@
     text-transform: uppercase;
     font-weight: 600;
 }
+#d,
+.start-btn:hover {
 
+    color: rgba(49, 9, 9, 0.774);
+    width: 350px;
+    background-color: rgb(81, 148, 224);
+}
 .disabled-start {
     color: rgba(75, 72, 72, 0.657);
     pointer-events: none;
 }
+
+.ok-div {
+    display: flex;
+    margin: auto;
+    font-size: 15px;
+}
+.ok-button{
+    margin: 0 auto;
+    font-size: 35px;
+    margin-top: 20px;
+    width: 300px;
+    background-color: rgb(99, 99, 192);
+    border: none;
+    border-radius: 15px;
+    height: 70px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: inherit;
+}
+
