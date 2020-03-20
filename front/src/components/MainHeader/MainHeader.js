@@ -29,20 +29,20 @@ class MainHeader extends React.Component {
                     <ul>
                         <Link to="/"><li>Home</li></Link>
 
-                        <li onMouseEnter={this.hoverHandler} onMouseLeave={this.hoverLeaveHandler}>Game list</li>
-
+                        {/* <li onMouseEnter={this.hoverHandler} onMouseLeave={this.hoverLeaveHandler}>Game list</li> */}
+                        <Link to="/fight-list"><li>Fight List</li></Link>
                         <Link to="/card-draw"><li>Card Draw</li></Link>
                     </ul>
                    
                 </nav>
-                {/* {this.state.hovered ?  */}
+                {/* {this.state.hovered ? 
                 
                 <div className="hovered-div">
                     <ul>
                         <Link to="/fight-list"><li>Fight List</li></Link>
                         <Link to="/game-two"> <li>Game Two</li></Link>
                     </ul>
-                </div>
+                </div> */}
             </div>
         )
     }
