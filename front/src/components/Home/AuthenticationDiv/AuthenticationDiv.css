@@ -1,9 +1,17 @@
-.authentication-div {
-    width: 33.3%;
+.authentication-main-div {
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 33.3%;
+
+}
+
+.authentication-div {
+    height: 70%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-color: black;
+    width: 100%;
 }

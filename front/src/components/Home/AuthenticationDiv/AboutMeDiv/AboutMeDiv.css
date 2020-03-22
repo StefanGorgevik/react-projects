@@ -1,0 +1,21 @@
+.about-me-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    width: 100%;
+    background-color: rgb(148, 142, 115);
+    color: rgba(32, 27, 27, 0.739);
+}
+.about-me-div a {
+    color: rgb(131, 89, 89);
+    text-decoration: none;
+}
+.about-me-h1 {
+    cursor: pointer;
+    margin: auto;
+}
+.about-me-h1:hover {
+    font-size: 45px;
+    color: rgb(110, 178, 235);
+}

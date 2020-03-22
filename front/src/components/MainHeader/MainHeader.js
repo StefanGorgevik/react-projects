@@ -5,8 +5,8 @@ import './MainHeader.css'
 
 function MainHeader(props){
         return (
-            <nav>
-                <ul >
+            <nav className="main-header">
+                <ul className="main-header-ul">
                 <Link to="/"> <li>Home</li></Link>
                     <li>Game List
                          <div >

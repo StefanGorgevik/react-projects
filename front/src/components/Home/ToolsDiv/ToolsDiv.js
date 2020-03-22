@@ -13,19 +13,19 @@ class ToolsDiv extends React.Component {
         }
     }
 
-      componentDidMount() {
-        setInterval(() => {
-            this.setState((prevState) => ({
-                flCount: prevState.flCount + 1
-            })
-            )
-            if (this.state.flCount === 4) {
-                this.setState({
-                    flCount: 1
-                })
-            }
-        }, 5000);
-    }
+    //   componentDidMount() {
+    //     setInterval(() => {
+    //         this.setState((prevState) => ({
+    //             flCount: prevState.flCount + 1
+    //         })
+    //         )
+    //         if (this.state.flCount === 4) {
+    //             this.setState({
+    //                 flCount: 1
+    //             })
+    //         }
+    //     }, 5000);
+    // }
 
     dotClicked = (i) => {
         console.log(i)

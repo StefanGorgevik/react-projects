@@ -3,6 +3,7 @@ import Answer from '../../../assets/images/fight-list/answer.jpg'
 import Tools from '../../../assets/images/fight-list/tools.jpg'
 import { Link } from 'react-router-dom'
 import './FightListDiv.css'
+import firstImage from '../../../assets/images/fight-list/fight-list-img-1.jpg'
 
 class FightListDiv extends React.Component {
     constructor(props) {
@@ -13,19 +14,19 @@ class FightListDiv extends React.Component {
         }
     }
 
-      componentDidMount() {
-        setInterval(() => {
-            this.setState((prevState) => ({
-                flCount: prevState.flCount + 1
-            })
-            )
-            if (this.state.flCount === 4) {
-                this.setState({
-                    flCount: 1
-                })
-            }
-        }, 5000);
-    }
+    //   componentDidMount() {
+    //     setInterval(() => {
+    //         this.setState((prevState) => ({
+    //             flCount: prevState.flCount + 1
+    //         })
+    //         )
+    //         if (this.state.flCount === 4) {
+    //             this.setState({
+    //                 flCount: 1
+    //             })
+    //         }
+    //     }, 5000);
+    // }
 
     dotClicked = (i) => {
         console.log(i)
@@ -47,7 +48,7 @@ class FightListDiv extends React.Component {
                     {this.state.flCount === 1 ?
                         <div className="div1">
                             <h1>Are you ready for the challenge?</h1>
-                            <div className="fight-list-img-1"></div>
+                            <img src={firstImage} alt="first-img" />
                             <h2>You get 30 seconds</h2>
                             <h2>You get 10 questions</h2>
                             <h2>Give as many answers as you can!</h2>

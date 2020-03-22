@@ -1,6 +1,7 @@
 import React from 'react'
 // import { Link } from 'react-router-dom'
 import './AuthenticationDiv.css'
+import AboutMeDiv from './AboutMeDiv/AboutMeDiv'
 
 class AuthenticationDiv extends React.Component {
     constructor(props) {
@@ -10,8 +11,11 @@ class AuthenticationDiv extends React.Component {
 
     render() {
         return (
-            <div className="authentication-div">
-                    
+            <div className="authentication-main-div">
+                    <div className="authentication-div">
+
+                    </div>
+                    <AboutMeDiv/>
                 </div>
         )
     }

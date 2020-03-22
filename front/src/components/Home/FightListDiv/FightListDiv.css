@@ -19,13 +19,14 @@
     background-color: rgb(66, 179, 100);
 }
 
-.fight-list-img-1 {
-    background-image: url('../../../assets/images/fight-list/fight-list-img-1.jpg');
+.div1 img {
     background-size: contain;
-    width: 600px;
+    width: 100%;
+    border-radius: 10px;
     height: 130px;
     background-repeat: no-repeat;
     margin: 0 auto;
+    margin-bottom: 150px;
 }
 
 .dot {
@@ -77,6 +78,7 @@
 
   .fight-list-div .div2 img {
       margin: 40px auto;
+      border-radius: 10px;
   }
   .fight-list-div .div1 h1,
     .fight-list-div .div2 h1,
