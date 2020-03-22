@@ -18,21 +18,25 @@ class AboutMeHeader extends React.Component {
     render() {
         var lis = this.props.divs.map((div, i) => {
             return (
-                <li key={i} onMouseEnter={() => this.props.divHovered(div)}>
+                <li className="about-me-header-ul-li"
+                    key={i}
+                    onMouseEnter={() => this.props.divHovered(div)}>
                     {div}
                 </li>
             )
         })
         return (
-            <nav onMouseEnter={this.handleHover} onMouseLeave={this.handleHoverLeave} className="about-me-header">
-                {this.state.hovered ? <ul>
+            <nav className={this.state.hovered ? "about-me-header about-me-header-active" : "about-me-header"}
+                onMouseEnter={this.handleHover}
+                onMouseLeave={this.handleHoverLeave}
+            >
+                {/* {this.state.hovered ?  */}
+                <ul className={this.state.hovered ? "about-me-header-ul-active" : "about-me-header-ul"}>
                     {lis}
-                </ul> :
-                    <div className="arrow-div">
-                        <span>
-                            <i class="fas fa-arrow-alt-circle-right">
-
-                            </i></span>
+                </ul>
+                {this.state.hovered ? null :
+                <div className="arrow-div">
+                    <i class="fas fa-arrow-alt-circle-right"></i>
                     </div>}
 
             </nav>

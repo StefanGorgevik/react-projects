@@ -1,20 +1,22 @@
 import React from 'react'
 import './PersonalInfo.css'
+import '../shared.css'
+
 
 function PersonalInfo(props) {
-    const keys = ["Professional Headline", "Email", "Location", "Age",]
-    const values = ["Full stack web developer", "stefangorgevik@hotmail.com", "Skopje, Macedonia", 25]
+    const keys = ["Name", "Professional Headline", "Email", "Phone Number", "Location", "Age",]
+    const values = ["Stefan Gorgevik","Full stack web developer", "stefangorgevik@hotmail.com","079-231-692", "Skopje, Macedonia", 25]
     const infoDivs = keys.map((key, i) => {
         return (
             <div className="info-div">
-                <p className="key-p">{key}</p>
-                <p className="value-p">{values[i]}</p>
+                <h3 className="key-h3">{key}</h3>
+                <h2 className="value-h2">{values[i]}</h2>
             </div>
         )
     })
     return (
         <div className="personal-info-div">
-            <h1 className="personal-info-div-h1 ">Personal Info</h1>
+            <h1 className="about-me-divs-title">Personal Info</h1>
 
             {infoDivs}
 

@@ -1,40 +1,55 @@
 .technical-skills-div {
     display: flex;
     flex-direction: column;
-    text-align: center;
     align-items: center;
-    height: 100%;
+    min-height: 100%;
     width: 100%;
 }
 
 .ul-div {
     display: flex;
-    width: 100%;
-    flex-direction: row;
+    align-items: center;
     justify-content: center;
-    list-style: square ;
-    margin-top: 30px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    border: 1px dotted rgba(245, 245, 245, 0.335);
+    height: 50%;
+}
+
+.ul-div:hover {
+    background-color: rgba(51, 38, 47, 0.568);
+
+}
+
+.ul-div ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: flex-start;
+    width: 60%;
+    padding-left: 10%;
+}
+.ul-div ul li {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+    padding: 1%;
 }
 
 .ul-div-h1{
+    margin-left: 50px;
     color: white;
-    width:400px;
+    justify-content: flex-start;
+    margin-right: 100px;
+    width: 40%;
+    font-size: 45px;
 }
 
-.ul-div ul li {
-    padding: 10px;
-    font-size: 25px;
-    list-style: square;
-    color: white;
-    
-}
-.ul-div ul {
-    list-style: square outside none;
-    color: white;
-}
 
-.technical-skills-div-h1 {
-    margin-top: 100px;
-    margin-bottom: 150px;
-    font-size: 50px;
+
+.fa-circle-notch {
+    font-size: 26px;
+    height: 100%;
 }
