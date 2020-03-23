@@ -4,28 +4,33 @@
     background-size: cover;
     overflow: hidden;
     cursor: pointer;
-    height:95%;
+    height:100%;
     position: absolute;
     width: 100%;
 }
 
+.card{ 
+    max-height: 100%;
+}
+
 .card-draw-h1 {
-    padding: 30px;
     color: white;
     margin-bottom: 10px;
+    font-size: 65px;
+    padding: 45px;
 }
 
 .back-card {
-    height: 500px;
-    width: 335px;
+    height: 900px;
+    width: 700px;
 }
 
 .draw-btn {
     color: white;
     background-color: grey;
-    height: 50px;
-    width: 335px;;
-    font-size: 15px;
+    height: 70px;
+    width: 700px;;
+    font-size: 35px;
     margin-top: 10px;
     cursor: pointer;
     border: none;

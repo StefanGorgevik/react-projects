@@ -2,16 +2,53 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    width: 33.3%;
-
+    width: 25%;
+    background-image: url('../../../assets/images/backgrounds/authentication-div-background.jpg');
 }
 
 .authentication-div {
-    height: 70%;
+    height: 60%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    background-color: black;
+    justify-content: center;
     width: 100%;
+    border: 1px dotted black;
+}
+.about-me-div {
+    display: flex;
+    justify-content: center;
+    height: 40%;
+    width: 100%;
+}
+
+.authenticaton-div-btns,
+.about-me-div-btn {
+    width: 500px;
+    height: 70px;
+    text-transform: uppercase;
+    font-size: 40px;
+    letter-spacing: 5px;
+    border: 3px solid rgb(73, 60, 60);
+    color: #1b1f27;
+    border-radius: 25px;
+    background-color: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.authenticaton-div-btns {
+    margin: 20px auto;
+}
+
+.about-me-div-btn {
+    margin-top: 50px;
+}
+
+.authenticaton-div-btns:hover,
+.about-me-div-btn:hover {
+    color: rgb(200, 190, 190);
+    letter-spacing: 10px;
+    border: 3px solid rgb(221, 190, 190);
+    border-radius: 15px;
 }

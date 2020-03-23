@@ -54,6 +54,7 @@
 .courses-ul li {
     display: flex;
     justify-content: flex-start;
+    align-items: center;
     padding-bottom: 20px;
     font-size: 30px;
     margin-left: 5%;

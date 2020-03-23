@@ -1,9 +1,35 @@
 .tools-div {
-    width: 33.3%;
+    width: 37.6%;
     height: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: blue;
+    border-left:1px solid white;
+}
+
+.tools-title-h1 {
+    color: white;
+    font-size: 40px;
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.678);
+    width: 40%;
+    margin: 0 auto;
+}
+
+.tools-div .div1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 60%;
+    color: whitesmoke;
+}
+
+.tools-div .div1 h1 {
+    font-size: 40px;
+}
+.tools-div .div1 h2 {
+    font-size: 35px;
+}
+.tools-div .div1 h3 {
+    font-size: 45px;
 }

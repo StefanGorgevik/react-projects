@@ -7,14 +7,15 @@
 }
 
 .inputLabel {
-    font-size: 20px;
+    font-size: 24px;
     border-bottom: 1px solid black;
     font-weight: bold;
 }
 .answer {
-    width: 300px;
+    width: 450px;
     border: 3px solid black;
-    border-radius: 5px;  height: 40px;
+    border-radius: 5px;  
+    height: 50px;
     margin: 0 20px;
     background-color: transparent;
 }
@@ -23,22 +24,15 @@
     border: 3px solid grey;
 }
 
-/* .input button {
-    height: 40px;
-    padding: 0 20px;
-    font-size: 20px;
-    cursor: pointer;
-} */
-
 .next-button {
     display: flex;
     font-family: inherit;
     background-color: inherit;
     border: 3px solid rgb(27, 26, 26);
     border-radius: 4px;
-    width: 200px;
-    height: 40px;
-    font-size:18px;
+    width: 250px;
+    height: 50px;
+    font-size:24px;
     color: black;
     justify-content: center;
     cursor: pointer;
@@ -49,7 +43,7 @@
 
 .next-button:hover {
     width: 205px;
-    height: 45px;
+    height: 52px;
     font-size: 22px;
 }
 
@@ -83,7 +77,6 @@
     font-size: 18px;
     padding: 0 auto;
     margin-top: 2px;
-    
 }
 
 .fas {

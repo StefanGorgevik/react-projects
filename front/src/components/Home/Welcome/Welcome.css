@@ -1,0 +1,32 @@
+.welcome-div {
+    height: 50%;
+    width: 100%;
+    background-color: #160b16ef;
+    background-image: url("../../../assets/images/backgrounds/welcome-background.png");
+    border-bottom: 10px solid rgba(0, 0, 2, 0.377);
+    font-family: 'Acme', sans-serif;
+
+}
+
+.welcome-div h1 {
+    margin: 60px auto;
+    margin-top: 80px;
+    color: rgba(248, 250, 249, 0.657);
+    text-transform: uppercase;
+    font-size: 100px;
+    letter-spacing: 20px;
+}
+.welcome-div h3 {
+    margin: 60px auto;
+    margin-top: 80px;
+    color: rgba(248, 250, 249, 0.89);
+    font-size: 40px;
+    letter-spacing: 5px;
+}
+.welcome-div h2 {
+    margin: 60px auto;
+    margin-top: 80px;
+    color: rgba(248, 250, 249, 0.89);
+    font-size: 50px;
+    letter-spacing: 10px;
+}

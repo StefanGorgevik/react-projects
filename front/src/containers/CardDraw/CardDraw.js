@@ -21,7 +21,6 @@ class CardDraw extends React.Component {
     }
 
     render() {
-        
         return (
             <div className="card-draw">
                 <h1 className="card-draw-h1">CardDraw</h1>

@@ -1,9 +1,17 @@
 .home {
     display: flex;
+    flex-direction: column;
     align-items: center;
     margin: auto;
     height: 100%;
     width: 100%;
     position: absolute;
+    background-color: #160b16ef;
+    background-image: url("../../assets/images/backgrounds/welcome-background.png");
 }
 
+.home-bottom-div {
+    display: flex;
+    height: 60%;
+    width: 100%;
+}

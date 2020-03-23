@@ -1,8 +1,7 @@
 import React from 'react'
 import './Input.css'
 
-const Input = (props) => {
-    
+const Input = (props) => { 
     return (
         <div className="input">
             <form onSubmit={props.click}>
@@ -41,8 +40,6 @@ const Input = (props) => {
                         <span className="info-span"><i className="fas fa-arrow-up"></i>
                         </span>Press to skip question</p>
                     : null}
-
-
             </div>
 
             <div>

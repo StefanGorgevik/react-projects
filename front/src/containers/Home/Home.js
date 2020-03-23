@@ -1,11 +1,9 @@
 import React from 'react'
 import './Home.css'
-// import { Link } from 'react-router-dom'
-// import Answer from '../../assets/images/fight-list/answer.jpg'
-// import Tools from '../../assets/images/fight-list/tools.jpg'
-import FightListDiv from '../../components/Home/FightListDiv/FightListDiv'
+import GamesDiv from '../../components/Home/GamesDiv/GamesDiv'
 import ToolsDiv from '../../components/Home/ToolsDiv/ToolsDiv'
 import AuthenticationDiv from '../../components/Home/AuthenticationDiv/AuthenticationDiv'
+import Welcome from '../../components/Home/Welcome/Welcome'
 
 class Home extends React.Component {
     constructor(props) {
@@ -16,9 +14,12 @@ class Home extends React.Component {
     render() {
         return (
             <div className="home">
-                <FightListDiv />
-                <ToolsDiv />
-                <AuthenticationDiv />
+                <Welcome/>
+                <div className="home-bottom-div">
+                    <GamesDiv />
+                    <ToolsDiv />
+                    <AuthenticationDiv />
+                </div>
             </div>
         )
     }

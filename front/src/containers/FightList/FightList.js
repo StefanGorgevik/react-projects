@@ -235,14 +235,14 @@ class FightList extends React.Component {
 
     render() {
         return (
-            <div className="fight-list">
+            <div className="fight-list-main">
                 {this.state.gameOver || this.state.gameFinished ?
                     <GameOver hide={this.hideGameOverAlert}
                         score={this.state.score}
                         gameFinished={this.state.gameFinished}
                     /> : null}
                 {this.state.infoPopped ? <HowToPlay closeInfo={this.closeInfoPopup} /> : null}
-                <div>
+                <div className="fight-list">
                     <h1 className="title-h1">Fight list</h1>
                     <button id={this.state.infoCount === 3 ? "d" : ""}
                         className={this.state.infoPopped || this.state.infoCount !== 5 ? "disabled-start start-btn" : "start-btn"}
