@@ -1,7 +1,4 @@
  import React from 'react'
-// import Answer from '../../../assets/images/fight-list/answer.jpg'
-// import Tools from '../../../assets/images/fight-list/tools.jpg'
-import { Link } from 'react-router-dom'
 import './GamesDiv.css'
 import firstImage from '../../../assets/images/fight-list/fight-list-img-1.jpg'
 import DotsDiv from '../DotsDiv/DotsDiv'

@@ -11,7 +11,7 @@ function MainHeader(props){
                     <li className="main-header-ul-li">Game List
                          <div className="main-header-ul-li-div">
                             <Link to="/fight-list">Fight list</Link>
-                            <Link to="#">Game Two</Link>
+                            <Link to="/memory-card">Memory Card</Link>
                             <Link to="#">Game Three</Link>
                         </div>
                     </li>

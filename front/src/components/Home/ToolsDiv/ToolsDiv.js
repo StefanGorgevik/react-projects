@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+
 import './ToolsDiv.css'
 import DotsDiv from '../DotsDiv/DotsDiv'
 
@@ -35,13 +35,6 @@ class ToolsDiv extends React.Component {
     }
 
     render() {
-        var dots = this.state.divs.map((div, i) => {
-            return (
-                <span onClick={() => this.dotClicked(i + 1)}
-                    key={i}
-                    className={this.state.flCount === i + 1 ? "dot active-dot" : "dot"}></span>
-            )
-        })
         return (
             <div className={`tools-div tools-div-${this.state.flCount}`}>
                 <h1 className="tools-title-h1">Tools</h1>
@@ -62,7 +55,6 @@ class ToolsDiv extends React.Component {
                         <p>Tool 2</p>
                         <p>Upcoming</p>
                     </div> : null}
-                    
                     <DotsDiv divs={this.state.divs} dotClicked={this.dotClicked} flCount={this.state.flCount} />
             </div>
         )
