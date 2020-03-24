@@ -11,7 +11,7 @@
 
 .games-div .div1 img {
     background-size: contain;
-    width: 60%;
+    width: 70%;
     border-radius: 10px;
     height: 90px;
     background-repeat: no-repeat;
@@ -24,9 +24,10 @@
     font-size: 15px;
 }
 
-  .games-div .div1 {
+.games-div .div1 {
     min-height: 50%;
-  }
+}
+
 .games-div .div2,
 .games-div .div3{
     min-height: 50%;

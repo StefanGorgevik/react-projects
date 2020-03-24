@@ -5,7 +5,6 @@
     margin: auto;
     height: 100%;
     width: 100%;
-    position: absolute;
     background-color: #160b16ef;
     background-image: url("../../assets/images/backgrounds/welcome-background.png");
 }
