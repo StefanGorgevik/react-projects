@@ -1,13 +1,41 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+import Login from '../Authentication/Login/Login'
+import Register from '../Authentication/Register/Register'
 import './MainHeader.css'
 
-function MainHeader(props){
+class MainHeader extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state={
+            loginClicked: false,
+            registerClicked: false
+        }
+    }
+
+    loginClickedHandler = () => {
+        this.setState(prevState => ({
+            loginClicked: !prevState.loginClicked
+        }))
+    }
+    registerClickedHandler = () => {
+        this.setState(prevState => ({
+            registerClicked: !prevState.registerClicked
+        }))
+    }
+
+    render() {
         return (
+            <>
+            {this.state.loginClicked ? 
+            <Login clicked={this.loginClickedHandler} /> : null }
+
+            {this.state.registerClicked ? 
+            <Register clicked={this.registerClickedHandler} /> : null }
+            
             <nav className="main-header">
                 <ul className="main-header-ul">
-                <li className="main-header-ul-li"><Link to="/"> Home</Link></li>
+                    <li className="main-header-ul-li"><Link to="/"> Home</Link></li>
                     <li className="main-header-ul-li">Game List
                          <div className="main-header-ul-li-div">
                             <Link to="/fight-list">Fight list</Link>
@@ -18,20 +46,22 @@ function MainHeader(props){
                     <li className="main-header-ul-li">Tools
                         <div className="main-header-ul-li-div">
                             <Link to="/card-draw">Card Draw</Link>
-                            <Link to="#">Game Two</Link>
-                            <Link to="#">Game Three</Link>
+                            <Link to="/stopwatch">Stopwatch</Link>
+                            <Link to="#">Tool Three</Link>
                         </div>
                     </li>
                     <li className="main-header-ul-li">Account
                         <div className="main-header-ul-li-div">
-                            <Link to="#">Login</Link>
-                            <Link to="#">Register</Link>
+                            <Link to="#" onClick={this.loginClickedHandler}>Login</Link>
+                            <Link to="#" onClick={this.registerClickedHandler}>Register</Link>
                         </div>
                     </li>
-                     <li className="main-header-ul-li"><Link to="/about-me">About me</Link></li>
+                    <li className="main-header-ul-li"><Link to="/about-me">About me</Link></li>
                 </ul>
             </nav>
+            </>
         )
+    }
 }
 
 export default MainHeader

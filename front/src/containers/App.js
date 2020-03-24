@@ -7,6 +7,7 @@ import Home from './Home/Home'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import MainHeader from '../components/MainHeader/MainHeader';
 import MemoryCard from './MemoryCard/MemoryCard';
+import Stopwatch from './Stopwatch/Stopwatch'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route exact path="/header" component={MainHeader} />
           <Route exact path="/about-me" component={AboutMe} />
           <Route exact path="/memory-card" component={MemoryCard} />
+          <Route exact path="/stopwatch" component={Stopwatch} />
         </Switch>
       </BrowserRouter>
     </div>
