@@ -27,6 +27,10 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StefanGorgevik/react-projects.git"
+  },
   "browserslist": {
     "production": [
       ">0.2%",
