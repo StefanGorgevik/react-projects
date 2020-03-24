@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7a93845c4f20b404728c7754d4c61f3d",
+    "revision": "c9448c53190c5cef2523c21fd2053e16",
     "url": "/index.html"
   },
   {
-    "revision": "ab63dfb530eef2205c8c",
-    "url": "/static/css/main.69bc4d0f.chunk.css"
+    "revision": "4ebbb72e88d6e2371b18",
+    "url": "/static/css/main.b02e6c82.chunk.css"
   },
   {
-    "revision": "bead95a6da867c3dd31c",
-    "url": "/static/js/2.1f058643.chunk.js"
+    "revision": "837a168e38dae58caf97",
+    "url": "/static/js/2.c9e39cf0.chunk.js"
   },
   {
     "revision": "f231859d6585c4cd5f80c344783ed269",
-    "url": "/static/js/2.1f058643.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.c9e39cf0.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ab63dfb530eef2205c8c",
-    "url": "/static/js/main.6dca1ba9.chunk.js"
+    "revision": "4ebbb72e88d6e2371b18",
+    "url": "/static/js/main.346d43f2.chunk.js"
   },
   {
     "revision": "176e5982079ee7645667",
@@ -248,8 +248,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/Yellow_back.8788b8fa.jpg"
   },
   {
+    "revision": "d7fea9e85d394d2c9fa2c07d8a885247",
+    "url": "/static/media/acdc.d7fea9e8.jpg"
+  },
+  {
     "revision": "0fe7cdf1009ee7c80badd6f18e5e6e9c",
     "url": "/static/media/authentication-div-background.0fe7cdf1.jpg"
+  },
+  {
+    "revision": "fc47b6b6c0887c7db89710f7116a02d8",
+    "url": "/static/media/back-face.fc47b6b6.jpg"
   },
   {
     "revision": "d9e0d11ee6846f418f5a71617d2fc0f9",
@@ -270,6 +278,30 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "8ad2e26b37a01f8d19c56a01a7a3d49e",
     "url": "/static/media/fight-list-wall.8ad2e26b.jpg"
+  },
+  {
+    "revision": "14500af7fa103758f011ae5bebd7fb99",
+    "url": "/static/media/iron-maiden.14500af7.jpg"
+  },
+  {
+    "revision": "0275212e8120d935c0eb4efc7f0f51e8",
+    "url": "/static/media/memory-card-background.0275212e.jpg"
+  },
+  {
+    "revision": "9b3b307b8e2350b8319045046af15499",
+    "url": "/static/media/metallica2.9b3b307b.jpg"
+  },
+  {
+    "revision": "9ad0c8a4cb1d938ce51d7675fed06d8e",
+    "url": "/static/media/nirvana.9ad0c8a4.jpg"
+  },
+  {
+    "revision": "00b8a8462e63d5469b0fe102b1b45656",
+    "url": "/static/media/pearljam.00b8a846.jpg"
+  },
+  {
+    "revision": "18661be6d964bcd4bda81fc6dd0aa420",
+    "url": "/static/media/pink-floyd.18661be6.jfif"
   },
   {
     "revision": "438c2e78ebccc71091f17d4351ad58f2",
