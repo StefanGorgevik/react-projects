@@ -24,10 +24,10 @@ function EducationCourses(props) {
                     <h1>Courses</h1>
                     <p className="courses-p">Before joining Semos Education, I had previous experience by following several courses on Udemy, including:</p>
                     <ul className="courses-ul">
-                        <li><i class="fas fa-circle-notch"></i>Udemy - Web Developer Bootcamp by Colt Steele</li>
-                        <li><i class="fas fa-circle-notch"></i>Udemy - React - The Complete Guide by Maximilian Schwarzmüller</li>
-                        <li><i class="fas fa-circle-notch"></i>Udemy - NodeJS - The Complete Guide by Maximilian Schwarzmüller</li>
-                        <li><i class="fas fa-circle-notch"></i>Udemy - The Complete JavaScript Course 2020 by Jonas Schmedtmann</li>
+                        <li><i className="fas fa-circle-notch"></i>Udemy - Web Developer Bootcamp by Colt Steele</li>
+                        <li><i className="fas fa-circle-notch"></i>Udemy - React - The Complete Guide by Maximilian Schwarzmüller</li>
+                        <li><i className="fas fa-circle-notch"></i>Udemy - NodeJS - The Complete Guide by Maximilian Schwarzmüller</li>
+                        <li><i className="fas fa-circle-notch"></i>Udemy - The Complete JavaScript Course 2020 by Jonas Schmedtmann</li>
                     </ul>
                 </div>
             </div>

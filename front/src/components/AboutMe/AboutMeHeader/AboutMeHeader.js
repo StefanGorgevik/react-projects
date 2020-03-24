@@ -36,7 +36,7 @@ class AboutMeHeader extends React.Component {
                 </ul>
                 {this.state.hovered ? null :
                 <div className="arrow-div">
-                    <i class="fas fa-arrow-alt-circle-right"></i>
+                    <i className="fas fa-arrow-alt-circle-right"></i>
                     </div>}
 
             </nav>

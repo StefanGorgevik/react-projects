@@ -8,7 +8,7 @@ function PersonalInfo(props) {
     const values = ["Stefan Gorgevik","Full stack web developer", "stefangorgevik@hotmail.com","079-231-692", "Skopje, Macedonia", 25]
     const infoDivs = keys.map((key, i) => {
         return (
-            <div className="info-div">
+            <div key={key+i} className="info-div">
                 <h3 className="key-h3">{key}</h3>
                 <h2 className="value-h2">{values[i]}</h2>
             </div>
