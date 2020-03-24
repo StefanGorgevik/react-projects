@@ -5,7 +5,7 @@
     margin: 0 auto;
     min-height: 7%;
     background-color: #665962;
-    background-image: url("https://www.transparenttextures.com/patterns/double-lined.png");
+    background-image: url("../../assets/images/backgrounds/main-header-background.png");
     transition: 1s;
 }
 
@@ -13,7 +13,7 @@
     transition: 1s;
     min-height: 18%;
     background-color: #665962;
-    background-image: url("https://www.transparenttextures.com/patterns/double-lined.png");
+    background-image: url("../../assets/images/backgrounds/main-header-background.png");
 }
 
 .main-header-ul {
@@ -34,7 +34,7 @@
     float: left;
     width: 10%;
     text-align: center;
-    font-size: 35px;
+    font-size: 20px;
     color: rgb(0, 0, 0);
     padding:10px;
 }
@@ -44,12 +44,13 @@
     color: black;
     display: block;
     height: 100%;
-    font-size: 35px;
+    font-size: 20px;
 }
 
 .main-header-ul-li-div a {
-    padding-top: 25px;
-    font-size: 28px;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 18px;
 }
 
 .main-header-ul-li-div a:hover{

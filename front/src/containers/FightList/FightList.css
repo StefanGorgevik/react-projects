@@ -15,8 +15,8 @@
 }
 
 .title-h1 {
-    font-size: 65px;
-    padding: 45px;
+    font-size: 45px;
+    padding: 25px;
 }
 
 .correct, 
@@ -30,16 +30,7 @@
     justify-content: space-evenly;
 }
 
-.score-p {
-    width: 80px;
-    height: 80px;
-    margin: auto;
-    padding: 5px;
-    margin-top: 10px;
-    font-size: 50px;
-    border: 5px solid rgba(8, 5, 37, 0.596);
-    border-radius: 13px;
-}
+
 
 .score-time-div {
     display: flex;
@@ -49,16 +40,14 @@
     margin-bottom: 30px;
 }
 
-
-
 .start-btn {
     width: 250px;
-    background-color: rgb(139, 125, 125);
+    background-color: rgba(23, 37, 54, 0.65);
     color: white;
     height: 40px;
     border: none;
     border-radius: 15px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     cursor: pointer;
     font-size: 20px;
     text-transform: uppercase;
@@ -66,9 +55,8 @@
 }
 #d,
 .start-btn:hover {
-
     color: rgba(49, 9, 9, 0.774);
-    width: 350px;
+    width: 280px;
     background-color: rgb(81, 148, 224);
 }
 .disabled-start {

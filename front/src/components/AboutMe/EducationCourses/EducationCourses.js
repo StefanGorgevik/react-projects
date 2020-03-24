@@ -27,7 +27,7 @@ function EducationCourses(props) {
                         <li><i className="fas fa-circle-notch"></i>Udemy - Web Developer Bootcamp by Colt Steele</li>
                         <li><i className="fas fa-circle-notch"></i>Udemy - React - The Complete Guide by Maximilian Schwarzmüller</li>
                         <li><i className="fas fa-circle-notch"></i>Udemy - NodeJS - The Complete Guide by Maximilian Schwarzmüller</li>
-                        <li><i className="fas fa-circle-notch"></i>Udemy - The Complete JavaScript Course 2020 by Jonas Schmedtmann</li>
+                        <li><i className="fas fa-circle-notch"></i>Udemy - The Complete JavaScript Course by Jonas Schmedtmann</li>
                     </ul>
                 </div>
             </div>

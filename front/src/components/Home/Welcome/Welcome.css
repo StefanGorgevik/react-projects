@@ -1,5 +1,5 @@
 .welcome-div {
-    height: 50%;
+    min-height:35%;
     width: 100%;
     background-color: #160b16ef;
     background-image: url("../../../assets/images/backgrounds/welcome-background.png");
@@ -9,24 +9,17 @@
 }
 
 .welcome-div h1 {
-    margin: 60px auto;
-    margin-top: 80px;
+    margin: 50px auto;
+    /* margin-top: 50px; */
     color: rgba(248, 250, 249, 0.657);
     text-transform: uppercase;
-    font-size: 100px;
+    font-size:50px;
     letter-spacing: 20px;
 }
-.welcome-div h3 {
-    margin: 60px auto;
-    margin-top: 80px;
-    color: rgba(248, 250, 249, 0.89);
-    font-size: 40px;
-    letter-spacing: 5px;
-}
+
 .welcome-div h2 {
-    margin: 60px auto;
-    margin-top: 80px;
+    margin: 30px auto;
     color: rgba(248, 250, 249, 0.89);
-    font-size: 50px;
-    letter-spacing: 10px;
+    font-size: 25px;
+    letter-spacing: 5px;
 }

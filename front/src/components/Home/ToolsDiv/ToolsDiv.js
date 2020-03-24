@@ -52,7 +52,7 @@ class ToolsDiv extends React.Component {
 
                 {this.state.flCount === 3 ?
                     <div className="div3">
-                        <p>Tool 2</p>
+                        <p>Tool 3</p>
                         <p>Upcoming</p>
                     </div> : null}
                     <DotsDiv divs={this.state.divs} dotClicked={this.dotClicked} flCount={this.state.flCount} />

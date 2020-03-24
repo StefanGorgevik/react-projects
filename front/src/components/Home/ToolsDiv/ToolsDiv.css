@@ -10,26 +10,42 @@
 
 .tools-title-h1 {
     color: white;
-    font-size: 40px;
+    font-size: 30px;
     border-bottom: 1px dotted rgba(255, 255, 255, 0.678);
     width: 40%;
     margin: 0 auto;
+    min-height: 10%;
 }
 
 .tools-div .div1 {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 60%;
     color: whitesmoke;
 }
 
+.tools-div .div1 {
+    min-height: 50%;
+  }
+.tools-div .div2,
+.tools-div .div3{
+    min-height: 50%;
+      color: white;
+  }
+
+.tools-div .div2 p,
+.tools-div .div3 p{
+    font-size:35px;
+  }
+
 .tools-div .div1 h1 {
-    font-size: 40px;
+    font-size: 25px;
 }
 .tools-div .div1 h2 {
-    font-size: 35px;
+    font-size: 20px;
+    height: 10%;
 }
 .tools-div .div1 h3 {
-    font-size: 45px;
+    font-size: 25px;
+
 }

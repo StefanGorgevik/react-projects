@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100%;
+    min-height: 90%;
     width: 100%;
 }
 
@@ -12,9 +12,9 @@
     justify-content: center;
     width: 100%;
     margin: 0 auto;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
     border: 1px dotted rgba(245, 245, 245, 0.335);
-    height: 50%;
+    min-height: 10%;
 }
 
 .ul-div:hover {
@@ -33,7 +33,7 @@
 .ul-div ul li {
     display: flex;
     align-items: center;
-    font-size: 30px;
+    font-size: 20px;
     color: white;
     padding: 1%;
 }
@@ -44,7 +44,7 @@
     justify-content: flex-start;
     margin-right: 100px;
     width: 40%;
-    font-size: 45px;
+    font-size: 25px;
 }
 
 

@@ -1,9 +1,8 @@
-
 .dot {
     margin: 0 ;
     margin-right: 6px;
-    height: 20px;
-    width: 20px;
+    height: 15px;
+    width: 15px;
     background-color: transparent;
     border-radius: 50%;
     display: flex;
@@ -18,14 +17,15 @@
       justify-content: center;
       align-items: flex-end;
       margin: 0 auto;
-      margin-bottom:100px;
+      margin-bottom:80px;
+      min-height: 10%;
+      position: relative;
 }
 
 .dots-div div{
       display: flex;
       margin: 0 auto;
       flex-direction: row;
-      margin-bottom: 15px;
   }
 
    .active-dot{
@@ -38,23 +38,22 @@
   }
 
   .play-button {
-    width: 300px;
-    height: 55px;
+    width: 250px;
+    height: 35px;
     padding: 10px auto;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 40px;
+    font-size: 25px;
     background-color: rgba(158, 107, 107, 0.609);
     border: none;
     border-radius: 10px;
     color: rgb(255, 255, 255);
     cursor: pointer;
-    margin:0 auto;
-    margin-bottom: 20px;
+    margin:20px auto;
   }
 
   .play-button:hover {
-      width: 310px;
+      width: 260px;
       background-color: rgb(255, 255, 255);
       color: rgb(17, 16, 16);
   }

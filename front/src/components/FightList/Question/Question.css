@@ -4,18 +4,17 @@
     align-items: center;
     border: 10px solid rgba(26, 21, 21, 0.527);
     border-radius: 15px;
-    height: 250px;
+    height: 200px;
     padding: 80px;
     width: 50%;
     margin: auto;
 }
 
 .question p {
-    font-size: 54px;
+    font-size: 44px;
     font-weight: bold 700;
     font-family: 'Teko', sans-serif;
     margin:0 auto;
-
 }
 
 .remaining-ans {
@@ -24,6 +23,6 @@
     padding: 2px;
     width: 100px;
     position: static;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
 }

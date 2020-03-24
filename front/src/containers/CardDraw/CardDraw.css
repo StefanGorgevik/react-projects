@@ -16,39 +16,39 @@
 .card-draw-h1 {
     color: white;
     margin-bottom: 10px;
-    font-size: 65px;
+    font-size: 45px;
     padding: 45px;
 }
 
 .back-card {
-    height: 900px;
-    width: 700px;
+    height: 450px;
+    width: 320px;
 }
 
 .draw-btn {
-    color: white;
-    background-color: grey;
-    height: 70px;
-    width: 700px;;
-    font-size: 35px;
+    color: rgb(243, 214, 214);
+    background-color: inherit;
+    height: 60px;
+    width: 400px;
+    font-size: 22px;
+    font-weight: bold;
     margin-top: 10px;
     cursor: pointer;
     border: none;
     outline: none;
+    text-transform: uppercase;
+    border: 10px double rgb(243, 214, 214);
 }
 
 .draw-btn:hover {
     font-size: 25px;
     font-weight: 700;
-    height: 60px;
-    color: black;
-    border: 2px double black;
-    border-radius: 15px;
+    background-color: rgba(27, 23, 25, 0.548);
 }
 
 .deck-cards {
-    margin-bottom: 20px;
-    margin-left: 380px;
+    margin-bottom: 30px;
+    margin-left: 250px;
     height: 70px;
     width: 900px;
 }
