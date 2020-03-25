@@ -1,0 +1,55 @@
+.guess-it-main {
+    height: 100%;
+    width: 100%;
+    background-color: #000000;
+    background-image: url('../../assets/images/backgrounds/guess-it-background.png');
+}
+
+.guess-it-title {
+    margin: 20px auto;
+    width: 50%;
+    color: white;
+    font-size: 50px;
+}
+
+.guess-it-div {
+    width: 100%;
+    min-height: 50%;
+    margin-top: 10px;
+}
+
+.guess-it-div img {
+    width: 40%;
+    height: 350px;
+    border: 12px solid rgb(70, 60, 60);
+    border-radius: 20px;
+}
+
+#country-input {
+    height: 35px;
+    width: 350px;
+    margin-left: 20px;
+    font-size: 22px;
+}
+
+.guess-it-input-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+}
+
+.guess-it-input-div label { 
+    padding-bottom: 10px;
+}
+
+.guess-it-btn {
+    font-size: 25px;
+    height: 35px;
+    width: 150px;
+    margin-left: 20px;
+    background-color: #413535ad;
+    cursor: pointer;
+    border: 2px double rgb(34, 30, 30);
+}

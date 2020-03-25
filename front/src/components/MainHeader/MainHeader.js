@@ -40,7 +40,7 @@ class MainHeader extends React.Component {
                          <div className="main-header-ul-li-div">
                             <Link to="/fight-list">Fight list</Link>
                             <Link to="/memory-card">Memory Card</Link>
-                            <Link to="#">Game Three</Link>
+                            <Link to="/guess-it">Guess It</Link>
                         </div>
                     </li>
                     <li className="main-header-ul-li">Tools

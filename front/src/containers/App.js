@@ -8,6 +8,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import MainHeader from '../components/MainHeader/MainHeader';
 import MemoryCard from './MemoryCard/MemoryCard';
 import Stopwatch from './Stopwatch/Stopwatch'
+import GuessIt from './GuessIt/GuessIt'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route exact path="/about-me" component={AboutMe} />
           <Route exact path="/memory-card" component={MemoryCard} />
           <Route exact path="/stopwatch" component={Stopwatch} />
+          <Route exact path="/guess-it" component={GuessIt} />
         </Switch>
       </BrowserRouter>
     </div>
