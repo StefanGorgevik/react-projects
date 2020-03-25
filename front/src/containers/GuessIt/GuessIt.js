@@ -1,66 +1,72 @@
 import React from 'react'
 import './GuessIt.css'
-import France from '../../assets/images/guess-it/fr.png'
-import Macedonia from '../../assets/images/guess-it/mk.png'
-import Serbia from '../../assets/images/guess-it/rs.png'
-import Sweden from '../../assets/images/guess-it/se.png'
-// import axios from 'axios'
+import FlagGame from '../../components/GuessIt/FlagGame/FlagGame'
+import LogosGame from '../../components/GuessIt/LogosGame/LogosGame'
+import ActorsGame from '../../components/GuessIt/Actors/ActorsGame'
+import Timer from '../../components/FightList/Timer/Timer'
+import Score from '../../components/FightList/Score/Score'
 
 class GuessIt extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            inputValue: '',
-            flags: [Macedonia, Serbia, France, Sweden],
-            flag: '',
-            num: Math.floor(Math.random() * 3),
-            guessed: false
+            categories: ["Flags", "Actors", "Logos"],
+            categoryPicked: false,
+            category: ''
         }
     }
 
-    handleSubmitAnswer = () => {
-        console.log('e')
-        console.log(this.state.flags[2])
-        console.log(this.state.num)
-        console.log(this.state.flags[this.state.num])
-        var s = this.state.flags[this.state.num].replace('/static/media/', '')
-        s = s.substring(0, s.indexOf('.'));
-        s = s.charAt(0).toUpperCase() + s.substring(1)
-        console.log(s)
-        console.log(this.state.num)
-        console.log(this.state.flags[2])
-        if (this.state.inputValue === this.state.flags[this.state.num]) {
-            console.log("yes")
-        }
-        if (this.state.inputValue === s) {
-            console.log("yes")
-            this.setState({ guessed: true, num: Math.floor(Math.random() * 3) })
-        }
+    pickCategory = (cat) => {
+        this.setState({ category: cat, categoryPicked: true })
     }
 
-    handleInputValue = (event) => {
-        var val = event.target.value.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
-        this.setState({ inputValue: val })
+    goBackHandler = () => {
+        this.setState({ categoryPicked: false })
+    }
+
+    renderSwitch() {
+        switch (this.state.category) {
+            case 'Flags':
+                return <FlagGame />;
+            case 'Actors':
+                return <ActorsGame />;
+            case 'Logos':
+                return <LogosGame />;
+            default:
+                return null;
+        }
     }
 
     render() {
-
+        const cat = this.state.categories.map((cat, i) => {
+            return (
+                <div key={cat + i} className="category-div" onClick={() => this.pickCategory(cat)}>
+                    {cat}
+                </div>
+            )
+        })
         return (
             <div className="guess-it-main">
-                <h1 className="guess-it-title">Guess it</h1>
-                <div className="guess-it-div">
-                    <img src={this.state.flags[this.state.num]} alt="france" />
+                <div className="guess-it-title-div">
+                    {this.state.categoryPicked ?
+                        <button
+                            onClick={this.goBackHandler}
+                            className="guess-it-go-back-btn">Go back</button> : null}
+                    <h1 className="guess-it-title">Guess it</h1>
                 </div>
-                <div className="guess-it-input-div">
-                    <label htmlFor="country-input">Name the country</label>
-                    <input type="text" id="country-input"
-                        onChange={this.handleInputValue}
-                        defaultValue={this.state.inputValue}
-                        ref={input => input && input.focus()}
-                    />
-                    <button onClick={this.handleSubmitAnswer} className="guess-it-btn">Enter</button>
-                    {this.state.guessed ? <h1>You got it</h1> : null}
-                </div>
+                {this.state.categoryPicked ?
+                    <div className="guess-it-score">
+                        <Timer />
+                        <Score />
+                    </div> : null}
+                {this.state.categoryPicked ? null :
+                    <div>
+                        <h2>Choose a category</h2>
+                        <div className="categories-div">
+                            {cat}
+                        </div>
+                    </div>}
+                {this.state.categoryPicked ? this.renderSwitch() : null}
             </div>
         )
     }

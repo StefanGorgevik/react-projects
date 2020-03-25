@@ -1,0 +1,43 @@
+
+
+
+#country-input {
+    height: 50px;
+    width: 350px;
+    margin-left: 20px;
+    font-size: 22px;
+    border: 2px double rgba(15, 11, 11, 0.733);
+    background-color: transparent;
+    color: rgba(218, 244, 245, 0.637);
+}
+
+.guess-it-input-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+    padding: 0px;
+    height: 15%;
+}
+
+.guess-it-input-div label { 
+    padding-bottom: 10px;
+}
+
+.guess-it-btn {
+    width: 100px;
+    height: 100px;
+    margin-left: 75px;
+    color: white;
+    background-color: transparent;
+    border-radius: 50px;
+    font-size: 30px;
+    cursor: pointer;
+}
+.guess-it-btn:hover {
+    background-color: rgba(245, 241, 241, 0.157);
+    color: rgb(20, 13, 13);
+}
+
