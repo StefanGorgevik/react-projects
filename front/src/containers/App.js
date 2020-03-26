@@ -9,6 +9,7 @@ import MainHeader from '../components/MainHeader/MainHeader';
 import MemoryCard from './MemoryCard/MemoryCard';
 import Stopwatch from './Stopwatch/Stopwatch'
 import GuessIt from './GuessIt/GuessIt'
+import BudgetCalc from './BudgetCalc/BudgetCalc'
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route exact path="/memory-card" component={MemoryCard} />
           <Route exact path="/stopwatch" component={Stopwatch} />
           <Route exact path="/guess-it" component={GuessIt} />
+          <Route exact path="/budget-calc" component={BudgetCalc} />
         </Switch>
       </BrowserRouter>
     </div>

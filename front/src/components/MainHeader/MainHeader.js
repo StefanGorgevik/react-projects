@@ -47,7 +47,7 @@ class MainHeader extends React.Component {
                         <div className="main-header-ul-li-div">
                             <Link to="/card-draw">Card Draw</Link>
                             <Link to="/stopwatch">Stopwatch</Link>
-                            <Link to="#">Tool Three</Link>
+                            <Link to="/budget-calc">Budget Calculator</Link>
                         </div>
                     </li>
                     <li className="main-header-ul-li">Account
