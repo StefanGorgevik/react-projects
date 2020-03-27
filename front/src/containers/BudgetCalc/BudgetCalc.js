@@ -138,6 +138,7 @@ class BudgetCalc extends React.Component {
                     product={this.state.product}
                     editClicked={this.state.editClicked}
                     editProduct={this.editProduct}
+                    types={this.state.types}
                 />
                 <div className="budget-calc-content-div">
                     <Table
@@ -158,4 +159,4 @@ class BudgetCalc extends React.Component {
     }
 }
 
-export default BudgetCalc;
+export default BudgetCalc

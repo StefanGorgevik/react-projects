@@ -2,7 +2,7 @@ const initState = {
     answers: [
         {
             id: 0,
-            answers: ['Asia','Africa', 'North America', 'South America', 'Antarctica', 'Europe', 'Australia']
+            answers: ['Asia', 'Africa', 'North America', 'South America', 'Antarctica', 'Europe', 'Australia']
         },
         {
             id: 1,
@@ -26,7 +26,7 @@ const initState = {
         },
         {
             id: 6,
-            answers: ['Action', 'Horror', 'Drama', 'Science-fiction',  ]
+            answers: ['Action', 'Horror', 'Drama', 'Science-fiction',]
         },
         {
             id: 7,
@@ -47,17 +47,21 @@ const initState = {
         { id: 2, question: "Car brands" },
         { id: 3, question: "Mobile phones brands" },
         { id: 4, question: "Rooms in a house" },
-        { id: 5, question: "Words that rhyme with sell"},
-        { id: 6, question: "Types of movie genres"},
-        { id: 7, question: "10 most played instruments"},
-        { id: 8, question: "Types of family relationships"},
-        { id: 9, question: "Types of music genre"}
+        { id: 5, question: "Words that rhyme with sell" },
+        { id: 6, question: "Types of movie genres" },
+        { id: 7, question: "10 most played instruments" },
+        { id: 8, question: "Types of family relationships" },
+        { id: 9, question: "Types of music genre" }
 
-    ]
+    ],
+    budgetCalcTypes: ["Food", "Drinks", "Clothing"]
 }
 
 export function reducer(state = initState, action) {
     switch (action.type) {
+        case "ADD_TYPE": {
+            return { ...state, budgetCalcTypes: action.payload }
+        }
         default:
             return state;
     }

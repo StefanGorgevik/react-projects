@@ -1,0 +1,98 @@
+
+.table-tools-btn {
+    min-width: 70%;
+    margin: 10px auto;
+    height: 60px;
+    cursor: pointer;
+    font-size:20px;
+    text-transform: uppercase;
+    background-color: rgba(6, 41, 41, 0.24);
+    font-weight: 700;
+    border: 2px solid black;
+    border-radius: 15px;
+    color: whitesmoke;
+    padding: 0 20px;
+    font-family: 'Tomorrow', sans-serif;
+}
+.add-type-btn:hover,
+.table-tools-btn:hover {
+    background-color: rgba(22, 47, 47, 0.692);
+}
+
+
+.price-p {
+    margin: 10px;
+    font-size: 28px;
+    border-bottom: 5px double black;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.price-p span {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.filter-div {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#sort {
+    min-width: 70%;
+    margin: 10px auto;
+    height: 60px;
+    background-color: rgba(6, 41, 41, 0.24);
+    border: 2px solid black;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-family: 'Tomorrow', sans-serif;
+    text-transform: capitalize;
+
+}
+
+#sort option {
+    color: black;
+    background-color: rgba(3, 3, 3, 0.24);
+    border-radius: 10px;
+    font-family: 'Tomorrow', sans-serif;
+    text-transform: capitalize;
+}
+
+
+.add-type-div {
+    display: flex;
+}
+
+.add-type-div input {
+    width: 70%;
+    margin: 10px auto;
+    height: 40px;
+    font-size:20px;
+    background-color: rgba(6, 41, 41, 0.24);
+    border: 2px solid black;
+    border-radius: 10px;
+    color: whitesmoke;
+    padding: 0 50px;
+    font-family: 'Tomorrow', sans-serif;
+}
+
+.add-type-btn {
+    width: 20%;
+    margin: 10px auto;
+    height: 40px;
+    cursor: pointer;
+    font-size:14px;
+    text-transform: uppercase;
+    background-color: rgba(6, 41, 41, 0.24);
+    font-weight: 700;
+    border: 2px solid black;
+    border-radius: 10px;
+    color: whitesmoke;
+    font-family: 'Tomorrow', sans-serif;
+}

@@ -1,66 +1,79 @@
 import React from 'react'
 import './Inputs.css'
+import { connect } from 'react-redux'
 
 function Inputs(props) {
+    var selectType = <select onChange={props.handleInputValue} name="select-type" id="type" className="select-type">
+        <option defaultChecked value='default' > Select type</option>
+        {props.types.map((type, i) => {
+            return <option key={type + i} value={type}>{type}</option>
+        })}
+    </select>
     return (
         <form onSubmit={props.saveProduct}
             className="budget-calc-inputs">
-           <div className="budget-calc-biginput-div">
-                <label htmlFor="name">Name</label>
-                <input
-                    onChange={props.handleInputValue}
-                    type="text"
-                    id="name"
-                    placeholder="Enter product name"
-                    value={props.product.name}
-                />
+            <div className="bcalc-bigger-inputs">
+                <div>
+                    <label htmlFor="name">Name</label>
+                    <input
+                        onChange={props.handleInputValue}
+                        type="text"
+                        id="name"
+                        placeholder="product name"
+                        value={props.product.name}
+                    />
+                </div>
+                <div>
+                    <label htmlFor="date">date</label>
+                    <input
+                        onChange={props.handleInputValue}
+                        type="date"
+                        id="date"
+                        value={props.product.date}
+                    />
+                </div>
             </div>
-           <div className="budget-calc-type-div">
-                <select onChange={props.handleInputValue} name="select-type" id="type" className="select-type">
-                    <option value="type">Select type</option>
-                    <option value="food">Food</option>
-                    <option value="drinks">Drinks</option>
-                    <option value="clothing">Clothing</option>
-                </select>
+
+            <div className="bcalc-smaller-inputs">
+                <div className="budget-calc-type-div">
+                    {selectType}
+                </div>
+
+                <div className="budget-calc-price-div">
+                    <label htmlFor="quantity-input">Price</label>
+                    <input
+                        onChange={props.handleInputValue}
+                        type="number"
+                        id="price"
+                        placeholder="price"
+                        value={props.product.price}
+                    />
+                </div>
+                <div className="budget-calc-quantity-div">
+                    <label id="quantity-label" htmlFor="quantity-input">Quantity</label>
+                    <input
+                        onChange={props.handleInputValue}
+                        type="number"
+                        id="quantity"
+                        placeholder="quantity"
+                        value={props.product.quantity}
+                    />
+                </div>
             </div>
-           
-           <div className="budget-calc-price-div">
-                <label htmlFor="quantity-input">Price</label>
-                <input
-                    onChange={props.handleInputValue}
-                    type="number"
-                    id="price"
-                    placeholder="Enter price"
-                    value={props.product.price}
-                />  
-            </div>
-           <div className="budget-calc-quantity-div">
-                <label htmlFor="quantity-input">Quantity</label>
-                <input
-                    onChange={props.handleInputValue}
-                    type="number"
-                    id="quantity"
-                    placeholder="Enter quantity"
-                    value={props.product.quantity}
-                />  
-            </div>
-           <div className="budget-calc-biginput-div">
-                <label htmlFor="date">date</label>
-                <input
-                    onChange={props.handleInputValue}
-                    type="date"
-                    id="date"
-                    placeholder="Enter date"
-                    value={props.product.date}
-                />  
-            </div>
+
             {props.editClicked ?
                 <button onClick={props.editProduct}
                     className="budget-calc-submit-btn">Edit</button> :
                 <button onClick={props.saveProduct}
-                    className="budget-calc-submit-btn">Submit</button> }
+                    className="budget-calc-submit-btn">Submit</button>}
         </form>
     )
 }
 
-export default Inputs
+function mapStateToProps(state) {
+    return {
+        types: state.budgetCalcTypes
+    }
+}
+
+export default connect(mapStateToProps)(Inputs);
