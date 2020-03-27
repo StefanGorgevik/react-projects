@@ -3,16 +3,15 @@ import './Thead.css'
 
 function Thead(props) {
     return (
-        <table className="top-table">
-            <thead className="thead-tr">
-                <tr>
-                    <th>Name</th>
-                    <th>Type</th>
-                    <th>Price</th>
-                    <th>Date</th>
-                </tr>
-            </thead>
-        </table>
+        <div className="top-table">
+                <ul>
+                    <li id="name-li">Name</li>
+                    <li id="type-li">Type</li>
+                    <li id="price-li">Price</li>
+                    <li id="quantity-li">Quantity</li>
+                    <li id="date-li">Date</li>
+                </ul>
+        </div>
     )
 }
 

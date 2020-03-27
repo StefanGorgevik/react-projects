@@ -12,7 +12,7 @@
 
 .table-tools-div-active {
     width: 30%;
-    transition: 1.5s;
+    transition: 1s;
 
 }
 
@@ -20,11 +20,12 @@
     width: 20%;
     margin: 10px auto;
     border-bottom: 8px solid black;
-    transition: 1s;
+    transition: 1.5s;
 
 }
-.dlt-selected-btn {
+.table-tools-btn {
     min-width: 70%;
+    margin: 10px auto;
     height: 60px;
     cursor: pointer;
     font-size:20px;
@@ -37,7 +38,7 @@
     padding: 0 50px;
     font-family: 'Tomorrow', sans-serif;
 }
-
+.add-type-btn:hover,
 .dlt-selected-btn:hover {
     background-color: rgba(22, 47, 47, 0.692);
 }
@@ -104,4 +105,37 @@
     font-size: 60px;
     margin: 0 auto;
     color: rgb(245, 237, 237);
+}
+.add-type-div {
+    display: flex;
+    
+}
+
+.add-type-div input {
+    width: 70%;
+    margin: 10px auto;
+    height: 40px;
+    font-size:20px;
+    background-color: rgba(6, 41, 41, 0.24);
+    font-weight: 700;
+    border: 2px solid black;
+    border-radius: 10px;
+    color: whitesmoke;
+    padding: 0 50px;
+    font-family: 'Tomorrow', sans-serif;
+}
+
+.add-type-btn {
+    width: 20%;
+    margin: 10px auto;
+    height: 40px;
+    cursor: pointer;
+    font-size:14px;
+    text-transform: uppercase;
+    background-color: rgba(6, 41, 41, 0.24);
+    font-weight: 700;
+    border: 2px solid black;
+    border-radius: 10px;
+    color: whitesmoke;
+    font-family: 'Tomorrow', sans-serif;
 }

@@ -2,30 +2,80 @@
 .budget-calc-inputs {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
-    width: 90%;
+    width: 100%;
     height: 5%;
+    margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 20px;
+    font-family: 'Tomorrow', sans-serif;
 }
 
-.budget-calc-input-div {
+.budget-calc-biginput-div ,
+.budget-calc-type-div,
+.budget-calc-price-div ,
+.budget-calc-quantity-div {
     display: flex;
-    width: 30%;
-}
-.budget-calc-input-div input {
-    height: 35px;
-    width: 80%;
-    font-size: 20px;
-    background-color: transparent;
-    border-radius: 5px;
-    border: 5px double black;
-    outline: transparent;
+    align-items: center;
+    height: 40px;
     text-align: center;
     color: whitesmoke;
+    font-family: 'Tomorrow', sans-serif;
+    font-size: 20px;
+}
+
+.budget-calc-biginput-div #name,
+.budget-calc-biginput-div #date {
+    border: 5px double black;
+    height: 40px;
+    width: 390px;
+    font-size: 20px;
+    margin-right: 120px;
+    background-color: transparent;
+    border-radius: 5px;
+    outline: transparent;
+    color:whitesmoke;
+    text-align:center;
 
 }
-.budget-calc-input-div label {
+
+.budget-calc-price-div #price,
+.budget-calc-quantity-div #quantity,
+.budget-calc-type-div #type  {
+    height: 40px;
+    width:120px;
+    padding: 0;
+    margin: 0 20px;
+    background-color: transparent;
+    border-radius: 5px;
+    outline: transparent;
+    border: 5px double black;
+    color: whitesmoke;
+    font-family: 'Tomorrow', sans-serif;
+    font-size: 20px;
+    text-align:center;
+
+}
+.budget-calc-price-div label,
+.budget-calc-quantity-div label {
+    height: 35px;
+    min-width: 25%;
+    font-size: 24px;
+    text-transform: capitalize;
+    color: whitesmoke;
+}
+.budget-calc-quantity-div,
+.budget-calc-price-div {
+    width: 300px;
+}
+.budget-calc-type-div #type{
+    width: 200px;
+}
+.budget-calc-type-div option {
+    color: black;
+}
+.budget-calc-biginput-div label {
     height: 35px;
     min-width: 20%;
     font-size: 24px;
@@ -35,8 +85,8 @@
 
 .budget-calc-submit-btn {
     height: 45px;
-    min-width: 10%;
-    margin:0 15px;
+    width: 12%;
+    margin:0 auto;
     font-size: 20px;
     font-weight: 600;
     background-color: rgba(6, 41, 41, 0.24);
@@ -44,6 +94,7 @@
     border-radius: 15px;
     cursor: pointer;
     color:whitesmoke;
+    margin-right: 50px;
 }
 
 .budget-calc-submit-btn:hover {

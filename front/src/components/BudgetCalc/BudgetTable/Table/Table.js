@@ -12,6 +12,7 @@ function Table(props) {
                     <Tbody products={props.products}
                         productToEdit={props.productToEdit}
                         handleCheckboxChange={props.handleCheckboxChange}
+                        editClicked={props.editClicked}
                     />
                 </table>
             </div>

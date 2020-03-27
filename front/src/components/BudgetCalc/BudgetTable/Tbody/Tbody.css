@@ -10,9 +10,24 @@
     cursor: pointer;
     color: white;
 }
-
+.budg-edit-btn-disabled {
+    pointer-events: none;
+    color: grey;
+    border-color: grey;
+}
+.product-tr {
+    transition: 2s;
+}
 .product-tr td{
     width: 200px;
+    text-transform: capitalize;
+
+}
+.product-tr .number-td{
+    width: 100px;
+}
+.number-td span{
+   font-size: 18px;
 }
 
 .product-tr:hover {
@@ -40,3 +55,4 @@
     margin: 0;
     border:none;
 }
+

@@ -5,7 +5,8 @@ class TableTools extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            hovered: false
+            hovered: false,
+            addTypeClicked: false
         }
     }
 
@@ -17,6 +18,10 @@ class TableTools extends React.Component {
         this.setState({ hovered: false })
     }
 
+    addTypeClickedHandler = () => {
+        this.setState({ addTypeClicked: true })
+    }   
+
     render() {
         return (
             <div className={this.state.hovered ? "table-tools-div table-tools-div-active" : "table-tools-div"}onMouseEnter={this.handleHover}
@@ -25,12 +30,21 @@ class TableTools extends React.Component {
                     <div className="table-tools-content">
                         <h1>Tools</h1>
                         <p className="price-p">Total price: <span>{this.props.totalPrice}</span></p>
-                        <button onClick={this.props.deleteProducts} className="dlt-selected-btn">Delete selected items</button>
+                        <button onClick={this.props.deleteProducts} className="table-tools-btn">Delete selected items</button>
+                        {this.state.addTypeClicked ? 
+                        <div className="add-type-div">
+                            <input type='text' id="type" />
+                            <button className="add-type-btn">Add type</button>
+                        </div>
+                       
+                        : 
+                        <button onClick={this.addTypeClickedHandler} className="table-tools-btn">Add type of product</button>}
                         <div className="filter-div">
                             <select onChange={this.props.selectFilterHandler} id="sort">
                                 <option value="default">Select sort</option>
                                 <option value="name">Name descending</option>
                                 <option value="price">Price ascending</option>
+                                <option value="quantity">Quantity ascending</option>
                                 <option value="type">Type descending</option>
                                 <option value="date">Date descending</option>
                             </select>
@@ -38,7 +52,7 @@ class TableTools extends React.Component {
                     </div>
                     :
                     <div className="before-hover-div">
-                        <p><i class="fas fa-tools"></i></p>
+                        <p><i className="fas fa-tools"></i></p>
                     </div>}
             </div>
         )

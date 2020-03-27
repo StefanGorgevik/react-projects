@@ -9,35 +9,38 @@ class BudgetCalc extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            properties: ["name", "type", "price", "date"],
             product: {
                 id: '',
                 name: '',
                 type: '',
                 price: '',
+                quantity: '',
                 date: ''
             },
             products: [
                 {
                     id: 0,
-                    name: "Cheese",
-                    type: "Food",
+                    name: "cheese",
+                    type: "food",
                     price: 150,
+                    quantity: 1,
                     date: "2020-01-01"
                 },
                 {
                     id: 1,
-                    name: "Burger",
-                    type: "Fast-food",
-                    price: 150,
+                    name: "burger",
+                    type: "food",
+                    price: 120,
+                    quantity: 2,
                     date: "2019-01-01"
                 },
                 {
-                    id: 2,
-                    name: "Coca cola",
-                    type: "Drink",
+                    id: 3,
+                    name: "coca cola",
+                    type: "drinks",
                     price: 60,
-                    date: "2020-01-01"
+                    quantity: 5,
+                    date: "2020-06-01"
                 }
             ],
             isChecked: false,
@@ -61,7 +64,7 @@ class BudgetCalc extends React.Component {
             prods.push(product)
             this.setState({
                 products: prods,
-                product: { id: '', name: '', type: '', price: '', date: '' }
+                product: { id: '', name: '', type: '', price: '', quantity: '', date: '' }
             })
         }
     }
@@ -91,7 +94,7 @@ class BudgetCalc extends React.Component {
         this.setState(prevState => ({
             editClicked: !prevState.editClicked,
             products: prods,
-            product: { id: '', name: '', type: '', price: '', date: '' }
+            product: { id: '', name: '', type: '', price: '', quantity: '', date: '' }
         }))
 
     }
@@ -125,13 +128,12 @@ class BudgetCalc extends React.Component {
     render() {
         var totPrice = 0;
         for (var i = 0; i < this.state.products.length; i++) {
-            totPrice += this.state.products[i].price
+            totPrice += Number(this.state.products[i].price)
         }
         return (
             <main className="budget-calc-main">
                 <h1 className="budget-calc-h1">Budget Calculator</h1>
                 <Inputs saveProduct={this.saveProduct}
-                    properties={this.state.properties}
                     handleInputValue={this.handleInputValue}
                     product={this.state.product}
                     editClicked={this.state.editClicked}
@@ -143,6 +145,7 @@ class BudgetCalc extends React.Component {
                         products={this.state.products}
                         productToEdit={this.productToEdit}
                         handleCheckboxChange={this.handleCheckboxChange}
+                        editClicked={this.state.editClicked}
                     />
                     <TableTools
                         deleteProducts={this.deleteProducts}
