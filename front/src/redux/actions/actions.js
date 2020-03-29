@@ -10,3 +10,16 @@ export function addNewGroupClicked(clicked) {
         payload: clicked
     }
 }
+export function changeMode(mode) {
+    return {
+        type: "CHANGE_MODE",
+        payload: mode
+    }
+}
+
+export function saveGroup(group) {
+    return {
+        type: "SAVE_GROUP",
+        payload: group
+    }
+}

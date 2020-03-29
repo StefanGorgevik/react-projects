@@ -10,6 +10,9 @@
     cursor: pointer;
     color: white;
 }
+.budg-edit-btn:hover {
+    border-color: white;
+}
 .budg-edit-btn-disabled {
     pointer-events: none;
     color: grey;

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import Login from '../Authentication/Login/Login'
 import Register from '../Authentication/Register/Register'
 import './MainHeader.css'
-import NewGroup from '../BudgetCalc/TableTools/NewGroupForm/NewGroup/NewGroup'
+import NewGroup from '../BudgetCalc/NewGroupForm/NewGroup/NewGroup'
 import {connect} from 'react-redux'
 
 class MainHeader extends React.Component {

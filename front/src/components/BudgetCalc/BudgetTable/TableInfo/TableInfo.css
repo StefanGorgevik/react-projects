@@ -1,0 +1,24 @@
+.table-info-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 60px;
+    margin: 0 auto;
+}
+
+.price-p {
+    font-size: 28px;
+    color: white;
+    letter-spacing: 2px;
+    border-bottom: 5px double black;
+    border-radius: 20px;
+    width:40%;
+    margin-right: 10px;
+}
+
+.price-p span {
+    font-size: 30px;
+    font-weight: bold;
+}
+

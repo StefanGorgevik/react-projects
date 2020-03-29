@@ -1,6 +1,7 @@
 import React from 'react'
 import './ToolsContent.css'
-import Button from '../NewGroupForm/Button-NG/Button'
+import Button from '../../NewGroupForm/Button-NG/Button'
+import SelectMode from '../SelectMode/SelectMode'
 
 function ToolsContent(props) {
     var selectSort =
@@ -16,27 +17,28 @@ function ToolsContent(props) {
             <h1>Tools</h1>
             <div className="filter-div">
                 {selectSort}
+            <SelectMode selectModeHandler={props.selectModeHandler} /> 
             </div>
             <Button click={props.deleteProducts}
-                content='Delete selected items' 
-                    name='table-tools-btn'
-                />
+                content='Delete selected items'
+                name='table-tools-btn'
+            />
 
             {props.addTypeClicked ?
                 <div className="add-type-div">
                     <input onChange={props.handleInputValue} type='text' id="type" placeholder="Enter a new type" />
-                    <button onClick={props.addTypeHandler} className="add-type-btn">Add type</button>
+                    <Button click={props.addTypeHandler}
+                        content='Add type'
+                        name='table-tools-btn add-type-btn'/>
                 </div>
                 :
                 <Button click={props.addTypeClickedHandler}
-                content='Add a new type of product' 
+                    content='Add a new type of product'
                     name='table-tools-btn'
                 />}
-                <Button click={props.addNewGroupHandler}
-                content='Add a new group of products' 
-                    name='table-tools-btn'
-                />
-            
+            <Button click={props.addNewGroupHandler}
+                content='Add a new group of products'
+                name='table-tools-btn' />
         </div>
     )
 }

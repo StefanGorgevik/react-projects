@@ -3,8 +3,8 @@ import './NewGroup.css'
 import Inputs from '../Inputs-NG/Inputs'
 import Table from '../Table-NG/Table'
 import Button from '../Button-NG/Button'
-import store from '../../../../../redux/store'
-import { addNewGroupClicked } from '../../../../../redux/actions/actions'
+import store from '../../../../redux/store'
+import { addNewGroupClicked, saveGroup } from '../../../../redux/actions/actions'
 
 class NewGroup extends React.Component {
     constructor(props) {
@@ -12,6 +12,7 @@ class NewGroup extends React.Component {
         this.state = {
             firstProductAdded: false,
             date: '',
+            type: '',
             newGroupProducts: [
                 {
                     id: 30,
@@ -33,22 +34,7 @@ class NewGroup extends React.Component {
                 type: '',
                 price: 0,
                 quantity: 0
-            },
-            productsGroups: [
-                {
-                    id: 0,
-                    groupDate: "2020-01-01",
-                    products: [
-                        {
-                            id: 25,
-                            name: "Burger",
-                            type: "Groceries",
-                            price: 150,
-                            quantity: 2
-                        }
-                    ]
-                }
-            ]
+            }
         }
     }
 
@@ -81,17 +67,18 @@ class NewGroup extends React.Component {
     }
 
     saveGroupOfProducts = () => {
-        var productsGroups = this.state.productsGroups
         const productGroup = {
-            id: 1,
-            groupDate: "2020-01-01",
+            id: Math.floor(Math.random() * 1000),
+            groupDate: this.state.date,
+            type: this.state.type,
             products: this.state.newGroupProducts
         }
-        productsGroups.push(productGroup)
-        this.setState({ newGroupProducts: [], productsGroups: productsGroups })
+        this.setState({ newGroupProducts: [], type: '', date: '' })
+        store.dispatch(addNewGroupClicked(false))
+        store.dispatch(saveGroup(productGroup))
     }
 
-    addNewGroupHandler = () => {
+    closeNewGroup = () => {
         store.dispatch(addNewGroupClicked(false))
     }
 
@@ -115,9 +102,9 @@ class NewGroup extends React.Component {
                         product={this.state.product} />
                     <div className="ng-prods-dv">
                         {this.state.firstProductAdded ?
-                            <Table newGroupProducts={this.state.newGroupProducts}
+                            <Table products={this.state.newGroupProducts}
                                 totalPrice={totalPrice} /> : null}
-                        <Button click={this.addNewGroupHandler}
+                        <Button click={this.closeNewGroup}
                             content='Close'
                             name='ng-btn ng-close-btn' />
                         {this.state.firstProductAdded ?

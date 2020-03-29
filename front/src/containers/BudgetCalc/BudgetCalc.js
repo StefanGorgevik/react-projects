@@ -3,6 +3,8 @@ import './BudgetCalc.css'
 import Inputs from '../../components/BudgetCalc/Inputs/Inputs'
 import TableTools from '../../components/BudgetCalc/TableTools/TableTools'
 import Table from '../../components/BudgetCalc/BudgetTable/Table/Table'
+import Groups from '../../components/BudgetCalc/Groups/Groups'
+import {connect} from 'react-redux'
 
 
 class BudgetCalc extends React.Component {
@@ -96,7 +98,6 @@ class BudgetCalc extends React.Component {
             products: prods,
             product: { id: '', name: '', type: '', price: '', quantity: '', date: '' }
         }))
-
     }
 
     deleteProducts = () => {
@@ -137,14 +138,16 @@ class BudgetCalc extends React.Component {
         return (
             <main className="budget-calc-main">
                 <h1 className="budget-calc-h1">Budget Calculator</h1>
+                {this.props.mode === "products" ? 
                 <Inputs saveProduct={this.saveProduct}
                     handleInputValue={this.handleInputValue}
                     product={this.state.product}
                     editClicked={this.state.editClicked}
                     editProduct={this.editProduct}
                     types={this.state.types}
-                />
+                /> : null }
                 <div className="budget-calc-content-div">
+                {this.props.mode === "products" ? 
                     <Table
                         properties={this.state.properties}
                         products={this.state.products}
@@ -152,7 +155,7 @@ class BudgetCalc extends React.Component {
                         handleCheckboxChange={this.handleCheckboxChange}
                         editClicked={this.state.editClicked}
                         totalPrice={totPrice}
-                    />
+                    />  : <Groups/>}
                     <TableTools
                         deleteProducts={this.deleteProducts}
                         selectFilterHandler={this.selectFilterHandler}
@@ -163,4 +166,10 @@ class BudgetCalc extends React.Component {
     }
 }
 
-export default BudgetCalc
+function mapStateToProps(state) {
+    return {
+        mode: state.mode
+    }
+}
+
+export default connect(mapStateToProps)(BudgetCalc)

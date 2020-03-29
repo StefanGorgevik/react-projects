@@ -54,17 +54,64 @@ const initState = {
         { id: 9, question: "Types of music genre" }
 
     ],
+    productGroups: [
+        {
+            id: 0,
+            groupDate: "2020-01-01",
+            type: 'Groceries',
+            products: [
+                {
+                    id: 25,
+                    name: "Burger",
+                    price: 150,
+                    quantity: 2
+                },
+                {
+                    id: 255,
+                    name: "Alva",
+                    price: 100,
+                    quantity: 2
+                },
+            ]
+        },
+        {
+            id: 22,
+            groupDate: "2020-01-01",
+            type:"Electronics",
+            products: [
+                {
+                    id: 23,
+                    name: "Phone",
+                    price: 150,
+                    quantity: 2
+                },
+                {
+                    id: 233,
+                    name: "Laptop",
+                    price: 150,
+                    quantity: 2
+                }
+            ]
+        }
+    ],
     budgetCalcTypes: ["Food", "Drinks", "Clothing"],
-    addNewGroupClicked: false
+    addNewGroupClicked: false,
+    mode: 'products'
 }
 
 export function reducer(state = initState, action) {
     switch (action.type) {
         case "ADD_TYPE": {
-            return { ...state, budgetCalcTypes: action.payload }
+            return { ...state, budgetCalcTypes: state.budgetCalcTypes.concat(action.payload) }
         }
         case "ADD_NEW_GROUP_CLICKED": {
             return { ...state, addNewGroupClicked: action.payload }
+        }
+        case "CHANGE_MODE": {
+            return { ...state, mode: action.payload }
+        }
+        case "SAVE_GROUP": {
+            return { ...state,  productGroups: state.productGroups.concat(action.payload) }
         }
         default:
             return state;

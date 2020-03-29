@@ -3,14 +3,13 @@ import './Table.css'
 import TableInfo from '../TableInfo/TableInfo'
 
 function Table(props) {
-    var products = props.newGroupProducts
+    var products = props.products
     if (products.length !== 0) {
         var prods = products.map((prod, i) => {
             return (
                 <tr key={prod + i}
                     className="ng-new-prod-tr">
                     <td>{prod.name}</td>
-                    <td>{prod.type}</td>
                     <td>{prod.quantity >= 1 ? (prod.price * prod.quantity) : prod.price}
                         {prod.quantity >= 1 ? <span>{"(" + prod.price + ")"}</span> : null}</td>
                     <td>{prod.quantity}</td>
@@ -21,14 +20,13 @@ function Table(props) {
 
     return (
         <>
-            <TableInfo productsLength={props.newGroupProducts.length}
+            <TableInfo productsLength={props.products.length}
                 totalPrice={props.totalPrice}
             />
             <table className="ng-table">
                 <thead>
                     <tr>
                         <th>Name</th>
-                        <th>Type</th>
                         <th>Price</th>
                         <th>Quantity</th>
                     </tr>

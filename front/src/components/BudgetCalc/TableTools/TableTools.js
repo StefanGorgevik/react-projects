@@ -1,7 +1,7 @@
 import React from 'react'
 import './TableTools.css'
 import store from '../../../redux/store'
-import { addType, addNewGroupClicked } from '../../../redux/actions/actions'
+import { addType, addNewGroupClicked, changeMode } from '../../../redux/actions/actions'
 import { connect } from 'react-redux'
 import ToolsContent from './ToolsContent/ToolsContent'
 
@@ -34,14 +34,16 @@ class TableTools extends React.Component {
     }
 
     addTypeHandler = () => {
-        var types = this.props.types
-        types.push(this.state.addedType)
-        store.dispatch(addType(types))
+        store.dispatch(addType(this.state.addedType))
         this.setState({ addTypeClicked: false })
     }
 
     addNewGroupHandler = () => {
         store.dispatch(addNewGroupClicked(!this.state.addNewGroupClicked))
+    }
+
+    selectModeHandler = (event) => {
+        store.dispatch(changeMode(event.target.value))
     }
 
     render() {
@@ -62,6 +64,7 @@ class TableTools extends React.Component {
                         addTypeClicked={this.state.addTypeClicked}
                         sorts={this.state.sorts}
                         addNewGroupHandler={this.addNewGroupHandler}
+                        selectModeHandler={this.selectModeHandler}
                     />
                     :
                     <div className="before-hover-div">
