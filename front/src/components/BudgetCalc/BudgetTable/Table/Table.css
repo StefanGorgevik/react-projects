@@ -22,7 +22,28 @@
 
 .products-div{
     width: 100%;
-    max-height: 90%;
+    max-height: 80%;
     border-radius: 5px;
     overflow-y: scroll;
+}
+
+.table-info-div {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 5px double black;
+    border-radius: 20px;
+    width: 70%;
+    height: 60px;
+    margin: 0 auto;
+}
+
+.price-p {
+    font-size: 28px;
+    padding: 15px;
+    color: white;
+}
+
+.price-p span {
+    font-size: 30px;
+    font-weight: bold;
 }

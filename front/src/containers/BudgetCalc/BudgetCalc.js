@@ -128,7 +128,11 @@ class BudgetCalc extends React.Component {
     render() {
         var totPrice = 0;
         for (var i = 0; i < this.state.products.length; i++) {
-            totPrice += Number(this.state.products[i].price)
+            if (this.state.products[i].quantity >= 1) {
+                totPrice += (this.state.products[i].quantity * Number(this.state.products[i].price))
+            } else if (this.state.products[i].quantity < 1) {
+                totPrice += Number(this.state.products[i].price)
+            }
         }
         return (
             <main className="budget-calc-main">
@@ -147,10 +151,10 @@ class BudgetCalc extends React.Component {
                         productToEdit={this.productToEdit}
                         handleCheckboxChange={this.handleCheckboxChange}
                         editClicked={this.state.editClicked}
+                        totalPrice={totPrice}
                     />
                     <TableTools
                         deleteProducts={this.deleteProducts}
-                        totalPrice={totPrice}
                         selectFilterHandler={this.selectFilterHandler}
                     />
                 </div>

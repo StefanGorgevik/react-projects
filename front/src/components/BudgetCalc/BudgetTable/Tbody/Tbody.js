@@ -9,7 +9,8 @@ function Tbody(props) {
                 className="checkbox" type="checkbox" /></td>
                 <td>{prod.name}</td>
                 <td>{prod.type}</td>
-                <td className="number-td">{prod.price * prod.quantity} <span>{ "(" + prod.price + ")"}</span></td>
+                <td className="number-td">{prod.quantity >= 1 ? (prod.price * prod.quantity) : prod.price}
+                {prod.quantity >= 1 ? <span>{ "(" + prod.price + ")"}</span> : null}</td>
                 <td className="number-td">{prod.quantity}</td>
                 <td>{prod.date}</td>
                 <td id="edit-td">

@@ -1,8 +1,8 @@
 import React from 'react'
 import './TableTools.css'
 import store from '../../../redux/store'
-import {addType }from '../../../redux/actions/actions'
-import {connect} from 'react-redux'
+import { addType, addNewGroupClicked } from '../../../redux/actions/actions'
+import { connect } from 'react-redux'
 import ToolsContent from './ToolsContent/ToolsContent'
 
 class TableTools extends React.Component {
@@ -11,8 +11,9 @@ class TableTools extends React.Component {
         this.state = {
             hovered: false,
             addTypeClicked: false,
-            sorts: [ "name","type", "price", "quantity", "date"],
-            addedType: ''
+            sorts: ["name", "type", "price", "quantity", "date"],
+            addedType: '',
+            addNewGroupClicked: false
         }
     }
 
@@ -39,28 +40,34 @@ class TableTools extends React.Component {
         this.setState({ addTypeClicked: false })
     }
 
-    render() {
-        
+    addNewGroupHandler = () => {
+        store.dispatch(addNewGroupClicked(!this.state.addNewGroupClicked))
+    }
 
-    return(
-            <div className = { this.state.hovered ? "table-tools-div table-tools-div-active" : "table-tools-div" } onMouseEnter = { this.handleHover }
-                onMouseLeave = { this.handleHoverLeave } >
-        {
-            this.state.hovered ?
-                <ToolsContent deleteProducts={this.props.deleteProducts} 
-                    totalPrice={this.props.totalPrice}
-                    selectFilterHandler={this.props.selectFilterHandler}
-                    handleInputValue={this.handleInputValue}
-                    addTypeHandler={this.addTypeHandler}
-                    addTypeClickedHandler={this.addTypeClickedHandler}
-                    addTypeClicked={this.state.addTypeClicked}
-                    sorts={this.state.sorts}
-                />
-                :
-                <div className="before-hover-div">
-                    <p><i className="fas fa-tools"></i></p>
-                </div>
-        }
+    render() {
+
+
+        return (
+            <div className={this.state.hovered ? "table-tools-div table-tools-div-active" : "table-tools-div"} 
+                onMouseEnter={this.handleHover}
+                onMouseLeave={this.handleHoverLeave} >
+                
+                {this.state.hovered ?
+                    <ToolsContent deleteProducts={this.props.deleteProducts}
+                        totalPrice={this.props.totalPrice}
+                        selectFilterHandler={this.props.selectFilterHandler}
+                        handleInputValue={this.handleInputValue}
+                        addTypeHandler={this.addTypeHandler}
+                        addTypeClickedHandler={this.addTypeClickedHandler}
+                        addTypeClicked={this.state.addTypeClicked}
+                        sorts={this.state.sorts}
+                        addNewGroupHandler={this.addNewGroupHandler}
+                    />
+                    :
+                    <div className="before-hover-div">
+                        <p><i className="fas fa-tools"></i></p>
+                    </div>
+                }
             </div>
         )
     }

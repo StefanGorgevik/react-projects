@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import Login from '../Authentication/Login/Login'
 import Register from '../Authentication/Register/Register'
 import './MainHeader.css'
+import NewGroup from '../BudgetCalc/TableTools/NewGroupForm/NewGroup/NewGroup'
+import {connect} from 'react-redux'
 
 class MainHeader extends React.Component {
     constructor(props) {
@@ -27,6 +29,8 @@ class MainHeader extends React.Component {
     render() {
         return (
             <>
+            {this.props.addNewGroupClicked ? <NewGroup/> : null}
+
             {this.state.loginClicked ? 
             <Login clicked={this.loginClickedHandler} /> : null }
 
@@ -64,4 +68,11 @@ class MainHeader extends React.Component {
     }
 }
 
-export default MainHeader
+
+function mapStateToProps(state) {
+    return {
+        addNewGroupClicked: state.addNewGroupClicked
+    }
+}
+
+export default connect(mapStateToProps)(MainHeader)

@@ -54,13 +54,17 @@ const initState = {
         { id: 9, question: "Types of music genre" }
 
     ],
-    budgetCalcTypes: ["Food", "Drinks", "Clothing"]
+    budgetCalcTypes: ["Food", "Drinks", "Clothing"],
+    addNewGroupClicked: false
 }
 
 export function reducer(state = initState, action) {
     switch (action.type) {
         case "ADD_TYPE": {
             return { ...state, budgetCalcTypes: action.payload }
+        }
+        case "ADD_NEW_GROUP_CLICKED": {
+            return { ...state, addNewGroupClicked: action.payload }
         }
         default:
             return state;

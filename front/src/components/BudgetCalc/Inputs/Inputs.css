@@ -92,3 +92,8 @@
 .budget-calc-submit-btn:hover {
     background-color: rgba(38, 80, 80, 0.24);
 }
+
+::placeholder {
+    font-size: 20px;
+    text-transform: capitalize;
+}

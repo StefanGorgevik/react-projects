@@ -4,3 +4,9 @@ export function addType(types) {
         payload: types
     }
 }
+export function addNewGroupClicked(clicked) {
+    return {
+        type: "ADD_NEW_GROUP_CLICKED",
+        payload: clicked
+    }
+}
