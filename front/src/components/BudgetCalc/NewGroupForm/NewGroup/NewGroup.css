@@ -15,6 +15,7 @@
 .ng-main .ng-div {
     width: 28%;
     min-height: 55%;
+    max-height: 100%;
     background-color:rgba(31, 27, 27);
     padding: 30px;
     border-radius: 5px;

@@ -17,15 +17,19 @@
 
 .ng-table thead tr th{
     border-bottom: 1px dashed white;
-    font-size: 19px;
+    font-size: 22px;
 }
 
 
 .ng-new-prod-tr td {
     min-width: 10%;
-    font-size: 19px;
+    font-size: 21px;
 }
 
 .ng-new-prod-tr td span {
     font-size: 12px;
+}
+
+.x-td {
+    cursor: pointer;
 }

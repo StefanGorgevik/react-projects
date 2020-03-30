@@ -26,7 +26,8 @@ class BudgetCalc extends React.Component {
                     type: "food",
                     price: 150,
                     quantity: 1,
-                    date: "2020-01-01"
+                    date: "2020-01-01",
+                    isChecked: false
                 },
                 {
                     id: 1,
@@ -34,7 +35,8 @@ class BudgetCalc extends React.Component {
                     type: "food",
                     price: 120,
                     quantity: 2,
-                    date: "2019-01-01"
+                    date: "2019-01-01",
+                    isChecked: false
                 },
                 {
                     id: 3,
@@ -42,7 +44,8 @@ class BudgetCalc extends React.Component {
                     type: "drinks",
                     price: 60,
                     quantity: 5,
-                    date: "2020-06-01"
+                    date: "2020-06-01",
+                    isChecked: false
                 }
             ],
             isChecked: false,
@@ -62,7 +65,6 @@ class BudgetCalc extends React.Component {
             var prods = this.state.products
             var product = this.state.product
             product.id = Math.floor(Math.random() * 1000)
-            console.log(product)
             prods.push(product)
             this.setState({
                 products: prods,
@@ -72,9 +74,14 @@ class BudgetCalc extends React.Component {
     }
 
     handleCheckboxChange = (e, prod) => {
-        var dltProds = this.state.productsToDelete
-        dltProds.push(prod)
-        this.setState({ isChecked: e.target.checked, productsToDelete: dltProds })
+        let products = this.state.products
+        products.forEach(prod => {
+            if(prod.name === e.target.value) {
+                prod.isChecked = e.target.checked
+            }
+        })
+        console.log(products)
+        this.setState({ products: products })
     }
 
     productToEdit = (prod) => {
@@ -88,7 +95,6 @@ class BudgetCalc extends React.Component {
     }
 
     editProduct = (event) => {
-        console.log('prod edited')
         event.preventDefault()
         var prods = this.state.products
         var editedProd = this.state.product
@@ -101,18 +107,22 @@ class BudgetCalc extends React.Component {
     }
 
     deleteProducts = () => {
-        var array1 = this.state.products;
-        var array2 = this.state.productsToDelete;
+        var products = this.state.products
+        var prodToDlt = []
+        for(var i = 0; i < products.length; i++) {
+            if(products[i].isChecked) {
+                prodToDlt.push(products[i])
+            }
+        } 
         var index;
-        for (var i = 0; i < array2.length; i++) {
-            index = array1.indexOf(array2[i]);
+        for (var j = 0; j < prodToDlt.length; j++) {
+            index = products.indexOf(prodToDlt[j]);
             if (index > -1) {
-                array1.splice(index, 1);
+                products.splice(index, 1);
             }
         }
         this.setState({
-            products: array1,
-            productsToDelete: []
+            products: products
         })
     }
 
@@ -155,7 +165,7 @@ class BudgetCalc extends React.Component {
                         handleCheckboxChange={this.handleCheckboxChange}
                         editClicked={this.state.editClicked}
                         totalPrice={totPrice}
-                    />  : <Groups/>}
+                    />  : <Groups /> }
                     <TableTools
                         deleteProducts={this.deleteProducts}
                         selectFilterHandler={this.selectFilterHandler}

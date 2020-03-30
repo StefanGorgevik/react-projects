@@ -2,33 +2,18 @@ import React from 'react'
 import './NewGroup.css'
 import Inputs from '../Inputs-NG/Inputs'
 import Table from '../Table-NG/Table'
-import Button from '../Button-NG/Button'
+import Button from '../../Button/Button'
 import store from '../../../../redux/store'
-import { addNewGroupClicked, saveGroup } from '../../../../redux/actions/actions'
+import { addNewGroupClicked, saveGroup, editGroupClicked, updateGroup } from '../../../../redux/actions/actions'
+import { connect } from 'react-redux'
 
 class NewGroup extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            firstProductAdded: false,
             date: '',
             type: '',
-            newGroupProducts: [
-                {
-                    id: 30,
-                    name: "Burger",
-                    type: "Groceries",
-                    price: 150,
-                    quantity: 2
-                },
-                {
-                    id: 228,
-                    name: "Burger",
-                    type: "Groceries",
-                    price: 150,
-                    quantity: 2
-                }
-            ],
+            newGroupProducts: [],
             product: {
                 name: '',
                 type: '',
@@ -53,10 +38,12 @@ class NewGroup extends React.Component {
     }
 
     addProductToGroup = () => {
-        if (!this.state.firstProductAdded) {
-            this.setState({ firstProductAdded: true })
+        var prods = [];
+        if(!this.props.editGroupClicked) {
+            prods = this.state.newGroupProducts
+        } else {
+            prods = this.props.productToEdit[0].products
         }
-        const prods = this.state.newGroupProducts
         var product = this.state.product
         product.id = Math.floor(Math.random() * 1000)
         prods.push(product)
@@ -66,20 +53,39 @@ class NewGroup extends React.Component {
         })
     }
 
+    removeProductFromGroup = (id) => {
+        var products = this.state.newGroupProducts
+        var dlt = products.filter((prod, i) => prod.id === id)
+        products.splice(products.indexOf(dlt[0]), 1)
+        this.setState({ newGroupProducts: products })
+    }
+
     saveGroupOfProducts = () => {
-        const productGroup = {
-            id: Math.floor(Math.random() * 1000),
-            groupDate: this.state.date,
-            type: this.state.type,
-            products: this.state.newGroupProducts
+        if(!this.props.editGroupClicked) {
+            const productGroup = {
+                id: Math.floor(Math.random() * 1000),
+                groupDate: this.state.date,
+                type: this.state.type,
+                products: this.state.newGroupProducts
+            }
+            this.setState({ newGroupProducts: [], type: '', date: '' })
+            store.dispatch(addNewGroupClicked(false))
+            store.dispatch(saveGroup(productGroup))
+        } else if(this.props.editGroupClicked) {
+            const productGroup = {
+                id: this.props.productToEdit[0].id,
+                groupDate: this.state.date,
+                type: this.state.type,
+                products: this.state.newGroupProducts
+            }
+            this.setState({ newGroupProducts: [], type: '', date: '' })
+            store.dispatch(updateGroup(productGroup))
         }
-        this.setState({ newGroupProducts: [], type: '', date: '' })
-        store.dispatch(addNewGroupClicked(false))
-        store.dispatch(saveGroup(productGroup))
     }
 
     closeNewGroup = () => {
         store.dispatch(addNewGroupClicked(false))
+        store.dispatch(editGroupClicked(false))  
     }
 
     render() {
@@ -101,17 +107,16 @@ class NewGroup extends React.Component {
                         handleProductInputValue={this.handleProductInputValue}
                         product={this.state.product} />
                     <div className="ng-prods-dv">
-                        {this.state.firstProductAdded ?
-                            <Table products={this.state.newGroupProducts}
-                                totalPrice={totalPrice} /> : null}
+                        <Table products={this.state.newGroupProducts}
+                            totalPrice={totalPrice}
+                            removeProductFromGroup={this.removeProductFromGroup}
+                        />
                         <Button click={this.closeNewGroup}
                             content='Close'
                             name='ng-btn ng-close-btn' />
-                        {this.state.firstProductAdded ?
-                            <Button click={this.saveGroupOfProducts}
-                                content='Save group'
-                                name='ng-btn' /> : null}
-
+                        <Button click={this.saveGroupOfProducts}
+                            content='Save group'
+                            name='ng-btn' />
 
                     </div>
                 </div>
@@ -120,4 +125,11 @@ class NewGroup extends React.Component {
     }
 }
 
-export default NewGroup; 
+function mapStateToProps(state) {
+    return {
+        productToEdit: state.productToEdit,
+        editGroupClicked: state.editGroupClicked
+    }
+}
+
+export default connect(mapStateToProps)(NewGroup); 

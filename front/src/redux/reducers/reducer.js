@@ -57,8 +57,9 @@ const initState = {
     productGroups: [
         {
             id: 0,
-            groupDate: "2020-01-01",
-            type: 'Groceries',
+            groupDate: "2019-05-01",
+            type: 'groceries',
+            isChecked: false,
             products: [
                 {
                     id: 25,
@@ -77,7 +78,8 @@ const initState = {
         {
             id: 22,
             groupDate: "2020-01-01",
-            type:"Electronics",
+            type:"electronics",
+            isChecked: false,
             products: [
                 {
                     id: 23,
@@ -96,13 +98,15 @@ const initState = {
     ],
     budgetCalcTypes: ["Food", "Drinks", "Clothing"],
     addNewGroupClicked: false,
-    mode: 'products'
+    mode: 'products',
+    productToEdit: [],
+    editGroupClicked: false
 }
 
 export function reducer(state = initState, action) {
     switch (action.type) {
         case "ADD_TYPE": {
-            return { ...state, budgetCalcTypes: state.budgetCalcTypes.concat(action.payload) }
+            return { ...state, budgetCalcTypes: [...state.budgetCalcTypes, action.payload] }
         }
         case "ADD_NEW_GROUP_CLICKED": {
             return { ...state, addNewGroupClicked: action.payload }
@@ -111,7 +115,24 @@ export function reducer(state = initState, action) {
             return { ...state, mode: action.payload }
         }
         case "SAVE_GROUP": {
-            return { ...state,  productGroups: state.productGroups.concat(action.payload) }
+            return { ...state,  productGroups: [...state.productGroups, action.payload] }
+        }
+        case "DELETE_GROUP": {
+            return {...state,  productGroups: state.productGroups.filter(group => group.id !== action.payload.id)}
+        }
+        case "GROUP_TO_EDIT": {
+            return {...state, productToEdit: [...state.productToEdit.concat(action.payload)], editGroupClicked: action.clicked}
+        }
+        case "EDIT_GROUP_CLICKED": {
+            return {...state, editGroupClicked: action.payload}
+        }
+        case "UPDATE_GROUP": {
+            return {...state, productGroups: state.productGroups.map(group => {
+                if(group.id === action.payload.id) {
+                    return action.payload
+                }
+                return group;
+            })}
         }
         default:
             return state;

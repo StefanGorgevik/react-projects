@@ -1,15 +1,4 @@
-.budg-edit-btn {
-    width: 70px;
-    height: 40px;
-    font-size:20px;
-    text-transform: uppercase;
-    background-color: rgba(6, 41, 41, 0.24);
-    font-weight: 700;
-    border: 2px solid black;
-    border-radius: 15px;
-    cursor: pointer;
-    color: white;
-}
+
 .budg-edit-btn:hover {
     border-color: white;
 }
@@ -21,7 +10,6 @@
 .product-tr td{
     width: 200px;
     text-transform: capitalize;
-
 }
 .product-tr .number-td{
     width: 100px;
@@ -36,11 +24,11 @@
     background-color: rgba(0, 128, 128, 0.472);
 }
 
-.checkbox {
-    width: 35px;
-    height: 40px;
-    cursor: pointer;
-    margin-top: 5px;;
+#edit-td {
+    width:5px;
+    padding: 0;
+    margin: 0;
+    border:none;
 }
 
 #checkbox-td {
@@ -49,11 +37,3 @@
     border: none;
     padding: 0;
 }
-
-#edit-td {
-    width:5px;
-    padding: 0;
-    margin: 0;
-    border:none;
-}
-

@@ -47,3 +47,29 @@
     background-color: rgba(81, 163, 163, 0.24);
     border-color: white;
 }
+
+.budg-edit-btn {
+    width: 70px;
+    height: 40px;
+    font-size:20px;
+    text-transform: uppercase;
+    background-color: rgba(6, 41, 41, 0.24);
+    font-weight: 700;
+    border: 2px solid black;
+    border-radius: 15px;
+    cursor: pointer;
+    color: white;
+}
+
+.budg-edit-btn:hover {
+    border-color: white;
+}
+.budg-edit-btn-disabled {
+    pointer-events: none;
+    color: grey;
+    border-color: grey;
+}
+
+.budg-dlt-btn {
+    width: 100px;
+}

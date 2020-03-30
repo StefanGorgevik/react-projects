@@ -1,5 +1,6 @@
 import React from 'react'
 import './GroupsTable.css'
+import Button from '../../Button/Button'
 
 function GroupsTable(props) {
     var groups = props.groups.map((group, i) => {
@@ -8,7 +9,19 @@ function GroupsTable(props) {
                 <td>{group.groupDate}</td>
                 <td>{group.type}</td>
                 <td> 600</td>
-                <td onClick={() => props.selectedGroupHandler(group)} className="expand-td"> <i className="fas fa-long-arrow-alt-right"></i></td>
+                <td onClick={() => props.selectedGroupHandler(group)} className="expand-td">
+                   <span>Open</span>  <i className="fas fa-long-arrow-alt-right"></i>
+                </td>
+                <td id="edit-td">
+                    <Button click={() => props.editGroupHandler(group)}
+                        content='Edit'
+                        name='budg-edit-btn' />
+                </td>
+                <td id="edit-td">
+                    <Button click={() => props.deleteGroupHandler(group)}
+                        content='Delete'
+                        name='budg-edit-btn budg-dlt-btn' />
+                </td>
             </tr>
         )
     })
@@ -20,6 +33,8 @@ function GroupsTable(props) {
                     <th>Type</th>
                     <th>Total Price</th>
                     <th>Products</th>
+                    <th></th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>

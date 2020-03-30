@@ -1,6 +1,6 @@
 import React from 'react'
 import './ToolsContent.css'
-import Button from '../../NewGroupForm/Button-NG/Button'
+import Button from '../../Button/Button'
 import SelectMode from '../SelectMode/SelectMode'
 
 function ToolsContent(props) {

@@ -23,3 +23,32 @@ export function saveGroup(group) {
         payload: group
     }
 }
+
+export function deleteGroup(group) {
+    return {
+        type: "DELETE_GROUP",
+        payload: group
+    }
+}
+
+export function groupToEdit(group, bool) {
+    return {
+        type: "GROUP_TO_EDIT",
+        payload: group,
+        clicked: bool
+    }
+}
+
+export function editGroupClicked( bool) {
+    return {
+        type: "EDIT_GROUP_CLICKED",
+        payload: bool
+    }
+}
+
+export function updateGroup(group) {
+    return {
+        type: "UPDATE_GROUP",
+        payload: group
+    }
+}
