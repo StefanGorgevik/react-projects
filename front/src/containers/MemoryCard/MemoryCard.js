@@ -22,32 +22,7 @@ class MemoryCard extends React.Component {
     }
 
     handleClickFlip = (e) => {
-        console.log(e.currentTarget.dataset.id)
         this.setState({ card1: this.state.photos[e.currentTarget.dataset.id], card1Flipped: true })
-        // var s = card.replace('/static/media/', '')
-        // s = s.substring(0, s.indexOf('.'));
-        // s = s.charAt(0).toUpperCase() + s.substring(1)
-        // console.log(s, i)
-
-        // if (this.state.clickedCount === 0) {
-        //     console.log('entered1')
-        //     this.setState({ card1: s, card1Flipped: true, clickedCount: this.state.clickedCount + 1 })
-        // }
-        // if (this.state.clickedCount === 1) {
-        //     console.log('entered2')
-
-        //     this.setState({ card2: s, card2Flipped: true, clickedCount: this.state.clickedCount + 1 })
-        //     setTimeout(() => {
-        //         this.setState({
-        //             clickedCount: 0,
-        //             card1: '',
-        //             card2: '',
-        //             card1Flipped: false,
-        //             card2Flipped: false
-        //         })
-        //     }, 3000)
-        // }
-
     }
 
     render() {
