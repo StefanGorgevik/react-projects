@@ -3,12 +3,6 @@ import './Inputs.css'
 import { connect } from 'react-redux'
 
 function Inputs(props) {
-    var selectType = <select onChange={props.handleInputValue} name="select-type" id="type" className="select-type">
-        <option defaultChecked value='default' > Select type</option>
-        {props.types.map((type, i) => {
-            return <option key={type + i} value={type}>{type}</option>
-        })}
-    </select>
     return (
         <form onSubmit={props.saveProduct}
             className="budget-calc-inputs">
@@ -32,13 +26,19 @@ function Inputs(props) {
                         value={props.product.date}
                     />
                 </div>
+                <div>
+                    <label htmlFor="type">type</label>
+                    <input
+                        onChange={props.handleInputValue}
+                        type="text"
+                        id="type"
+                        value={props.product.type}
+                        placeholder="Type"
+                    />
+                </div>
             </div>
 
             <div className="bcalc-smaller-inputs">
-                <div className="budget-calc-type-div">
-                    {selectType}
-                </div>
-
                 <div className="budget-calc-price-div">
                     <label htmlFor="quantity-input">Price</label>
                     <input
@@ -60,12 +60,8 @@ function Inputs(props) {
                     />
                 </div>
             </div>
-
-            {props.editClicked ?
-                <button onClick={props.editProduct}
-                    className="budget-calc-submit-btn">Edit</button> :
-                <button onClick={props.saveProduct}
-                    className="budget-calc-submit-btn">Submit</button>}
+            <button onClick={props.saveProduct}
+                className="budget-calc-submit-btn">  {props.editClicked ? "Save" : "Submit"}</button>
         </form>
     )
 }

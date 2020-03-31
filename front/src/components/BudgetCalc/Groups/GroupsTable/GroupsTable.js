@@ -8,14 +8,9 @@ function GroupsTable(props) {
             <tr key={group + i} className="group-tr">
                 <td>{group.groupDate}</td>
                 <td>{group.type}</td>
-                <td> 600</td>
+                <td>{group.groupTotalPrice}</td>
                 <td onClick={() => props.selectedGroupHandler(group)} className="expand-td">
                    <span>Open</span>  <i className="fas fa-long-arrow-alt-right"></i>
-                </td>
-                <td id="edit-td">
-                    <Button click={() => props.editGroupHandler(group)}
-                        content='Edit'
-                        name='budg-edit-btn' />
                 </td>
                 <td id="edit-td">
                     <Button click={() => props.deleteGroupHandler(group)}

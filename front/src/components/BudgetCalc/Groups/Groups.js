@@ -5,13 +5,13 @@ import Selected from './Selected/Selected'
 import Button from '../Button/Button'
 import GroupsTable from './GroupsTable/GroupsTable'
 import store from '../../../redux/store'
-import { addNewGroupClicked, deleteGroup, groupToEdit, editGroupClicked } from '../../../redux/actions/actions'
+import { addNewGroupClicked, deleteGroup } from '../../../redux/actions/actions'
 
 class Groups extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            selected: '',
+            selected: [],
             groupsToDelete: []
         }
     }
@@ -28,19 +28,13 @@ class Groups extends React.Component {
         store.dispatch(deleteGroup(group))
     }
 
-    editGroupHandler = (group) => {
-        store.dispatch(groupToEdit(group))
-        store.dispatch(editGroupClicked(true))
-        store.dispatch(addNewGroupClicked(!this.state.addNewGroupClicked))
-    }
-
     render() {
         var selectedGroup = this.state.selected
         var totalPrice = 0
         for (var i = 0; i < selectedGroup.length; i++) {
-            if (selectedGroup[i].quantity >= 1) {
+            if (selectedGroup[i].quantity > 1) {
                 totalPrice += (selectedGroup[i].quantity * Number(selectedGroup[i].price))
-            } else if (selectedGroup[i].quantity < 1) {
+            } else if (selectedGroup[i].quantity < 2) {
                 totalPrice += Number(selectedGroup[i].price)
             }
         }
@@ -53,6 +47,7 @@ class Groups extends React.Component {
                             selectedGroupHandler={this.selectedGroupHandler}
                             deleteGroupHandler={this.deleteGroupHandler}
                             editGroupHandler={this.editGroupHandler}
+                            totalPrice={totalPrice}
                         />
                     </div>
                     <div className="groups-right-div">

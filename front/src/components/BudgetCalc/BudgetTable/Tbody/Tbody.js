@@ -8,7 +8,7 @@ function Tbody(props) {
         return (
             <tr key={prod + i} className="product-tr">
                 <td id="checkbox-td">
-                    <Checkbox handleCheckboxChange={(e) => props.handleCheckboxChange(e, products[i])}
+                    <Checkbox handleCheckboxChange={(e) => props.handleCheckboxChange(e)}
                         prods={props.products}
                         i={i}
                         checked={prod.isChecked}

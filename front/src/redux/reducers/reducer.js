@@ -54,11 +54,41 @@ const initState = {
         { id: 9, question: "Types of music genre" }
 
     ],
+    products: [
+        {
+            id: 25,
+            name: "cheese",
+            type: "food",
+            price: 150,
+            quantity: 1,
+            date: "2020-01-01",
+            isChecked: false
+        },
+        {
+            id: 1,
+            name: "burger",
+            type: "food",
+            price: 120,
+            quantity: 2,
+            date: "2019-01-01",
+            isChecked: false
+        },
+        {
+            id: 3,
+            name: "coca cola",
+            type: "drinks",
+            price: 60,
+            quantity: 5,
+            date: "2020-06-01",
+            isChecked: false
+        }
+    ],
     productGroups: [
         {
             id: 0,
             groupDate: "2019-05-01",
             type: 'groceries',
+            groupTotalPrice: 500,
             isChecked: false,
             products: [
                 {
@@ -78,7 +108,8 @@ const initState = {
         {
             id: 22,
             groupDate: "2020-01-01",
-            type:"electronics",
+            type: "electronics",
+            groupTotalPrice: 600,
             isChecked: false,
             products: [
                 {
@@ -96,17 +127,32 @@ const initState = {
             ]
         }
     ],
-    budgetCalcTypes: ["Food", "Drinks", "Clothing"],
     addNewGroupClicked: false,
     mode: 'products',
-    productToEdit: [],
-    editGroupClicked: false
+    productToEdit: {}
 }
 
 export function reducer(state = initState, action) {
     switch (action.type) {
-        case "ADD_TYPE": {
-            return { ...state, budgetCalcTypes: [...state.budgetCalcTypes, action.payload] }
+        case "SAVE_PRODUCT": {
+            return { ...state, products: [...state.products, action.payload] }
+        }
+        case "EDIT_PRODUCT": {
+            return {
+                ...state, products: state.products.filter(prod =>
+                    prod.id !== action.payload.id), productToEdit: action.payload
+            }
+        }
+        case "HANDLE_IS_CHECKED": {
+            return {
+                ...state, products: state.products.map((prod, i) => prod.name === action.val ? { ...prod, isChecked: action.checked } : prod)
+            }
+        }
+        case "DELETE_PRODUCTS": {
+            return {
+                ...state, products: state.products.filter(prod => { return !prod.isChecked }
+                )
+            }
         }
         case "ADD_NEW_GROUP_CLICKED": {
             return { ...state, addNewGroupClicked: action.payload }
@@ -115,24 +161,24 @@ export function reducer(state = initState, action) {
             return { ...state, mode: action.payload }
         }
         case "SAVE_GROUP": {
-            return { ...state,  productGroups: [...state.productGroups, action.payload] }
+            return { ...state, productGroups: [...state.productGroups, action.payload] }
         }
         case "DELETE_GROUP": {
-            return {...state,  productGroups: state.productGroups.filter(group => group.id !== action.payload.id)}
+            return { ...state, productGroups: state.productGroups.filter(group => group.id !== action.payload.id) }
         }
-        case "GROUP_TO_EDIT": {
-            return {...state, productToEdit: [...state.productToEdit.concat(action.payload)], editGroupClicked: action.clicked}
+        case "SORT_GROUPS": {
+            let val = action.payload
+            return {
+                ...state, productGroups: [...state.productGroups].sort((a, b) =>
+                    (a[val] > b[val]) ? 1 : ((b[val] > a[val]) ? -1 : 0))
+            }
         }
-        case "EDIT_GROUP_CLICKED": {
-            return {...state, editGroupClicked: action.payload}
-        }
-        case "UPDATE_GROUP": {
-            return {...state, productGroups: state.productGroups.map(group => {
-                if(group.id === action.payload.id) {
-                    return action.payload
-                }
-                return group;
-            })}
+        case "SORT_PRODUCTS": {
+            let val = action.payload
+            return {
+                ...state, products: [...state.products].sort((a, b) =>
+                    (a[val] > b[val]) ? 1 : ((b[val] > a[val]) ? -1 : 0))
+            }
         }
         default:
             return state;

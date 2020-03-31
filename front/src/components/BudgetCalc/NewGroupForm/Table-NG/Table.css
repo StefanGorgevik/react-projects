@@ -24,6 +24,7 @@
 .ng-new-prod-tr td {
     min-width: 10%;
     font-size: 21px;
+    text-transform: capitalize;
 }
 
 .ng-new-prod-tr td span {

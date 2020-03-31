@@ -4,8 +4,10 @@ import Inputs from '../../components/BudgetCalc/Inputs/Inputs'
 import TableTools from '../../components/BudgetCalc/TableTools/TableTools'
 import Table from '../../components/BudgetCalc/BudgetTable/Table/Table'
 import Groups from '../../components/BudgetCalc/Groups/Groups'
-import {connect} from 'react-redux'
-
+import { connect } from 'react-redux'
+import store from '../../redux/store'
+import { sortGroups, sortProducts, saveProduct, editProduct, handleIsChecked } from '../../redux/actions/actions'
+import Alert from '../../components/BudgetCalc/Alert/Alert'
 
 class BudgetCalc extends React.Component {
     constructor(props) {
@@ -15,43 +17,16 @@ class BudgetCalc extends React.Component {
                 id: '',
                 name: '',
                 type: '',
-                price: '',
-                quantity: '',
+                price: 0,
+                quantity: 1,
                 date: ''
             },
-            products: [
-                {
-                    id: 0,
-                    name: "cheese",
-                    type: "food",
-                    price: 150,
-                    quantity: 1,
-                    date: "2020-01-01",
-                    isChecked: false
-                },
-                {
-                    id: 1,
-                    name: "burger",
-                    type: "food",
-                    price: 120,
-                    quantity: 2,
-                    date: "2019-01-01",
-                    isChecked: false
-                },
-                {
-                    id: 3,
-                    name: "coca cola",
-                    type: "drinks",
-                    price: 60,
-                    quantity: 5,
-                    date: "2020-06-01",
-                    isChecked: false
-                }
-            ],
+            products: props.products,
             isChecked: false,
             productsToDelete: [],
             editClicked: false,
-            filter: 'name'
+            selectedValue: 'name',
+            error: false
         }
     }
 
@@ -60,80 +35,46 @@ class BudgetCalc extends React.Component {
     }
 
     saveProduct = (e) => {
-        if (!this.state.editClicked) {
-            e.preventDefault()
-            var prods = this.state.products
-            var product = this.state.product
+        var product = this.state.product
+        e.preventDefault()
+        if (product.name !== '' && product.type !== '' && product.price !== 0 && product.quantity >= 1 && product.date !== '') {
             product.id = Math.floor(Math.random() * 1000)
-            prods.push(product)
+            product.isChecked = false
+            store.dispatch(saveProduct(product))
             this.setState({
-                products: prods,
-                product: { id: '', name: '', type: '', price: '', quantity: '', date: '' }
+                product: { id: '', name: '', type: '', price: 0, quantity: 1, date: '' },
+                editClicked: false
             })
+        } else {
+            this.setState({ error: true })
         }
     }
 
-    handleCheckboxChange = (e, prod) => {
-        let products = this.state.products
-        products.forEach(prod => {
-            if(prod.name === e.target.value) {
-                prod.isChecked = e.target.checked
-            }
-        })
-        console.log(products)
-        this.setState({ products: products })
+    closeErrorAlert = () => {
+        this.setState({ error: false })
+    }
+
+    handleCheckboxChange = (e) => {
+        let val = e.target.value
+        let checked = e.target.checked
+        store.dispatch(handleIsChecked(val, checked))
     }
 
     productToEdit = (prod) => {
-        var prods = this.state.products
-        prods.splice(prods.indexOf(prod), 1)
-        this.setState(prevState => ({
-            editClicked: !prevState.editClicked,
-            products: prods,
-            product: prod
-        }))
-    }
-
-    editProduct = (event) => {
-        event.preventDefault()
-        var prods = this.state.products
-        var editedProd = this.state.product
-        prods.push(editedProd)
-        this.setState(prevState => ({
-            editClicked: !prevState.editClicked,
-            products: prods,
-            product: { id: '', name: '', type: '', price: '', quantity: '', date: '' }
-        }))
-    }
-
-    deleteProducts = () => {
-        var products = this.state.products
-        var prodToDlt = []
-        for(var i = 0; i < products.length; i++) {
-            if(products[i].isChecked) {
-                prodToDlt.push(products[i])
-            }
-        } 
-        var index;
-        for (var j = 0; j < prodToDlt.length; j++) {
-            index = products.indexOf(prodToDlt[j]);
-            if (index > -1) {
-                products.splice(index, 1);
-            }
-        }
+        store.dispatch(editProduct(prod))
         this.setState({
-            products: products
+            editClicked: true,
+            product: prod
         })
     }
 
     selectFilterHandler = (e) => {
         var val = e.target.value
-        var prods = this.state.products
-        prods.sort((a, b) =>
-            (a[val] > b[val]) ? 1 : ((b[val] > a[val]) ? -1 : 0))
-        this.setState({
-            products: prods,
-        })
+        if (this.props.mode === 'products') {
+            store.dispatch(sortProducts(val))
+        } else {
+            store.dispatch(sortGroups(val))
+        }
     }
 
     render() {
@@ -147,25 +88,28 @@ class BudgetCalc extends React.Component {
         }
         return (
             <main className="budget-calc-main">
+                {this.state.error ? <Alert click={this.closeErrorAlert} 
+                    text="Please fill up every field!"
+                /> : null}
                 <h1 className="budget-calc-h1">Budget Calculator</h1>
-                {this.props.mode === "products" ? 
-                <Inputs saveProduct={this.saveProduct}
-                    handleInputValue={this.handleInputValue}
-                    product={this.state.product}
-                    editClicked={this.state.editClicked}
-                    editProduct={this.editProduct}
-                    types={this.state.types}
-                /> : null }
-                <div className="budget-calc-content-div">
-                {this.props.mode === "products" ? 
-                    <Table
-                        properties={this.state.properties}
-                        products={this.state.products}
-                        productToEdit={this.productToEdit}
-                        handleCheckboxChange={this.handleCheckboxChange}
+                {this.props.mode === "products" ?
+                    <Inputs saveProduct={this.saveProduct}
+                        handleInputValue={this.handleInputValue}
+                        product={this.state.product}
                         editClicked={this.state.editClicked}
-                        totalPrice={totPrice}
-                    />  : <Groups /> }
+                        editProduct={this.editProduct}
+                        types={this.state.types}
+                    /> : null}
+                <div className="budget-calc-content-div">
+                    {this.props.mode === "products" ?
+                        <Table
+                            properties={this.state.properties}
+                            products={this.props.products}
+                            productToEdit={this.productToEdit}
+                            handleCheckboxChange={this.handleCheckboxChange}
+                            editClicked={this.state.editClicked}
+                            totalPrice={totPrice}
+                        /> : <Groups />}
                     <TableTools
                         deleteProducts={this.deleteProducts}
                         selectFilterHandler={this.selectFilterHandler}
@@ -178,7 +122,9 @@ class BudgetCalc extends React.Component {
 
 function mapStateToProps(state) {
     return {
-        mode: state.mode
+        mode: state.mode,
+        products: state.products,
+        groups: state.productGroups
     }
 }
 

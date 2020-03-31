@@ -1,9 +1,30 @@
-export function addType(types) {
+export function saveProduct(product) {
     return {
-        type: "ADD_TYPE",
-        payload: types
+        type: "SAVE_PRODUCT",
+        payload: product
     }
 }
+export function editProduct(product) {
+    return {
+        type: "EDIT_PRODUCT",
+        payload: product
+    }
+}
+
+export function handleIsChecked(val, checked) {
+    return {
+        type: "HANDLE_IS_CHECKED",
+        val: val,
+        checked: checked
+    }
+}
+
+export function deleteProducts() {
+    return {
+        type: "DELETE_PRODUCTS"
+    }
+}
+
 export function addNewGroupClicked(clicked) {
     return {
         type: "ADD_NEW_GROUP_CLICKED",
@@ -31,24 +52,15 @@ export function deleteGroup(group) {
     }
 }
 
-export function groupToEdit(group, bool) {
+export function sortGroups(val) {
     return {
-        type: "GROUP_TO_EDIT",
-        payload: group,
-        clicked: bool
+        type: "SORT_GROUPS",
+        payload: val
     }
 }
-
-export function editGroupClicked( bool) {
+export function sortProducts(val) {
     return {
-        type: "EDIT_GROUP_CLICKED",
-        payload: bool
-    }
-}
-
-export function updateGroup(group) {
-    return {
-        type: "UPDATE_GROUP",
-        payload: group
+        type: "SORT_PRODUCTS",
+        payload: val
     }
 }

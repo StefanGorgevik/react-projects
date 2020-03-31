@@ -1,7 +1,7 @@
 .select-mode-div {
     display: flex;
-    /* width: 40%; */
     align-items: center;
+    min-width: 85%;
 }
 
 #select-mode option {
@@ -17,9 +17,9 @@
 }
 
 .select-mode-div #select-mode {
-    min-width: 50%;
+    min-width: 65%;
     margin: 10px auto;
-    height: 70px;
+    height: 60px;
     background-color: rgba(6, 41, 41, 0.24);
     border: 2px solid black;
     font-size: 25px;

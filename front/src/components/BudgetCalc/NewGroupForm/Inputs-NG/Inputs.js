@@ -1,26 +1,21 @@
 import React from 'react'
 import './Inputs.css'
 import Button from '../../Button/Button'
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
 
 function Inputs(props) {
     return (
-        <>
+        <form onSubmit={props.addProductToGroup}>
             <div className="ng-date-div">
                 <div>
                     <label htmlFor="date">Date</label>
-                    <input onChange={props.handleGroupDateInputValue} type="date" id="date" placeholder="Enter the date of shopping"
-                    value={props.productToEdit.length !== 0 ? props.productToEdit[0].groupDate : null} />
+                    <input onChange={props.handleGroupDateInputValue} type="date" id="date" />
                 </div>
                 <div>
-                    <select onChange={props.handleProductInputValue} id="type">
-                        <option value="default">Select type of products</option>
-                        <option value="groceries">Groceries</option>
-                        <option value="electronics">Electronics</option>
-                        {/* <option selected={props.productToEdit[0].type === 'groceries' ? "selected": ''} value="groceries">Groceries</option>
-                        <option selected={props.productToEdit[0].type === 'electronics' ? "selected": ''} value="electronics">Electronics</option> */}
-                    </select>
+                    <label htmlFor="type">Type</label>
+                    <input onChange={props.handleGroupDateInputValue} type="text" id="type" placeholder="Enter the type of your products" />
                 </div>
+
             </div>
             <input onChange={props.handleProductInputValue}
                 type="text" id="name" placeholder="Enter product name"
@@ -31,9 +26,9 @@ function Inputs(props) {
                 <input type="number" id="price"
                     onChange={props.handleProductInputValue}
                     placeholder="Enter product price"
-                    value={props.product.price} />
+                    value={props.product.price} required />
                 <label htmlFor="quantity">Quantity:</label>
-                <input type="text" id="quantity"
+                <input type="number" id="quantity"
                     onChange={props.handleProductInputValue}
                     placeholder="Enter product quantity"
                     value={props.product.quantity} />
@@ -42,8 +37,7 @@ function Inputs(props) {
                 content='Add product to group'
                 name="ng-btn"
             />
-
-        </>
+        </form>
     )
 }
 
