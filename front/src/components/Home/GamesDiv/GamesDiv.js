@@ -49,14 +49,15 @@ class GamesDiv extends React.Component {
                         </div> : null}
                     {this.state.flCount === 2 ?
                         <div className="div2">
-                            <h1>Game two</h1>
-                            <p>Upcoming</p>
+                            <h1>Memory game</h1>
+                            <p>See if you can find every band logo behind the cards</p>
                         </div> : null}
 
                     {this.state.flCount === 3 ?
                         <div className="div3">
-                            <h1>Game three!</h1>
-                            <p>Upcoming</p>
+                            <h1>Guess it!</h1>
+                            <p>Given limited time, can you guess the name of every images shown?</p>
+                            <h4>Go ahead and challenge yourself</h4>
                         </div> : null}
                         <DotsDiv divs={this.state.divs} dotClicked={this.dotClicked} flCount={this.state.flCount} />
                 </div>

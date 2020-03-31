@@ -38,7 +38,7 @@ const initState = {
         },
         {
             id: 9,
-            answers: ['Blues']
+            answers: ['Blues', 'Rock', 'Jazz', 'Folk']
         }
     ],
     questions: [
@@ -52,7 +52,6 @@ const initState = {
         { id: 7, question: "10 most played instruments" },
         { id: 8, question: "Types of family relationships" },
         { id: 9, question: "Types of music genre" }
-
     ],
     products: [
         {
