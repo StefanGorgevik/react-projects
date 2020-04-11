@@ -60,7 +60,6 @@ class MainHeader extends React.Component {
                             <Link to="#" onClick={this.registerClickedHandler}>Register</Link>
                         </div>
                     </li>
-                    <li className="main-header-ul-li"><Link to="/about-me">About me</Link></li>
                 </ul>
             </nav>
             </>
