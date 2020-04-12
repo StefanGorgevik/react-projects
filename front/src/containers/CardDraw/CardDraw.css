@@ -1,7 +1,6 @@
 .card-draw  {
-    background-image: url('../../assets/images/card-draw-background.jpg');
-    background-position: center;
-    background-size: cover;
+    background-color: #290000;
+    background-image: url("../../assets/images/backgrounds/card-draw.png");
     overflow: hidden;
     cursor: pointer;
     height:100%;
@@ -23,6 +22,8 @@
 .back-card {
     height: 450px;
     width: 320px;
+    border-radius: 25px;
+    background-color: inherit;
 }
 
 .draw-btn {

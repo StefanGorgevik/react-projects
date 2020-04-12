@@ -17,26 +17,37 @@ class MemoryCard extends React.Component {
             photos: [Pearljam, Metallica, Acdc, Pinkfloyd, Nirvana, Pinkfloyd, Ironmaiden, Acdc, Ironmaiden, Nirvana, Pearljam, Metallica],
             card1: '',
             card2: '',
+            dataset: 0,
             clickedCount: 0
         }
     }
 
     handleClickFlip = (e) => {
-        this.setState({ card1: this.state.photos[e.currentTarget.dataset.id], card1Flipped: true })
+        if (this.state.clickedCount === 0) {
+            console.log(e.currentTarget.dataset.id)
+            console.log(this.state.photos[e.currentTarget.dataset.id])
+            this.setState({ card1: this.state.photos[e.currentTarget.dataset.id], card1Flipped: true, clickedCount: 1, dataset: e.currentTarget.dataset.id })
+            console.log(this.state.card1)
+        } 
+        if (this.state.clickedCount === 1) {
+            console.log(e.currentTarget.dataset.id)
+            this.setState({ card2: this.state.photos[e.currentTarget.dataset.id], card2Flipped: true, clickedCount: 0 })
+            console.log(this.state.card2)
+        }
     }
 
     render() {
         var cards = this.state.photos.map((card, i) => {
             return (
                 <div key={card + i} className="memory-card col" data-id={i} onClick={this.handleClickFlip} >
-                {!this.state.card1Flipped ? 
-                    <img className="back-face front-face"
-                        src={BackFace}
-                        alt={!this.state.isFlipped && this.state.clickedCount < 2 ? "BackFace" : this.state.card1} /> :
-                    <img className="back-face front-face"
-                        src={this.state.card1}
-                        alt={!this.state.isFlipped && this.state.clickedCount < 2 ? "BackFace" : this.state.card1} />
-                        }
+                    {!this.state.card1Flipped ?
+                        <img className="back-face front-face"
+                            src={BackFace}
+                            alt={!this.state.isFlipped && this.state.clickedCount < 2 ? "BackFace" : this.state.card1} /> :
+                        <img className="back-face front-face"
+                            src={this.state.dataset !== this.state.photos[i] ? this.state.photos[this.state.dataset] : BackFace}
+                            alt={!this.state.isFlipped && this.state.clickedCount < 2 ? "BackFace" : this.state.card1} />
+                    }
                 </div>
             )
         })
@@ -44,7 +55,7 @@ class MemoryCard extends React.Component {
             <div className="memory-card-main-div">
                 <h1 className="memory-card-title">Memory Card</h1>
                 <section className="memory-game">
-                            {cards}
+                    {cards}
                 </section>
             </div>
         )
