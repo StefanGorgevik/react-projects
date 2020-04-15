@@ -29,7 +29,6 @@ class MainHeader extends React.Component {
     render() {
         return (
             <>
-            {this.props.addNewGroupClicked ? <NewGroup/> : null}
 
             {this.state.loginClicked ? 
             <Login clicked={this.loginClickedHandler} /> : null }
@@ -51,7 +50,6 @@ class MainHeader extends React.Component {
                         <div className="main-header-ul-li-div">
                             <Link to="/card-draw">Card Draw</Link>
                             <Link to="/stopwatch">Stopwatch</Link>
-                            <Link to="/budget-calc">Budget Calculator</Link>
                         </div>
                     </li>
                     <li className="main-header-ul-li">Account
